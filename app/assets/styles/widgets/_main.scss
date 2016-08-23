@@ -1,0 +1,12 @@
+.main {
+    position: absolute;
+    width: 100%;
+    //height: calc(100vh - #{$header-height} - #{$footer-height});
+    height: 100%;
+
+    &::after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+}

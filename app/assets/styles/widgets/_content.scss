@@ -1,0 +1,10 @@
+.content {
+    position: relative;
+    //width: calc(100% - #{$menu-width});
+    //height: calc(100vh - #{$header-height} - #{$footer-height});
+    width: 100%;
+    height: 100%;
+    background-color: #6a9cbc;
+    float: right;
+    overflow-y: auto;
+}
