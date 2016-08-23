@@ -1,10 +1,6 @@
 import React, { PropTypes } from 'react';
 
 const Menu = ({ active, children, onClick }) => {
-    // if (active) {
-    //     return <li className="active">{children}</li>
-    // }
-
     return (
         <li className={active ? 'active' : ''}>
             <a href="javascript:;"

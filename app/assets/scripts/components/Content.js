@@ -8,9 +8,9 @@ import Skills from './Skills';
 
 const getContent = (content) => {
     switch (content) {
-        case 'INDEX':
+        case 'HOME':
             return (
-                'INDEX'
+                'HOME'
             );
         case 'ABOUT':
             return (

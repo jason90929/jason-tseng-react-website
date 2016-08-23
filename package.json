@@ -1,6 +1,6 @@
 {
-  "name": "react-redux-gulp-browerify-sample",
-  "version": "1.2.7",
+  "name": "jason-tseng-react-website",
+  "version": "1.2.8",
   "description": "Gulp, Npm, with React Redux",
   "main": "main.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "react-redux-gulp-browerify-sample"
+    "url": "jason-tseng-react-website"
   },
   "keywords": [
     "ReactJS",

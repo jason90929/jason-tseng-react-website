@@ -5,6 +5,9 @@ const Aside = () => (
     <aside className="menu">
         <nav className="main-menu">
             <ul className="bask">
+                <MenuLink filter="HOME">
+                    Home
+                </MenuLink>
                 <MenuLink filter="ABOUT">
                     About
                 </MenuLink>

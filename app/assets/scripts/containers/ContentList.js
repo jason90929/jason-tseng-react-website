@@ -3,8 +3,8 @@ import Content from '../components/Content';
 
 const getContent = (content) => {
     switch (content) {
-        case 'INDEX':
-            return 'INDEX';
+        case 'HOME':
+            return 'HOME';
         case 'ABOUT':
             return 'ABOUT';
         case 'SKILLS':
