@@ -19,6 +19,7 @@
     transition: font-size .25s ease-out;
 
     &.has-content {
-        font-size: 28px;
+        font-size: 18px;
+        letter-spacing: 1.8px;
     }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = ({ content }) => {
+const Header = ({content}) => {
     var headerClassName = '';
 
     if (content === 'CONTENT') {
