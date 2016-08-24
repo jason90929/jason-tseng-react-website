@@ -11,4 +11,14 @@
     letter-spacing: 2.6px;
     margin: 0;
     padding: 0;
+
+    -webkit-transition: font-size .25s ease-out;
+    -moz-transition: font-size .25s ease-out;
+    -ms-transition: font-size .25s ease-out;
+    -o-transition: font-size .25s ease-out;
+    transition: font-size .25s ease-out;
+
+    &.has-content {
+        font-size: 28px;
+    }
 }

@@ -9,7 +9,9 @@ import App from './components/App'
 
 const initialState = {};
 
+// In Development...
 window.store = createStore(todoApp, initialState);
+
 // let store = createStore(todoApp, initialState);
 
 render(

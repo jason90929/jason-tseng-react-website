@@ -1,12 +1,12 @@
 import React from 'react';
-import Header from './Header';
+import HeaderStatus from '../containers/HeaderStatus';
 import Aside from './Aside';
 import Main from './Main';
 import Footer from './Footer';
 
 const App = () => (
     <div>
-        <Header />
+        <HeaderStatus />
         <Aside />
         <Main />
         <Footer />
