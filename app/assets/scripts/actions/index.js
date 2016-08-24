@@ -28,6 +28,13 @@ export const getMenuList = (role) => {
     }
 };
 
+export const setAnimate = (bool) => {
+    return {
+        type: 'SET_ANIMATE',
+        bool
+    }
+};
+
 export const setContent = (content) => {
     return {
         type: 'SET_CONTENT',

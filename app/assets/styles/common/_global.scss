@@ -19,3 +19,33 @@ a {
     font-family: 'Libre Baskerville';
     letter-spacing: 3.2px;
 }
+
+.fade-in {
+    -webkit-animation: fade-in .5s linear;
+    -o-animation: fade-in .5s linear;
+    animation: fade-in .5s linear;
+}
+
+.fade-out {
+    -webkit-animation: fade-out .5s linear;
+    -o-animation: fade-out .5s linear;
+    animation: fade-out .5s linear;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: .2;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: .2;
+    }
+}

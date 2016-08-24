@@ -6,6 +6,7 @@ import TodoFilter from './TodoFilter';
 import Home from './Home';
 import About from './About';
 import Skills from './Skills';
+import Contact from './Contact';
 
 const getContent = (content) => {
     switch (content) {
@@ -31,18 +32,14 @@ const getContent = (content) => {
             );
         case 'CONTACT':
             return (
-                'Contact'
-            );
-        default:
-            return (
-                ''
+                <Contact />
             );
     }
 };
 
-const Content = ({ content }) => {
+const Content = ({ content, animation }) => {
     return (
-        <section className="content">
+        <section className={'content' + (animation ? ' fade-out' : ' fade-in')}>
             {getContent(content)}
         </section>
     );

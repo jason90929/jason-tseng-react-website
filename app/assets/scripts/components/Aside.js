@@ -1,11 +1,11 @@
 import React from 'react';
 import MenuLink from '../containers/MenuLink';
 
-const Aside = ({content}) => {
+const Aside = ({content, onClick}) => {
     var headerClassName = '';
 
     if (content === 'CONTENT') {
-        headerClassName = 'has-content';
+        headerClassName = 'has-content fade-in';
     }
 
     return (

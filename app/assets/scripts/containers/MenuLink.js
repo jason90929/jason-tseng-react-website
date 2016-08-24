@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { setContent } from '../actions';
+import { setContent, setAnimate } from '../actions';
 import Menu from '../components/Menu';
 
 const mapStateToProps = (state, ownProps) => {
@@ -11,7 +11,12 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         onClick: () => {
-            dispatch(setContent(ownProps.filter))
+            dispatch(setAnimate(true));
+
+            setTimeout(function() {
+                dispatch(setContent(ownProps.filter));
+                dispatch(setAnimate(false));
+            }, 500);
         }
     };
 };
