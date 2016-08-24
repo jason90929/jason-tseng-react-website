@@ -21,20 +21,24 @@ a {
 }
 
 .fade-in {
-    -webkit-animation: fade-in .5s linear;
-    -o-animation: fade-in .5s linear;
-    animation: fade-in .5s linear;
+    opacity: 1;
+
+    -webkit-animation: fade-in .6s linear;
+    -o-animation: fade-in .6s linear;
+    animation: fade-in .6s linear;
 }
 
 .fade-out {
-    -webkit-animation: fade-out .5s linear;
-    -o-animation: fade-out .5s linear;
-    animation: fade-out .5s linear;
+    opacity: 0;
+
+    -webkit-animation: fade-out .8s linear;
+    -o-animation: fade-out .8s linear;
+    animation: fade-out .8s linear;
 }
 
 @keyframes fade-in {
     from {
-        opacity: .2;
+        opacity: 0;
     }
     to {
         opacity: 1;
@@ -42,10 +46,13 @@ a {
 }
 
 @keyframes fade-out {
-    from {
+    0% {
         opacity: 1;
     }
-    to {
-        opacity: .2;
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
     }
 }

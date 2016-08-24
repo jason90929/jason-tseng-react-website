@@ -16,7 +16,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
             setTimeout(function() {
                 dispatch(setContent(ownProps.filter));
                 dispatch(setAnimate(false));
-            }, 500);
+            }, 800);
         }
     };
 };
