@@ -50,7 +50,7 @@ gulp.task('browserify', () => {
         .pipe(buffer()) // js 壓縮前置準備
         // .pipe(uglify()) // 壓縮 js
         .pipe(bom()) // 解決中文亂碼
-        .pipe(gulp.dest('./dist/assets'))
+        .pipe(gulp.dest('./dist/assets/scripts/'))
         .pipe(reload({stream: true}));
 });
 
@@ -75,14 +75,17 @@ gulp.task('scss', () => {
         // .pipe(minifyCSS({
         //     keepBreaks: false
         // }))
-        .pipe(gulp.dest('./dist/assets'))
+        .pipe(gulp.dest('./dist/assets/styles/'))
         .pipe(reload({stream: true}));
 });
 
 // 監聽字型
 gulp.task('fonts', () => {
     return gulp.src(mainBowerFiles('app/assets/fonts/*.{eot,svg,ttf,woff,woff2}', function (err) {})
-        .concat('app/assets/fonts/**/*'))
+        .concat([
+            'app/assets/fonts/**/*', // My custom fonts
+            'node_modules/font-awesome/fonts/*' // Font Awesome
+        ]))
         .pipe(gulp.dest('./dist/assets/fonts'))
         .pipe(reload({stream: true}));
 });
