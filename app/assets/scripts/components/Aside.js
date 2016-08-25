@@ -10,6 +10,9 @@ const Aside = ({content}) => {
                     <i className="fa fa-list"/>
                 </a>
                 <nav className="main-menu">
+                    <a href="javascript:;" className="toggle">
+                        <i className="fa fa-close"/>
+                    </a>
                     <ul className="bask">
                         <MenuLink filter="HOME">
                             Home

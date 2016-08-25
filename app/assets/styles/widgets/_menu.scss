@@ -7,32 +7,39 @@
         opacity: .95;
 
         .toggle {
-            position: absolute;
+            position: fixed;
             display: block;
+            right: 30px;
+            top: 20px;
+            font-size: 20px;
+            color: $white;
+
+            &:hover, &:focus, &:active {
+                color: $white;
+            }
         }
 
         &.has-content {
-            left: auto;
-            bottom: auto;
-            right: 50px;
-            top: 30px;
-
             nav.main-menu {
                 display: none;
+            }
+        }
 
-                &.active {
-                    position: fixed;
-                    display: block;
-                    left: 0;
-                    right: 0;
-                    top: 0;
-                    bottom: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba(0, 0, 0, .75);
-                    padding-top: 50%;
-                    padding-left: 30px;
-                }
+        &.active {
+            z-index: 3;
+
+            nav.main-menu {
+                position: fixed;
+                display: block;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, .75);
+                padding-top: 50%;
+                padding-left: 30px;
             }
         }
     }
@@ -114,15 +121,6 @@
             nav.main-menu {
                 display: block;
 
-                &.active {
-                    position: relative;
-                    left: auto;
-                    right: auto;
-                    top: auto;
-                    bottom: auto;
-                    background-color: transparent;
-                }
-
                 > ul {
                     &.bask {
                         letter-spacing: 1.8px;
@@ -143,6 +141,21 @@
                         }
                     }
                 }
+            }
+        }
+
+        &.active {
+            z-index: 1;
+            
+            nav.main-menu {
+                position: relative;
+                left: auto;
+                right: auto;
+                top: auto;
+                bottom: auto;
+                background-color: transparent;
+                padding-top: 0;
+                padding-left: 0;
             }
         }
     }
