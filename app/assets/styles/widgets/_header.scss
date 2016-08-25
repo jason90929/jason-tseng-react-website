@@ -1,25 +1,82 @@
-.header {
-    position: fixed;
-    z-index: 1;
-    top: 30px;
-    left: 40px;
+@media screen {
+    .header {
+        left: 0;
+        right: 0;
+        position: fixed;
+        z-index: 1;
+    }
+
+    .main-title {
+        position: relative;
+        display: block;
+        font-size: 32px;
+        color: $white;
+        letter-spacing: 2.4px;
+        padding: 0 30px;
+        margin: 30px 0 0;
+        text-align: center;
+
+        &.has-content {
+            font-size: 18px;
+            letter-spacing: 1.8px;
+        }
+    }
+
+    .sub-title {
+        position: relative;
+        display: block;
+        font-size: 28px;
+        color: $white;
+        letter-spacing: 2.4px;
+        padding: 0 40px;
+        margin: 5px 0 0;
+        text-align: center;
+
+        &.has-content {
+            font-size: 18px;
+            letter-spacing: 1.8px;
+        }
+    }
 }
 
-.main-title {
-    font-size: 36px;
-    color: $white;
-    letter-spacing: 2.6px;
-    margin: 0;
-    padding: 0;
+@media screen and (min-width: 640px) {
+    .header {
+        left: 40px;
+        right: 40px;
+    }
 
-    //-webkit-transition: font-size .25s ease-out;
-    //-moz-transition: font-size .25s ease-out;
-    //-ms-transition: font-size .25s ease-out;
-    //-o-transition: font-size .25s ease-out;
-    //transition: font-size .25s ease-out;
+    .main-title {
+        display: inline-block;
+        font-size: 24px;
+        letter-spacing: 2.6px;
+        padding: 0;
+        margin: 30px 6px 0 0;
+        text-align: left;
+    }
 
-    &.has-content {
-        font-size: 18px;
-        letter-spacing: 1.8px;
+    .sub-title {
+        display: inline-block;
+        font-size: 24px;
+        letter-spacing: 2.1px;
+        padding: 0;
+        margin: 5px 0 0;
+        text-align: left;
+
+        &::before {
+            content: '- ';
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .main-title {
+        font-size: 36px;
+        letter-spacing: 3.2px;
+        margin-right: 9px;
+    }
+
+    .sub-title {
+        font-size: 36px;
+        letter-spacing: 3.2px;
     }
 }

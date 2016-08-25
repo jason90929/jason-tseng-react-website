@@ -2,8 +2,8 @@
     .menu {
         position: fixed;
         z-index: 1;
-        left: 55px;
-        bottom: 84px;
+        left: 40px;
+        bottom: 64px;
         opacity: .95;
     }
 
@@ -69,6 +69,9 @@
 
 @media screen and (min-width: 640px) {
     .menu {
+        left: 55px;
+        bottom: 84px;
+
         &.has-content {
             top: 75px;
             left: 40px;

@@ -5,11 +5,11 @@ const Aside = ({content, onClick}) => {
     var headerClassName = '';
 
     if (content === 'CONTENT') {
-        headerClassName = 'has-content fade-in';
+        headerClassName = ' has-content fade-in';
     }
 
     return (
-        <aside className={'menu ' + headerClassName}>
+        <aside className={'menu' + headerClassName}>
             <nav className="main-menu">
                 <ul className="bask">
                     <MenuLink filter="HOME">

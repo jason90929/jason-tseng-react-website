@@ -1,9 +1,7 @@
 .main {
     position: relative;
     width: 100%;
-    //height: calc(100vh - #{$header-height} - #{$footer-height});
     height: 100%;
-    //z-index: 1;
 
     &::after {
         content: '';

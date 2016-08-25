@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Skills = () => (
+const Portfolio = () => (
     <div>
         <figure className="banner">
         </figure>
 
         <article className="article">
-            <h2>Skills</h2>
+            <h2>Portfolio</h2>
 
             <p>
                 育今吃同前小件外或著它比化質：為來機活，地家進次德日國果八印海從活。拉石動流王後不之如才遊。界因我情難神子要進斯用然是發學他品力開實果、新高樣信天個投。<br />
@@ -48,4 +48,4 @@ const Skills = () => (
     </div>
 );
 
-export default Skills;
+export default Portfolio;

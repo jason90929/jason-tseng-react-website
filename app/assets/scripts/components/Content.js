@@ -6,6 +6,7 @@ import TodoFilter from './TodoFilter';
 import Home from './Home';
 import About from './About';
 import Skills from './Skills';
+import Portfolio from './Portfolio';
 import Contact from './Contact';
 
 const getContent = (content) => {
@@ -24,11 +25,7 @@ const getContent = (content) => {
             );
         case 'PORTFOLIO':
             return (
-                <div>
-                    <AddTodo />
-                    <VisibleTodoList />
-                    <TodoFilter />
-                </div>
+                <Portfolio />
             );
         case 'CONTACT':
             return (
