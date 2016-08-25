@@ -20,10 +20,19 @@ figure {
     }
 }
 
-article {
+.bg-theme-color {
     position: relative;
+    width: 100%;
+    margin: 0 auto;
     z-index: 2;
-    background-color: #ededef;
+    background-color: $bg-main;
+}
+
+article {
+    max-width: 980px;
+    //width: 100%;
+    margin: 0 auto;
+    position: relative;
     padding: 20px;
 }
 

@@ -19,6 +19,7 @@
         &.has-content {
             font-size: 18px;
             letter-spacing: 1.8px;
+            text-align: left;
         }
     }
 
@@ -28,13 +29,14 @@
         font-size: 28px;
         color: $white;
         letter-spacing: 2.4px;
-        padding: 0 40px;
+        padding: 0 30px;
         margin: 5px 0 0;
         text-align: center;
 
         &.has-content {
-            font-size: 18px;
-            letter-spacing: 1.8px;
+            font-size: 14px;
+            letter-spacing: 1.4px;
+            text-align: left;
         }
     }
 }
@@ -61,6 +63,11 @@
         padding: 0;
         margin: 5px 0 0;
         text-align: left;
+
+        &.has-content {
+            font-size: 18px;
+            letter-spacing: 1.8px;
+        }
 
         &::before {
             content: '- ';

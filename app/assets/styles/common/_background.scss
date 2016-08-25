@@ -2,8 +2,8 @@
     &::before {
         -webkit-transform-origin: 2em 2em 1px;
         transform-origin: 2em 2em 1px;
-        -webkit-transform: scale(1.05) translate(-1.6em, -1.6em);
-        transform: scale(1.05) translate(-1.6em, -1.6em);
+        -webkit-transform: scale(1.15) translate(-1.05em, -1.05em);
+        transform: scale(1.15) translate(-1.05em, -1.05em);
 
         -webkit-animation-fill-mode: forwards;
         -moz-animation-fill-mode: forwards;
@@ -50,7 +50,7 @@
         transform: scale(1) translate(0);
     }
     to {
-        -webkit-transform: scale(1.05) translate(-1.6em, -1.6em);
-        transform: scale(1.05) translate(-1.6em, -1.6em);
+        -webkit-transform: scale(1.15) translate(-1.05em, -1.05em);
+        transform: scale(1.15) translate(-1.05em, -1.05em);
     }
 }
