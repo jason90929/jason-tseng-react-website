@@ -1,18 +1,19 @@
 import React from 'react';
+import MenuStatus from '../containers/MenuStatus';
 import MenuLink from '../containers/MenuLink';
 
-const Aside = ({content}) => {
+const Aside = ({content, menu}) => {
 
     if (content === 'CONTENT') {
         return (
-            <aside className="menu has-content fade-in">
-                <a href="javascript:;" className="toggle">
+            <aside className={'menu has-content fade-in' + (menu ? ' active' : '')}>
+                <MenuStatus filter={true}>
                     <i className="fa fa-list"/>
-                </a>
+                </MenuStatus>
                 <nav className="main-menu">
-                    <a href="javascript:;" className="toggle">
+                    <MenuStatus filter={false}>
                         <i className="fa fa-close"/>
-                    </a>
+                    </MenuStatus>
                     <ul className="bask">
                         <MenuLink filter="HOME">
                             Home

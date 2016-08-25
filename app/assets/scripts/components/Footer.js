@@ -1,8 +1,6 @@
 import React from 'react';
 
 const Footer = ({content}) => {
-    console.log(content);
-
     if (content === 'CONTENT') {
         return (
             <footer className="footer large">

@@ -12,6 +12,7 @@ const getContent = (content) => {
 
 const mapStateToProps = (state) => {
     return {
+        menu: state.menu,
         content: getContent(state.content)
     };
 };

@@ -21,7 +21,8 @@
 
         &.has-content {
             nav.main-menu {
-                display: none;
+                opacity: 0;
+                visibility: hidden;
             }
         }
 
@@ -31,13 +32,15 @@
             nav.main-menu {
                 position: fixed;
                 display: block;
+                opacity: 1;
+                visibility: visible;
                 left: 0;
                 right: 0;
                 top: 0;
                 bottom: 0;
-                width: 100%;
+                width: calc(100% - 30px);
                 height: 100%;
-                background-color: rgba(0, 0, 0, .75);
+                background-color: rgba(40, 40, 40, .875);
                 padding-top: 50%;
                 padding-left: 30px;
             }
@@ -45,6 +48,12 @@
     }
 
     nav.main-menu {
+        -webkit-transition: background-color .275s linear, opacity .275s linear;
+        -moz-transition: background-color .275s linear, opacity .275s linear;
+        -ms-transition: background-color .275s linear, opacity .275s linear;
+        -o-transition: background-color .275s linear, opacity .275s linear;
+        transition: background-color .275s linear, opacity .275s linear;
+
         > ul {
             font-weight: 400;
             margin: 0;
@@ -119,7 +128,9 @@
             bottom: auto;
 
             nav.main-menu {
-                display: block;
+                opacity: 1;
+                visibility: visible;
+                width: 100%;
 
                 > ul {
                     &.bask {
