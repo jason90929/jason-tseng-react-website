@@ -4,9 +4,7 @@
     //height: calc(100vh - #{$header-height} - #{$footer-height});
     width: 100%;
     height: 100%;
-    background-color: #6a9cbc;
     float: right;
-    overflow-y: auto;
     opacity: 1;
     visibility: visible;
 }
@@ -24,7 +22,32 @@ figure {
     }
 }
 
+article {
+    position: relative;
+    z-index: 2;
+    background-color: #ededef;
+    padding: 20px;
+}
+
 .full {
     width: 100%;
     height: 100%;
+}
+
+$bg-width: 1200px;
+.banner {
+    $h: 675px;
+    height: $h;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: $bg-width auto;
+    background-color: #6a9cbc;
+    background-image: url('../images/image-001-1200x675.jpg');
+}
+
+@media screen and (min-width: $bg-width) {
+    .banner {
+        background-size: 100% auto;
+    }
 }
