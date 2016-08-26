@@ -5,8 +5,8 @@ const getContent = (content) => {
     switch (content) {
         case 'HOME':
             return 'HOME';
-        case 'CONTACT':
-            return 'CONTACT';
+        // case 'CONTACT':
+        //     return 'CONTACT';
         default:
             return 'CONTENT';
     }

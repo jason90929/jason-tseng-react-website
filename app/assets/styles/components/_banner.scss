@@ -1,12 +1,10 @@
-$bg-width: 1200px;
 @media screen {
     .banner {
-        $h: 425px;
-        height: $h;
+        height: $banner-mobile-height;
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-position: top center;
-        background-size: $bg-width auto;
+        background-size: $banner-width auto;
         background-color: #6a9cbc;
 
         &._01 {
@@ -21,12 +19,11 @@ $bg-width: 1200px;
 
 @media screen and (min-width: 640px) {
     .banner {
-        $h: 675px;
-        height: $h;
+        height: $banner-pad-height;
     }
 }
 
-@media screen and (min-width: $bg-width) {
+@media screen and (min-width: $banner-width) {
     .banner {
         background-size: 100% auto;
     }
