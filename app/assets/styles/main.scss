@@ -1,6 +1,5 @@
 @import "common/variables";
 @import "common/global";
-@import "common/background";
 
 @import "widgets/header";
 @import "widgets/main";
@@ -8,6 +7,8 @@
 @import "widgets/content";
 @import "widgets/footer";
 
+@import "components/background";
+@import "components/banner";
 @import "components/button";
 @import "components/icon";
 

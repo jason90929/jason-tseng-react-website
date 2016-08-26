@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contact = () => (
     <div>
-        <figure className="banner">
+        <figure className="banner _01">
         </figure>
 
         <div className="bg-theme-color">

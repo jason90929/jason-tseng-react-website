@@ -22,7 +22,7 @@ const Footer = ({content}) => {
                     </a>
                 </div>
 
-                <div className="footer-banner"></div>
+                <div className="banner _02"></div>
             </footer>
         );
     }

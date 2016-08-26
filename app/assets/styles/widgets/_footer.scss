@@ -54,21 +54,3 @@
         }
     }
 }
-
-$bg-width: 1200px;
-.footer-banner {
-    $h: 675px;
-    height: $h;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-size: $bg-width auto;
-    background-color: #6a9cbc;
-    background-image: url('../images/image-002-1920x1080.jpg');
-}
-
-@media screen and (min-width: $bg-width) {
-    .footer-banner {
-        background-size: 100% auto;
-    }
-}
