@@ -1,5 +1,9 @@
 import React from 'react';
 
+/**
+ * @return {boolean}
+ * @return {boolean}
+ */
 const Footer = ({content}) => {
     if (content === 'CONTENT') {
         return (
@@ -29,9 +33,10 @@ const Footer = ({content}) => {
             </footer>
         );
     }
-    // else if (content === 'CONTACT') {
-    //     // do something
-    // }
+    else if (content === 'CONTACT') {
+        // do something
+        return false;
+    }
 
     return (
         <footer className="footer">
