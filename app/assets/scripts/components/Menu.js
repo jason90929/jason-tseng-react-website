@@ -1,13 +1,23 @@
 import React, { PropTypes } from 'react';
 
 const Menu = ({ active, children, onClick }) => {
+    if (active) {
+        return (
+            <li className="active">
+                <a href="javascript:;">
+                    {children}
+                </a>
+            </li>
+        );
+    }
+
     return (
-        <li className={active ? 'active' : ''}>
+        <li>
             <a href="javascript:;"
-                onClick={e => {
-                    e.preventDefault();
-                    onClick();
-                }}
+               onClick={e => {
+                   e.preventDefault();
+                   onClick();
+               }}
             >
                 {children}
             </a>

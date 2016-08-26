@@ -23,6 +23,14 @@
             nav.main-menu {
                 opacity: 0;
                 visibility: hidden;
+
+                > ul {
+                    > li {
+                        -webkit-animation: none;
+                        -o-animation: none;
+                        animation: none;
+                    }
+                }
             }
         }
 
@@ -69,6 +77,14 @@
                 margin-bottom: 21px;
                 color: $white;
                 font-size: 14px;
+
+                @for $i from 1 through 5 {
+                    &:nth-child(#{$i}) {
+                        -webkit-animation: main-menu-in 2.2s + $i * .5 ease-out;
+                        -o-animation: main-menu-in 2.2s + $i * .5 ease-out;
+                        animation: main-menu-in 2.2s + $i * .5 ease-out;
+                    }
+                }
 
                 > a {
                     position: relative;
@@ -173,5 +189,35 @@
                 padding-left: 0;
             }
         }
+    }
+}
+
+$tx: 30px;
+@keyframes main-menu-in {
+    0% {
+        display: none;
+        opacity: 0;
+        -webkit-transform: translateX($tx);
+        -moz-transform: translateX($tx);
+        -ms-transform: translateX($tx);
+        -o-transform: translateX($tx);
+        transform: translateX($tx);
+    }
+    80% {
+        display: block;
+        opacity: 0;
+        -webkit-transform: translateX($tx);
+        -moz-transform: translateX($tx);
+        -ms-transform: translateX($tx);
+        -o-transform: translateX($tx);
+        transform: translateX($tx);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
     }
 }
