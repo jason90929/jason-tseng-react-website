@@ -1,9 +1,9 @@
 .bg-animation {
     &::before {
-        -webkit-transform-origin: 2em 2em 1px;
-        transform-origin: 2em 2em 1px;
-        -webkit-transform: scale(1.15) translate(-1.05em, -1.05em);
-        transform: scale(1.15) translate(-1.05em, -1.05em);
+        -webkit-transform-origin: 2.1em 2.1em 1px;
+        transform-origin: 2.1em 2.1em 1px;
+        -webkit-transform: scale(1.1) translate(-1.05em, -1.05em);
+        transform: scale(1.1) translate(-1.05em, -1.05em);
 
         -webkit-animation-fill-mode: forwards;
         -moz-animation-fill-mode: forwards;
@@ -33,7 +33,7 @@
 
     &._01 {
         &::before {
-            background-image: url('../images/image-002-1920x1080.jpg');
+            background-image: url('../images/bg-main.jpg');
         }
     }
 
@@ -50,7 +50,7 @@
         transform: scale(1) translate(0);
     }
     to {
-        -webkit-transform: scale(1.15) translate(-1.05em, -1.05em);
-        transform: scale(1.15) translate(-1.05em, -1.05em);
+        -webkit-transform: scale(1.1) translate(-1.05em, -1.05em);
+        transform: scale(1.1) translate(-1.05em, -1.05em);
     }
 }

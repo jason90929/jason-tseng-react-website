@@ -51,9 +51,9 @@
 
                 @for $i from 1 through 5 {
                     &:nth-of-type(#{$i}) {
-                        -webkit-animation: footer-icon-in 4.8s + $i * .275 ease-in;
-                        -o-animation: footer-icon-in 4.8s + $i * .275 ease-in;
-                        animation: footer-icon-in 4.8s + $i * .275 ease-in;
+                        -webkit-animation: footer-icon-in 5.1s + $i * .2 ease-in;
+                        -o-animation: footer-icon-in 5.1s + $i * .2 ease-in;
+                        animation: footer-icon-in 5.1s + $i * .2 ease-in;
                     }
                 }
 
