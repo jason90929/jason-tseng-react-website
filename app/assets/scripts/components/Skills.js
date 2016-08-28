@@ -6,7 +6,6 @@ const Skills = () => (
         </figure>
 
         <div className="bg-theme-color">
-            <div className="bg-theme-color-2 _sub-bg-pos"></div>
             <article className="article">
                 <h2>Skills</h2>
 
