@@ -14,7 +14,7 @@ const About = () => (
                 </figure>
 
                 <p>
-                    Hello, I'm Jason Tseng. I have 2 years of experience in Front End Developer based in Taipei, Taiwan. <br />
+                    Hello, I'm <b>Jason Tseng</b>. I have 2 years of experience in Front End Developer based in Taipei, Taiwan. <br />
 
                 </p>
 

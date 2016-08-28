@@ -44,10 +44,9 @@ article {
     margin: 0 auto;
     z-index: 2;
     //background-color: $bg-main;
-
     background-image:
-            linear-gradient(175deg, $bg-main 30%, transparent 0),
-            linear-gradient(175deg, $bg-main-2 70%, transparent 0),
+            linear-gradient(175deg, $bg-main 600px, transparent 0),
+            linear-gradient(175deg, $bg-main-2 1200px, transparent 0),
             linear-gradient(175deg, $bg-main 100%, transparent 0);
 }
 
