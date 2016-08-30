@@ -2,10 +2,11 @@
 
 ### 環境架設
 
-##### 請先確認自己的 cmd 或 terminal 具有 npm，gulp 指令才能繼續以下步驟：
+##### 請先確認自己的 cmd 或 terminal 具有 npm，bower，gulp 指令才能繼續以下步驟：
 
 ```
 npm install
+bower install
 ```
 
 ##### 安裝完畢後，gulp 我自訂了兩樣指令

@@ -45,7 +45,10 @@ gulp.task('browserify', () => {
     })
         .transform(babelify, {presets: ['es2015', 'react']}) // We want to convert JSX to normal javascript
         .bundle()
-        .on('error', function(err) { console.error(err); this.emit('end'); })
+        .on('error', function (err) {
+            console.error(err);
+            this.emit('end');
+        })
         .pipe(source('main.js'))
         .pipe(buffer()) // js 壓縮前置準備
         // .pipe(uglify()) // 壓縮 js
@@ -56,7 +59,7 @@ gulp.task('browserify', () => {
 
 // 壓縮 react 檔案的前置作業
 // loose-envify 必備
-gulp.task('apply-prod-environment', function() {
+gulp.task('apply-prod-environment', function () {
     process.env.NODE_ENV = 'production';
 });
 
@@ -71,17 +74,16 @@ gulp.task('scss', () => {
             includePaths: ['.']
         }).on('error', $.sass.logError))
         .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
-        .pipe($.sourcemaps.write())
-        // .pipe(minifyCSS({
-        //     keepBreaks: false
-        // }))
+        .pipe($.sourcemaps.write()) // 若有 import node_modules 內的 css，在 minifyCSS 時此行要註解
+        // .pipe(minifyCSS({keepBreaks: false}))
         .pipe(gulp.dest('./dist/assets/styles/'))
         .pipe(reload({stream: true}));
 });
 
 // 監聽字型
 gulp.task('fonts', () => {
-    return gulp.src(mainBowerFiles('app/assets/fonts/*.{eot,svg,ttf,woff,woff2}', function (err) {})
+    return gulp.src(mainBowerFiles('app/assets/fonts/*.{eot,svg,ttf,woff,woff2}', function (err) {
+    })
         .concat([
             'app/assets/fonts/**/*', // My custom fonts
             'node_modules/font-awesome/fonts/*' // Font Awesome
@@ -109,9 +111,10 @@ gulp.task('images', () => {
 
 // 監聽網頁
 gulp.task('html', () => {
-    return gulp.src(mainBowerFiles('app/*.html', function (err) {})
+    return gulp.src(mainBowerFiles('app/*.html', function (err) {
+    })
         .concat('app/*'))
-        // .pipe(htmlmin({collapseWhitespace: true}))
+    // .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(bom()) // 解決中文亂碼
         .pipe(gulp.dest('dist'))
         .pipe(reload({stream: true}));
@@ -119,13 +122,14 @@ gulp.task('html', () => {
 
 // 清除所有輸出靜態頁面內容
 gulp.task('clean', () => {
-    return gulp.src('./dist', { read: false })
+    return gulp.src('./dist', {read: false})
         .pipe(rimraf());
 });
 
 // 打包所有頁面
 gulp.task('build', gulpsync.sync([
-    'clean', ['apply-prod-environment', 'browserify', 'scss', 'fonts', 'images', 'html']
+    'clean',
+    ['apply-prod-environment', 'browserify', 'scss', 'fonts', 'images', 'html']
 ]));
 
 // 啟動打包、伺服器後監聽
