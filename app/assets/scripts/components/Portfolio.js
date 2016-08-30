@@ -10,32 +10,51 @@ const Portfolio = () => (
             <article className="article">
                 <h2>Portfolio</h2>
 
-                <Card shadow={0} style={{width: '256px', height: '256px', background: 'url(http://www.getmdl.io/assets/demos/image_card.jpg) center / cover', margin: 'auto'}}>
-                    <CardTitle expand />
-                    <CardActions style={{height: '52px', padding: '16px', background: 'rgba(0,0,0,0.2)'}}>
-        <span style={{color: '#fff', fontSize: '14px', fontWeight: '500'}}>
-            Image.jpg
-        </span>
-                    </CardActions>
-                </Card>
+                <div className="card-wrapper">
+                    <Card shadow={0}>
+                        <a href="javascript:;">
+                            <img src="assets/images/portfolio/gopapala.png" alt="Gopapala" />
+                            <CardActions>
+                                <span className="card-intro">
+                                    Gopapala
+                                </span>
+                            </CardActions>
+                        </a>
+                    </Card>
 
-                <Card shadow={0} style={{width: '256px', height: '256px', background: 'url(http://www.getmdl.io/assets/demos/image_card.jpg) center / cover', margin: 'auto'}}>
-                    <CardTitle expand />
-                    <CardActions style={{height: '52px', padding: '16px', background: 'rgba(0,0,0,0.2)'}}>
-        <span style={{color: '#fff', fontSize: '14px', fontWeight: '500'}}>
-            Image.jpg
-        </span>
-                    </CardActions>
-                </Card>
+                    <Card shadow={0}>
+                        <a href="javascript:;">
+                            <img src="assets/images/portfolio/ctop.png" alt="ctop" />
+                            <CardActions>
+                                <span className="card-intro">
+                                    ctop
+                                </span>
+                            </CardActions>
+                        </a>
+                    </Card>
 
-                <Card shadow={0} style={{width: '256px', height: '256px', background: 'url(http://www.getmdl.io/assets/demos/image_card.jpg) center / cover', margin: 'auto'}}>
-                    <CardTitle expand />
-                    <CardActions style={{height: '52px', padding: '16px', background: 'rgba(0,0,0,0.2)'}}>
-        <span style={{color: '#fff', fontSize: '14px', fontWeight: '500'}}>
-            Image.jpg
-        </span>
-                    </CardActions>
-                </Card>
+                    <Card shadow={0}>
+                        <a href="javascript:;">
+                            <img src="assets/images/portfolio/girlfie.png" alt="Girlfie." />
+                            <CardActions>
+                                <span className="card-intro">
+                                    Girlfie.
+                                </span>
+                            </CardActions>
+                        </a>
+                    </Card>
+
+                    <Card shadow={0}>
+                        <a href="javascript:;">
+                            <img src="assets/images/portfolio/delta-irs-system.png" alt="Delta IRS System" />
+                            <CardActions>
+                                <span className="card-intro">
+                                    Delta IRS System
+                                </span>
+                            </CardActions>
+                        </a>
+                    </Card>
+                </div>
             </article>
         </div>
     </div>
