@@ -8,13 +8,13 @@ const Header = ({content}) => {
     }
 
     return (
-        <header className="header bask">
-            <h1 className={'main-title' + headerClassName}>
+        <header className="header">
+            <h1 className={'main-title bask' + headerClassName}>
                 Jason Tseng
             </h1>
-            <h2 className={'sub-title' + headerClassName}>
+            <p className={'sub-title bask' + headerClassName}>
                 Front End Developer
-            </h2>
+            </p>
         </header>
     );
 };

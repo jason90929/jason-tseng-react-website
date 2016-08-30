@@ -77,6 +77,7 @@
                 margin-bottom: 21px;
                 color: $white;
                 font-size: 14px;
+                letter-spacing: 3.2px;
 
                 @for $i from 1 through 5 {
                     &:nth-child(#{$i}) {

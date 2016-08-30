@@ -32,11 +32,11 @@
                     border-bottom: 1px solid #ccc;
 
                     > a {
-                        display: inline-block;
+                        display: block;
                         color: $dark;
                         font-size: 15px;
                         line-height: 20px;
-                        padding: 14px 0;
+                        //padding: 14px 0;
 
                         -webkit-transition: color .3s linear;
                         -moz-transition: color .3s linear;
@@ -67,7 +67,6 @@
 
     .bask {
         font-family: 'Libre Baskerville';
-        letter-spacing: 3.2px;
     }
 
     .avatar {
@@ -116,7 +115,7 @@
                     }
 
                     > a {
-                        padding: 14px 10px;
+                        //padding: 14px 10px;
 
                         &::after {
                             content: '';
