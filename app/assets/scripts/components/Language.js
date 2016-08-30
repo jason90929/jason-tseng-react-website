@@ -5,9 +5,9 @@ import LanguageLink from '../containers/LanguageLink';
  * @return {string}
  */
 const Language = ({content, language}) => {
-    if (content === 'HOME') {
-        return false;
-    }
+    // if (content === 'HOME') {
+    //     return false;
+    // }
 
     return (
         <div className="language-wrapper">

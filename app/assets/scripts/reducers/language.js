@@ -1,4 +1,4 @@
-const language = (state = 'TW', action) => {
+const language = (state = 'EN', action) => {
     switch (action.type) {
         case 'SET_LANGUAGE':
             return action.language;

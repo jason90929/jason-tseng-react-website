@@ -1,4 +1,4 @@
-const contentFilter = (state = 'HOME', action) => {
+const content = (state = 'HOME', action) => {
     switch (action.type) {
         case 'SET_CONTENT':
             return action.content;
@@ -7,4 +7,4 @@ const contentFilter = (state = 'HOME', action) => {
     }
 };
 
-export default contentFilter;
+export default content;

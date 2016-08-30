@@ -57,6 +57,8 @@ const Aside = ({content, menu}) => {
                     </MenuLink>
                 </ul>
             </nav>
+
+            <LanguageStatus />
         </aside>
     );
 };

@@ -1,16 +1,16 @@
 import React, { PropTypes } from 'react';
-import $ from 'jquery'
+// import $ from 'jquery'
+// if (language === 'TW') {
+//     $.ajax({
+//         method: 'GET',
+//         url: 'assets/models/portfolio.json',
+//         success: function (data) {
+//             console.log(data);
+//         }
+//     });
+// }
 
 const About = ({language}) => {
-    if (language === 'TW') {
-        $.ajax({
-            method: 'GET',
-            url: 'assets/models/example.json',
-            success: function (data) {
-                console.log(data);
-            }
-        });
-    }
 
     return (
         <div>

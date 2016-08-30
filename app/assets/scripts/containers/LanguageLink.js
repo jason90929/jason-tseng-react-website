@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { setLanguage } from '../actions';
+import { setLanguage, getData } from '../actions';
 import LanguageButton from '../components/LanguageButton';
 
 const mapStateToProps = (state, ownProps) => {
@@ -12,6 +12,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         onClick: () => {
             dispatch(setLanguage(ownProps.filter));
+            dispatch(getData(ownProps.filter));
         }
     };
 };
