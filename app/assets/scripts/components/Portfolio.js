@@ -16,7 +16,7 @@ const Portfolio = () => (
                             <img src="assets/images/portfolio/gopapala.png" alt="Gopapala" />
                             <CardActions>
                                 <span className="card-intro">
-                                    Gopapala
+                                    Gopapala (Private)
                                 </span>
                             </CardActions>
                         </a>
@@ -27,14 +27,14 @@ const Portfolio = () => (
                             <img src="assets/images/portfolio/ctop.png" alt="ctop" />
                             <CardActions>
                                 <span className="card-intro">
-                                    ctop
+                                    ctop (Private)
                                 </span>
                             </CardActions>
                         </a>
                     </Card>
 
                     <Card shadow={0}>
-                        <a href="javascript:;">
+                        <a href="http://girlfie.com.tw" target="_blank">
                             <img src="assets/images/portfolio/girlfie.png" alt="Girlfie." />
                             <CardActions>
                                 <span className="card-intro">
@@ -49,7 +49,73 @@ const Portfolio = () => (
                             <img src="assets/images/portfolio/delta-irs-system.png" alt="Delta IRS System" />
                             <CardActions>
                                 <span className="card-intro">
-                                    Delta IRS System
+                                    Delta IRS System (Private)
+                                </span>
+                            </CardActions>
+                        </a>
+                    </Card>
+
+                    <Card shadow={0}>
+                        <a href="javascript:;">
+                            <img src="assets/images/portfolio/my-wedding.png" alt="My Wedding" />
+                            <CardActions>
+                                <span className="card-intro">
+                                    My Wedding (Private)
+                                </span>
+                            </CardActions>
+                        </a>
+                    </Card>
+
+                    <Card shadow={0}>
+                        <a href="http://www.lotustourstpe.tw/">
+                            <img src="assets/images/portfolio/lotustourstpe.png" alt="Lotus Tours Taipei" />
+                            <CardActions>
+                                <span className="card-intro">
+                                    Lotus Tours Taipei
+                                </span>
+                            </CardActions>
+                        </a>
+                    </Card>
+
+                    <Card shadow={0}>
+                        <a href="http://urstage.net">
+                            <img src="assets/images/portfolio/urstage.png" alt="URstage" />
+                            <CardActions>
+                                <span className="card-intro">
+                                    URstage
+                                </span>
+                            </CardActions>
+                        </a>
+                    </Card>
+
+                    <Card shadow={0}>
+                        <a href="http://203.72.56.75:8088/">
+                            <img src="assets/images/portfolio/hua-chiang-high-school.png" alt="Hua Chiang High School Book System" />
+                            <CardActions>
+                                <span className="card-intro">
+                                    Hua Chiang High School Book System
+                                </span>
+                            </CardActions>
+                        </a>
+                    </Card>
+
+                    <Card shadow={0}>
+                        <a href="https://play.google.com/store/apps/details?id=com.wethink.itaiwan.hotel&hl=zh_TW">
+                            <img src="assets/images/portfolio/itaiwanhotel.png" alt="iTaiwan Hotel APP" />
+                            <CardActions>
+                                <span className="card-intro">
+                                    iTaiwan Hotel APP
+                                </span>
+                            </CardActions>
+                        </a>
+                    </Card>
+
+                    <Card shadow={0}>
+                        <a href="http://www.wethink.com.tw/">
+                            <img src="assets/images/portfolio/wethink.png" alt="WeThink Software" />
+                            <CardActions>
+                                <span className="card-intro">
+                                    WeThink Software
                                 </span>
                             </CardActions>
                         </a>

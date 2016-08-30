@@ -5,6 +5,16 @@ html, body {
     padding: 0;
     margin: 0;
     background-color: $bg-main;
+
+    $yellow: #ffdd7a;
+    ::-moz-selection {
+        background: $yellow;
+        color: $black;
+    }
+    ::selection {
+        background: $yellow;
+        color: $black;
+    }
 }
 
 a {
@@ -90,5 +100,27 @@ article {
     }
     100% {
         opacity: 0;
+    }
+}
+
+@mixin scroll-no-show() {
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        display: none;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-button {
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-corner {
+        background-color: transparent;
     }
 }

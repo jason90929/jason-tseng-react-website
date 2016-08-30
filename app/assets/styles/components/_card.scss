@@ -33,6 +33,12 @@
             left: 6px;
             bottom: 6px;
             background-color: rgba(0, 0, 0, .45);
+
+            white-space: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+
+            @include scroll-no-show();
         }
 
         .card-intro {
