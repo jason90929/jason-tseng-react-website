@@ -1,15 +1,15 @@
 import React from 'react';
 
-import AddTodo from '../containers/AddTodo';
-import VisibleTodoList from '../containers/VisibleTodoList';
-import TodoFilter from './TodoFilter';
+// import AddTodo from '../containers/AddTodo';
+// import VisibleTodoList from '../containers/VisibleTodoList';
+// import TodoFilter from './TodoFilter';
 import Home from './Home';
 import About from './About';
 import Skills from './Skills';
 import Portfolio from './Portfolio';
 import Contact from './Contact';
 
-const getContent = (content) => {
+const getContent = (content, language) => {
     switch (content) {
         case 'HOME':
             return (
@@ -17,7 +17,7 @@ const getContent = (content) => {
             );
         case 'ABOUT':
             return (
-                <About />
+                <About language={language} />
             );
         case 'SKILLS':
             return (
@@ -34,10 +34,10 @@ const getContent = (content) => {
     }
 };
 
-const Content = ({ content, animation }) => {
+const Content = ({ content, animation, language }) => {
     return (
         <section className={'content' + (animation ? ' fade-out' : ' fade-in')}>
-            {getContent(content)}
+            {getContent(content, language)}
         </section>
     );
 };

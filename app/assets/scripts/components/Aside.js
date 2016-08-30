@@ -1,9 +1,9 @@
 import React from 'react';
 import MenuStatus from '../containers/MenuStatus';
 import MenuLink from '../containers/MenuLink';
+import LanguageStatus from '../containers/LanguageStatus';
 
 const Aside = ({content, menu}) => {
-
     if (content === 'CONTENT') {
         return (
             <aside className={'menu has-content fade-in' + (menu ? ' active' : '')}>

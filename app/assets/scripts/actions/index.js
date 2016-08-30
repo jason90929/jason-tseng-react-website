@@ -49,6 +49,13 @@ export const setContent = (content) => {
     }
 };
 
+export const setLanguage = (language) => {
+    return {
+        type: 'SET_LANGUAGE',
+        language
+    }
+};
+
 export const getRole = (user) => {
     return {
         type: 'GET_ROLE',

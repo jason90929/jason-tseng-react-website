@@ -4,13 +4,15 @@ import visibilityFilter from './visibilityFilter';
 import menu from './menu';
 import content from './content';
 import animation from './animation';
+import language from './language';
 
 const todoApp = combineReducers({
     todos,
     visibilityFilter,
     menu,
     content,
-    animation
+    animation,
+    language
 });
 
 export default todoApp;

@@ -4,6 +4,7 @@ import Content from '../components/Content';
 const mapStateToProps = (state) => {
     return {
         content: state.content,
+        language: state.language,
         animation: state.animation
     }
 };

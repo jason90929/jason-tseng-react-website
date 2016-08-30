@@ -17,11 +17,12 @@ const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
 // 監聽所有項目
-gulp.task('watch', ['browserify', 'scss', 'fonts', 'images', 'html'], () => {
+gulp.task('watch', ['browserify', 'scss', 'fonts', 'images', 'models', 'html'], () => {
     gulp.watch('app/assets/scripts/**', ['browserify']);
     gulp.watch('app/assets/styles/**', ['scss']);
     gulp.watch('app/assets/fonts/**', ['fonts']);
     gulp.watch('app/assets/images/**', ['images']);
+    gulp.watch('app/assets/models/**', ['models']);
     gulp.watch('app/*.html', ['html']);
 });
 
@@ -80,6 +81,13 @@ gulp.task('scss', () => {
         .pipe(reload({stream: true}));
 });
 
+// 監聽 Models
+gulp.task('models', () => {
+    return gulp.src('app/assets/models/*')
+        .pipe(gulp.dest('./dist/assets/models/'))
+        .pipe(reload({stream: true}));
+});
+
 // 監聽字型
 gulp.task('fonts', () => {
     return gulp.src(mainBowerFiles('app/assets/fonts/*.{eot,svg,ttf,woff,woff2}', function (err) {
@@ -129,7 +137,7 @@ gulp.task('clean', () => {
 // 打包所有頁面
 gulp.task('build', gulpsync.sync([
     'clean',
-    ['apply-prod-environment', 'browserify', 'scss', 'fonts', 'images', 'html']
+    ['apply-prod-environment', 'browserify', 'scss', 'fonts', 'images', 'models', 'html']
 ]));
 
 // 啟動打包、伺服器後監聽

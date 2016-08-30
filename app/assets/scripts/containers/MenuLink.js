@@ -4,7 +4,7 @@ import Menu from '../components/Menu';
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        active: ownProps.filter === state.content
+        active: ownProps.filter === state.language
     };
 };
 
