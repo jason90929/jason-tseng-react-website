@@ -45,6 +45,15 @@ const About = () => (
                     Hi
                 </p>
 
+                <h3>
+                    Other
+                </h3>
+
+                <p>
+                    <a href="old/">Old website </a>
+                    Made with Angular 1.x
+                </p>
+
                 <br className="clear" />
             </article>
         </div>
