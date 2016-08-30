@@ -30,7 +30,7 @@ const About = () => (
                         Able to complete Responsive Web Design independently
                     </li>
                     <li>
-                        Have experience with using framework like AngularJS 1.x, ReactJS
+                        Have experience with using framework like AngularJS 1.x, React
                     </li>
                     <li>
                         Know how to use gulp, browserify, scss, npm development environment, it makes me completing jobs faster

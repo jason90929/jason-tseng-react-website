@@ -50,7 +50,7 @@ const Skills = () => (
                         jQuery
                     </li>
                     <li>
-                        ReactJS, Redux
+                        React, Redux
                     </li>
                     <li>
                         AngularJS 1.x
