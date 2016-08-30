@@ -188,6 +188,11 @@
                 background-color: transparent;
                 padding-top: 0;
                 padding-left: 0;
+
+                ul {
+                    position: relative;
+                    top: auto;
+                }
             }
         }
     }

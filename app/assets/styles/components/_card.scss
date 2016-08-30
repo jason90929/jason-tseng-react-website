@@ -19,6 +19,7 @@
         }
 
         .mdl-card {
+            display: block;
             position: relative;
             margin: 0 auto 16px;
             width: 100%;
@@ -37,6 +38,7 @@
             white-space: nowrap;
             overflow-x: auto;
             overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
 
             @include scroll-no-show();
         }

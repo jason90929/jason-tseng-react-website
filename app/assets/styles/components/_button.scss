@@ -14,6 +14,7 @@
     color: #3c3940;
     white-space: nowrap;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 
     .mdl-ripple {
         background: rgba(30, 30, 30, 0.75);

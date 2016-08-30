@@ -37,7 +37,7 @@ const Skills = () => (
                         Know how to deal with Responsive Web Design professional skills
                     </li>
                     <li>
-
+                        Use SCSS to replace CSS
                     </li>
                 </ol>
 

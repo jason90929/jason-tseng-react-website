@@ -67,7 +67,7 @@ const Portfolio = () => (
                     </Card>
 
                     <Card shadow={0}>
-                        <a href="http://www.lotustourstpe.tw/">
+                        <a href="http://www.lotustourstpe.tw/" target="_blank">
                             <img src="assets/images/portfolio/lotustourstpe.png" alt="Lotus Tours Taipei" />
                             <CardActions>
                                 <span className="card-intro">
@@ -78,7 +78,7 @@ const Portfolio = () => (
                     </Card>
 
                     <Card shadow={0}>
-                        <a href="http://urstage.net">
+                        <a href="http://urstage.net" target="_blank">
                             <img src="assets/images/portfolio/urstage.png" alt="URstage" />
                             <CardActions>
                                 <span className="card-intro">
@@ -89,7 +89,7 @@ const Portfolio = () => (
                     </Card>
 
                     <Card shadow={0}>
-                        <a href="http://203.72.56.75:8088/">
+                        <a href="http://203.72.56.75:8088/" target="_blank">
                             <img src="assets/images/portfolio/hua-chiang-high-school.png" alt="Hua Chiang High School Book System" />
                             <CardActions>
                                 <span className="card-intro">
@@ -100,7 +100,7 @@ const Portfolio = () => (
                     </Card>
 
                     <Card shadow={0}>
-                        <a href="https://play.google.com/store/apps/details?id=com.wethink.itaiwan.hotel&hl=zh_TW">
+                        <a href="https://play.google.com/store/apps/details?id=com.wethink.itaiwan.hotel&hl=zh_TW" target="_blank">
                             <img src="assets/images/portfolio/itaiwanhotel.png" alt="iTaiwan Hotel APP" />
                             <CardActions>
                                 <span className="card-intro">
@@ -111,7 +111,7 @@ const Portfolio = () => (
                     </Card>
 
                     <Card shadow={0}>
-                        <a href="http://www.wethink.com.tw/">
+                        <a href="http://www.wethink.com.tw/" target="_blank">
                             <img src="assets/images/portfolio/wethink.png" alt="WeThink Software" />
                             <CardActions>
                                 <span className="card-intro">

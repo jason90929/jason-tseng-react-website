@@ -14,6 +14,10 @@ const Menu = ({ active, children, onClick }) => {
     return (
         <li>
             <a href="javascript:;"
+               onTouchEnd={e => {
+                   e.preventDefault();
+                   onClick();
+               }}
                onClick={e => {
                    e.preventDefault();
                    onClick();
