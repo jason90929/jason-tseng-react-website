@@ -5,6 +5,8 @@ import AsideStatus from '../containers/AsideStatus';
 import Main from './Main';
 import FooterStatus from '../containers/FooterStatus';
 
+import 'react-mdl/extra/material.js';
+
 const App = () => (
     <div>
         <_HeaderDecoration />

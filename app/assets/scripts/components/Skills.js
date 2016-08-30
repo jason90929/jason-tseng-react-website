@@ -18,7 +18,7 @@ const Skills = () => (
                         Have SEO Experience
                     </li>
                     <li>
-                        Have knowledge of og meta as Facebook, Google
+                        Have knowledge of og meta like Facebook, Google
                     </li>
                     <li>
                         Know how to have a better performance

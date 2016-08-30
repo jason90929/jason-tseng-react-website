@@ -48,6 +48,10 @@
                             color: #5a5a5a;
                         }
 
+                        .mdl-button {
+                            padding: 0;
+                        }
+
                         i {
                             font-size: 18px;
                             width: 20px;
@@ -120,6 +124,10 @@
                         &::after {
                             content: '';
                             clear: both;
+                        }
+
+                        .mdl-button {
+                            padding: 0 16px;
                         }
 
                         i {

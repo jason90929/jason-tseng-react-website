@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { Button } from 'react-mdl';
-import 'react-mdl/extra/material.js';
 
 const Contact = () => {
     return (

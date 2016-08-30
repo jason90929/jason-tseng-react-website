@@ -15,7 +15,6 @@ const About = () => (
 
                 <p>
                     Hello, I'm <b>Jason Tseng</b>. I have 2 years of experience in Front End Developer based in Taipei, Taiwan. <br />
-
                 </p>
 
                 <h3>Summary</h3>
@@ -25,16 +24,16 @@ const About = () => (
                         More than 2 years experience with HTML5, CSS3 and JavaScript
                     </li>
                     <li>
-                        Have experience with RESTful API, contains Facebook API
+                        Have experience with RESTful API, such as Facebook, Google
                     </li>
                     <li>
                         Able to complete Responsive Web Design independently
                     </li>
                     <li>
-                        Have experience with using AngularJS 1.x, ReactJS framework
+                        Have experience with using framework like AngularJS 1.x, ReactJS
                     </li>
                     <li>
-                        Know how to use gulp, browserify, scss, npm to speed up my develope schedule.
+                        Know how to use gulp, browserify, scss, npm development environment, it makes me completing jobs faster
                     </li>
                 </ol>
 
@@ -46,6 +45,7 @@ const About = () => (
                     Hi
                 </p>
 
+                <br className="clear" />
             </article>
         </div>
     </div>

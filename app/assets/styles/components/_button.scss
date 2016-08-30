@@ -9,4 +9,33 @@
     text-align: left;
     text-transform: none;
     height: 50px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #3c3940;
+    white-space: nowrap;
+    overflow-x: auto;
+
+    .mdl-ripple {
+        background: rgba(30, 30, 30, 0.75);
+    }
+}
+
+.mdl-icon-custom {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    color: $white;
+    padding: 0;
+    min-width: 36px;
+    font-size: 20px;
+
+    .mdl-ripple {
+        background: rgba(210, 210, 210, 0.75);
+    }
+
+    .mdl-button__ripple-container {
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+    }
 }
