@@ -6,14 +6,11 @@ html, body {
     margin: 0;
     background-color: $bg-main;
 
-    $yellow: #ffdd7a;
     ::-moz-selection {
-        background: $yellow;
-        color: $black;
+        background: #efefef;
     }
     ::selection {
-        background: $yellow;
-        color: $black;
+        background: #efefef;
     }
 }
 

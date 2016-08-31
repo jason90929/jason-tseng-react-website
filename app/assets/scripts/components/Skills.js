@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 
-const Skills = () => (
+const Skills = ({data}) => (
     <div>
         <figure className="banner _01">
         </figure>
@@ -60,5 +60,9 @@ const Skills = () => (
         </div>
     </div>
 );
+
+Skills.propTypes = {
+    data: PropTypes.object.isRequired
+};
 
 export default Skills;

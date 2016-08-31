@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => {
     return (
-        <figure className="fixed full bg _01 bg-animation">
+        <figure className="pof full bg _01 bg-animation">
         </figure>
     );
 };

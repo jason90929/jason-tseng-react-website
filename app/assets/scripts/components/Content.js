@@ -9,7 +9,7 @@ import Skills from './Skills';
 import Portfolio from './Portfolio';
 import Contact from './Contact';
 
-const getContent = (content, language) => {
+const getContent = (content, data) => {
     switch (content) {
         case 'HOME':
             return (
@@ -17,27 +17,27 @@ const getContent = (content, language) => {
             );
         case 'ABOUT':
             return (
-                <About language={language} />
+                <About data={data.about} />
             );
         case 'SKILLS':
             return (
-                <Skills />
+                <Skills data={data.skills} />
             );
         case 'PORTFOLIO':
             return (
-                <Portfolio />
+                <Portfolio data={data.portfolio} />
             );
         case 'CONTACT':
             return (
-                <Contact />
+                <Contact data={data.contact} />
             );
     }
 };
 
-const Content = ({ content, animation, language }) => {
+const Content = ({ content, animation, data }) => {
     return (
         <section className={'content' + (animation ? ' fade-out' : ' fade-in')}>
-            {getContent(content, language)}
+            {getContent(content, data)}
         </section>
     );
 };
