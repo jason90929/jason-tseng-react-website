@@ -1,3 +1,4 @@
+// Todo:
 function getTwData() {
     return {
         portfolio: 'TW'
@@ -11,7 +12,6 @@ function getEnData() {
 }
 
 const data = (state = getEnData(), action) => {
-    console.log(action);
     switch (action.type) {
         case 'GET_DATA':
             if (action.language === 'TW') {

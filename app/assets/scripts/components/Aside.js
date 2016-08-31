@@ -1,7 +1,7 @@
 import React from 'react';
 import MenuStatus from '../containers/MenuStatus';
 import MenuLink from '../containers/MenuLink';
-import LanguageStatus from '../containers/LanguageStatus';
+// import LanguageStatus from '../containers/LanguageStatus';
 
 const Aside = ({content, menu}) => {
     if (content === 'CONTENT') {
@@ -58,7 +58,7 @@ const Aside = ({content, menu}) => {
                 </ul>
             </nav>
 
-            <LanguageStatus />
+            {/*<LanguageStatus />*/}
         </aside>
     );
 };
