@@ -10,15 +10,43 @@ const About = ({data}) => (
                 <h2>About</h2>
 
                 <figure className="avatar">
-                    <img src="assets/images/avatar.jpg" alt="Jason Tseng Avatar" />
+                    <img src={data.avatar.src} alt={data.avatar.alt} />
                 </figure>
 
-                <p>
-                    Hello, I'm <b>Jason Tseng</b>. I have 2 years of experience in Front End Developer based in
-                    Taipei, Taiwan. <br />
+
+                <p dangerouslySetInnerHTML={{__html: data.intro}}>
+
                 </p>
 
-                <h3>Summary</h3>
+                {data.details.map(item =>
+                    <div>
+                        <h3>
+                            {item.title}
+                        </h3>
+
+                        { item.intro ?
+                            <p dangerouslySetInnerHTML={{__html: item.intro}}>
+
+                            </p>
+                            :
+                            false
+                        }
+
+                        { item.items ?
+                            <ol>
+                                {item.items.map(text =>
+                                    <li>
+                                        {text}
+                                    </li>
+                                )}
+                            </ol>
+                            :
+                            false
+                        }
+                    </div>
+                )}
+
+                {/*<h3>Summary</h3>
 
                 <ol>
                     <li>
@@ -54,7 +82,7 @@ const About = ({data}) => (
                 <p>
                     <a href="old/">Old website </a>
                     Made with Angular 1.x
-                </p>
+                </p>*/}
 
                 <br className="clear"/>
             </article>

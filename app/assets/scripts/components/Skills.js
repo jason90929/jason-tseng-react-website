@@ -9,53 +9,20 @@ const Skills = ({data}) => (
             <article className="article">
                 <h2>Skills</h2>
 
-                <h3>
-                    HTML5
-                </h3>
-
-                <ol>
-                    <li>
-                        Have SEO Experience
-                    </li>
-                    <li>
-                        Have knowledge of og meta like Facebook, Google
-                    </li>
-                    <li>
-                        Know how to have a better performance
-                    </li>
-                </ol>
-
-                <h3>
-                    CSS3
-                </h3>
-
-                <ol>
-                    <li>
-                        Know how to use ::after, ::before
-                    </li>
-                    <li>
-                        Know how to deal with Responsive Web Design professional skills
-                    </li>
-                    <li>
-                        Use SCSS to replace CSS
-                    </li>
-                </ol>
-
-                <h3>
-                    JavaScript
-                </h3>
-
-                <ol>
-                    <li>
-                        jQuery
-                    </li>
-                    <li>
-                        React, Redux
-                    </li>
-                    <li>
-                        AngularJS 1.x
-                    </li>
-                </ol>
+                {data.details.map(item =>
+                    <div>
+                        <h3>
+                            {item.title}
+                        </h3>
+                        <ol>
+                            {item.items.map(text =>
+                                <li>
+                                    {text}
+                                </li>
+                            )}
+                        </ol>
+                    </div>
+                )}
             </article>
         </div>
     </div>

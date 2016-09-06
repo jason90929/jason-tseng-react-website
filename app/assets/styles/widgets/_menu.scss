@@ -60,11 +60,11 @@
     }
 
     nav.main-menu {
-        -webkit-transition: background-color .275s linear, opacity .275s linear;
-        -moz-transition: background-color .275s linear, opacity .275s linear;
-        -ms-transition: background-color .275s linear, opacity .275s linear;
-        -o-transition: background-color .275s linear, opacity .275s linear;
-        transition: background-color .275s linear, opacity .275s linear;
+        -webkit-transition: opacity .275s linear;
+        -moz-transition: opacity .275s linear;
+        -ms-transition: opacity .275s linear;
+        -o-transition: opacity .275s linear;
+        transition: opacity .275s linear;
 
         > ul {
             font-weight: 400;

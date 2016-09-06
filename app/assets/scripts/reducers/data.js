@@ -31,7 +31,7 @@ function getTwData() {
                 }
             ]
         },
-        Skills: {
+        skills: {
             detail: [
                 {
                     title: 'HTML5',
@@ -158,10 +158,9 @@ function getEnData() {
                 src: 'assets/images/avatar.jpg',
                 alt: 'Jason Tseng Avatar'
             },
-            detail: [
+            details: [
                 {
                     title: 'Summary',
-                    intro: '',
                     items: [
                         'More than 2 years experience with HTML5, CSS3 and JavaScript',
                         'Have experience with RESTful API, such as Facebook, Google',
@@ -172,18 +171,16 @@ function getEnData() {
                 },
                 {
                     title: 'Personality',
-                    intro: 'Hi',
-                    items: []
+                    intro: 'Hi'
                 },
                 {
                     title: 'Other',
-                    intro: '<a href="old/">Old website </a> Made with Angular 1.x',
-                    items: []
+                    intro: '<a href="old/">Old website </a> Made with Angular 1.x'
                 }
             ]
         },
-        Skills: {
-            detail: [
+        skills: {
+            details: [
                 {
                     title: 'HTML5',
                     items: [
