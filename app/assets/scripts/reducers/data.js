@@ -165,12 +165,14 @@ function getEnData() {
                         'Have experience with RESTful API, such as Facebook, Google',
                         'Able to complete Responsive Web Design independently',
                         'Have experience with using framework like AngularJS 1.x, React',
-                        'Know how to use gulp, browserify, scss, npm development environment, it makes me completing jobs faster'
+                        'Know how to use gulp, browserify, scss, npm development environment, it makes me complete jobs faster'
                     ]
                 },
                 {
                     title: 'Personality',
-                    intro: 'Hi'
+                    intro: 'I have a book. ' +
+                        'Hello, how are you? ' +
+                        'I am fine, and you?'
                 },
                 {
                     title: 'Other',

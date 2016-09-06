@@ -52,7 +52,7 @@ gulp.task('browserify', () => {
         })
         .pipe(source('main.js'))
         .pipe(buffer()) // js 壓縮前置準備
-        // .pipe(uglify()) // 壓縮 js
+        .pipe(uglify()) // 壓縮 js
         .pipe(bom()) // 解決中文亂碼
         .pipe(gulp.dest('./dist/assets/scripts/'))
         .pipe(reload({stream: true}));
@@ -75,8 +75,8 @@ gulp.task('scss', () => {
             includePaths: ['.']
         }).on('error', $.sass.logError))
         .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
-        .pipe($.sourcemaps.write()) // 若有 import node_modules 內的 css，在 minifyCSS 時此行要註解
-        // .pipe(minifyCSS({keepBreaks: false}))
+        // .pipe($.sourcemaps.write()) // 若有 import node_modules 內的 css，在 minifyCSS 時此行要註解
+        .pipe(minifyCSS({keepBreaks: false}))
         .pipe(gulp.dest('./dist/assets/styles/'))
         .pipe(reload({stream: true}));
 });
