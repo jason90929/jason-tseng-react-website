@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 // import AddTodo from '../containers/AddTodo';
 // import VisibleTodoList from '../containers/VisibleTodoList';
@@ -34,12 +34,20 @@ const getContent = (content, data) => {
     }
 };
 
-const Content = ({ content, animation, data }) => {
-    return (
-        <section className={'content' + (animation ? ' fade-out' : ' fade-in')}>
-            {getContent(content, data)}
-        </section>
-    );
-};
+// 另一種寫法，可以加 Component 的寫法
+class Content extends Component {
+
+    _onclick() {
+        // console.log('clicked');
+    }
+    render() {
+// const Content = ({ content, animation, data }) => {
+        return (
+            <section onClick={this._onclick} className={'content' + (this.props.animation ? ' fade-out' : ' fade-in')}>
+                {getContent(this.props.content, this.props.data)}
+            </section>
+        );
+    }
+}
 
 export default Content;

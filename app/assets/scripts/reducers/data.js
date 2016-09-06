@@ -1,4 +1,3 @@
-// Todo:
 function getTwData() {
     return {
         about: {
