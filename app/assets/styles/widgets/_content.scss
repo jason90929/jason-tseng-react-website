@@ -101,6 +101,17 @@
     //    top: 30px;
     //    right: 50px;
     //}
+
+    .lazyload {
+        opacity: 1;
+
+        -webkit-transition: opacity 0.3s ease-out;
+        transition: opacity 0.3s ease-out;
+
+        &[data-src] {
+            opacity: 0;
+        }
+    }
 }
 
 @media screen and (min-width: $response-1) {

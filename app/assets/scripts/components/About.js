@@ -18,7 +18,7 @@ const About = ({data}) => (
 
                 </p>
 
-                {data.details.map(item =>
+                {data.detail.map(item =>
                     <div>
                         <h3>
                             {item.title}
@@ -35,8 +35,7 @@ const About = ({data}) => (
                         { item.items ?
                             <ol>
                                 {item.items.map(text =>
-                                    <li>
-                                        {text}
+                                    <li dangerouslySetInnerHTML={{__html: text}}>
                                     </li>
                                 )}
                             </ol>

@@ -9,7 +9,7 @@ const Skills = ({data}) => (
             <article className="article">
                 <h2>Skills</h2>
 
-                {data.details.map(item =>
+                {data.detail.map(item =>
                     <div>
                         <h3>
                             {item.title}

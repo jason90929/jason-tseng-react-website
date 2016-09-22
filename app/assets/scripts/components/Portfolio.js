@@ -1,33 +1,46 @@
 import React, {PropTypes} from 'react';
 import {Card, CardTitle, CardActions} from 'react-mdl';
 
-const Portfolio = ({data}) => (
-    <div>
-        <figure className="banner _01">
-        </figure>
+const Portfolio = ({data}) => {
+    // Lazy load
+    [].forEach.call(document.querySelectorAll('[data-src]'), function (el) {
+        var src = el.getAttribute('data-src');
+        
+        el.setAttribute('src', src);
 
-        <div className="bg-theme-color">
-            <article className="article">
-                <h2>Portfolio</h2>
+        el.onload = function () {
+            el.removeAttribute('data-src');
+        };
+    });
 
-                <div className="card-wrapper">
-                    {data.map(item =>
-                        <Card shadow={0}>
-                            <a href="javascript:;">
-                                <img src={item.src} alt={item.name}/>
-                                <CardActions>
+    return (
+        <div>
+            <figure className="banner _01">
+            </figure>
+
+            <div className="bg-theme-color">
+                <article className="article">
+                    <h2>Portfolio</h2>
+
+                    <div className="card-wrapper">
+                        {data.map(item =>
+                            <Card shadow={0}>
+                                <a href="javascript:;">
+                                    <img className="lazyload" data-src={item.src} src={item.src} alt={item.name}/>
+                                    <CardActions>
                                     <span className="card-intro">
                                         {item.info}
                                     </span>
-                                </CardActions>
-                            </a>
-                        </Card>
-                    )}
-                </div>
-            </article>
+                                    </CardActions>
+                                </a>
+                            </Card>
+                        )}
+                    </div>
+                </article>
+            </div>
         </div>
-    </div>
-);
+    );
+};
 
 Portfolio.propTypes = {
     data: PropTypes.object.isRequired
