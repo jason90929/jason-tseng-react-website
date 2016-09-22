@@ -1,32 +1,33 @@
 function getTwData() {
     return {
         about: {
-            intro: 'Hello, I\'m <b>Jason Tseng</b>. I have 2 years of experience in Front End Developer based in Taipei, Taiwan.',
+            intro: '我是 <b>曾志豪</b>，超過兩年前端開發經驗，目前在台北任職網頁設計公司。',
             avatar: {
                 src: 'assets/images/avatar.jpg',
                 alt: 'Jason Tseng Avatar'
             },
             detail: [
                 {
-                    title: 'Summary',
+                    title: '能力概述',
                     intro: '',
                     items: [
-                        'More than 2 years experience with HTML5, CSS3 and JavaScript',
-                        'Have experience with RESTful API, such as Facebook, Google',
-                        'Able to complete Responsive Web Design independently',
-                        'Have experience with using framework like AngularJS 1.x, React',
-                        'Know how to use gulp, browserify, scss, npm development environment, it makes me completing jobs faster'
+                        '超過兩年的 HTML5, CSS3 and JavaScript 開發經驗',
+                        '具備使用 RESTful API 的能力，如 Facebook API',
+                        '能獨立完成 RWD 網頁與切版',
+                        '瞭解 SEO 所需的 tag',
+                        '具有使用過 AngularJS 1.x, React 的經驗，你現在看到的網頁是 React + Redux 架構寫的，<a href="sample/old-website/">舊網站</a>則是使用 Angular 1.x',
+                        '使用 gulp、rowserify、scss、npm (或 bower 如果需要) 開發環境，加快開頭的開發建置提高工作效率'
                     ]
                 },
                 {
-                    title: 'Personality',
-                    intro: 'Hi',
-                    items: []
-                },
-                {
-                    title: 'Other',
-                    intro: '<a href="old/">Old website </a> Made with Angular 1.x',
-                    items: []
+                    title: '人格特質',
+                    intro: '',
+                    items: [
+                        '對於理解任何新東西的能力比一般人快許多',
+                        '傾向於大方向來編寫程式而非挖東牆補西牆',
+                        '對於同一件事情可以投入長時間的專注力',
+                        '較不善言辭，但有傾聽的優點'
+                    ]
                 }
             ]
         },
@@ -35,30 +36,42 @@ function getTwData() {
                 {
                     title: 'HTML5',
                     items: [
-                        'Have SEO Experience',
-                        'Have knowledge of og meta like Facebook, Google',
+                        '具備 SEO 經驗，善用 HTML 5 的 tag',
+                        '會用 meta tag，包含預覽 Facebook, Google 的 og:',
                         'Know how to have a better performance'
                     ]
                 },
                 {
                     title: 'CSS3',
                     items: [
-                        'Know how to use ::after, ::before',
-                        'Know how to deal with Responsive Web Design professional skills',
-                        'Use SCSS to replace CSS'
+                        '以使用 SCSS 開發為主',
+                        '熟 RWD 開發方式，個人偏好由小尺寸開始',
+                        '熟悉使用 after、before，知道某些「有這個就要加另一個」的 css',
+                        '實作過 style 先後載入順序，以提高效能',
+                        '魔鬼藏在細節裡，知道圖片的 preload、lazyload 方法',
+                        '知道哪些 transition 的效能順暢度比較好'
                     ]
                 },
                 {
                     title: 'JavaScript',
                     items: [
-                        'jQuery',
-                        'React, Redux',
-                        'AngularJS 1.x'
+                        '熟 jQuery，但傾向能用 Vanilla 解決就不使用 jQuery',
+                        '有 React、AngularJS 1.x 的開發經驗'
                     ]
                 }
             ]
         },
         portfolio: [
+            {
+                name: 'CNEWS',
+                src: 'assets/images/portfolio/cnews.png',
+                info: '匯流新聞網（開發中）\n'
+            },
+            {
+                name: 'Home Integration',
+                src: 'assets/images/portfolio/home-integration.png',
+                info: '紘樂網站（開發中）\n'
+            },
             {
                 name: 'Gopapala',
                 src: 'assets/images/portfolio/gopapala.png',
@@ -176,7 +189,7 @@ function getEnData() {
                 },
                 {
                     title: 'Other',
-                    intro: '<a href="old/">Old website </a> Made with Angular 1.x'
+                    intro: '<a href="sample/old-website/">Old website </a> Made with Angular 1.x'
                 }
             ]
         },
