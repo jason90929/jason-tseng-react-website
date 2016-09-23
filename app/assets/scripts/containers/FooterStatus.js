@@ -14,7 +14,8 @@ const getContent = (content) => {
 
 const mapStateToProps = (state) => {
     return {
-        content: getContent(state.content)
+        content: getContent(state.content),
+        data: state.data.contact
     };
 };
 

@@ -1,18 +1,4 @@
 @media screen {
-    $header-decoration-color: #ffd230;
-    ._header-decoration {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 6px;
-        background-color: $header-decoration-color;
-        -webkit-box-shadow: 0 1px 2px darken($header-decoration-color, 30%);
-        -moz-box-shadow: 0 1px 2px darken($header-decoration-color, 30%);
-        box-shadow: 0 1px 2px darken($header-decoration-color, 30%);
-        z-index: 4;
-    }
-
     .header {
         left: 0;
         right: 0;

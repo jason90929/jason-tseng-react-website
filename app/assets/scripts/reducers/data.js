@@ -77,6 +77,13 @@ function getTwData() {
                     items: [
                         {
                             name: 'Flicker Text',
+                            html: '<iframe height="300" scrolling="no" src="//codepen.io/jason90929/embed/PGWvjE/?height=300&theme-id=0&default-tab=result,result&embed-version=2"' +
+                            ' frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/jason90929/pen/PGWvjE/">Self Rotate Bubble</a> ' +
+                            'by Jason Tseng (<a href="http://codepen.io/jason90929">@jason90929</a>) on <a href="http://codepen.io">CodePen</a>.</iframe>',
+                            info: '破碎文字一個字一個字出現'
+                        },
+                        {
+                            name: 'Flicker Text',
                             html: '<iframe height="300" scrolling="no" src="http://codepen.io/jason90929/embed/LRbBYd/?height=300&theme-id=0&default-tab=result,result&embed-version=2" ' +
                             'frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/jason90929/pen/LRbBYd/">Flicker Text</a>' +
                             ' by Jason Tseng (<a href="http://codepen.io/jason90929">@jason90929</a>) on <a href="http://codepen.io">CodePen</a>.</iframe>',
@@ -193,6 +200,12 @@ function getTwData() {
                 _blank: true,
                 icon: 'fa-github'
             },
+            {
+                name: 'https://codepen.io/jason90929/',
+                url: 'https://codepen.io/jason90929/',
+                _blank: true,
+                icon: 'fa-codepen'
+            }
         ]
     }
 }

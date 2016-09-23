@@ -1,3 +1,12 @@
+/* adjust path as needed */
+@import "node_modules/font-awesome/scss/variables.scss";
+@import "node_modules/font-awesome/scss/mixins.scss";
+@import "node_modules/font-awesome/scss/path.scss";
+@import "node_modules/font-awesome/scss/core.scss";
+@import "node_modules/font-awesome/scss/icons.scss";
+@import "node_modules/material-design-lite/src/material-design-lite.scss";
+@import 'https://fonts.googleapis.com/css?family=Libre+Baskerville';
+
 html, body {
     position: relative;
     height: 100%;

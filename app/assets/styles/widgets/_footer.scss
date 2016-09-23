@@ -50,7 +50,7 @@
                 -o-transition: color .3s linear;
                 transition: color .3s linear;
 
-                @for $i from 1 through 5 {
+                @for $i from 1 through 6 {
                     &:nth-of-type(#{$i}) {
                         -webkit-animation: footer-icon-in 5.1s + $i * .2 ease-in;
                         -o-animation: footer-icon-in 5.1s + $i * .2 ease-in;
