@@ -44,6 +44,13 @@
     }
 }
 
+.bg-image {
+    padding-top: 75%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
 @keyframes bg-large {
     from {
         -webkit-transform: scale(1) translate(0);

@@ -3,12 +3,13 @@ import {Card, CardTitle, CardActions} from 'react-mdl';
 
 const Portfolio = ({data}) => {
     // Lazy load
-    [].forEach.call(document.querySelectorAll('[data-src]'), function (el) {
+    [].forEach.call(document.querySelectorAll('div[data-src]'), function(el) {
         var src = el.getAttribute('data-src');
-        
-        el.setAttribute('src', src);
+        var img = document.createElement('img');
+        img.setAttribute('src', src);
 
-        el.onload = function () {
+        el.style.backgroundImage = 'url(' + src + ')';
+        img.onload = function() {
             el.removeAttribute('data-src');
         };
     });
@@ -22,20 +23,38 @@ const Portfolio = ({data}) => {
                 <article className="article">
                     <h2>Portfolio</h2>
 
-                    <div className="card-wrapper">
-                        {data.map(item =>
-                            <Card shadow={0}>
-                                <a href="javascript:;">
-                                    <img className="lazyload" data-src={item.src} src={item.src} alt={item.name}/>
-                                    <CardActions>
-                                    <span className="card-intro">
-                                        {item.info}
-                                    </span>
-                                    </CardActions>
-                                </a>
-                            </Card>
-                        )}
-                    </div>
+                    {data.detail.map(list =>
+                        <div className="card-wrapper">
+                            <h3>
+                                {list.title}
+                            </h3>
+
+                            {
+                                list.method === 'iframe'
+                                    ?
+                                    list.items.map(item =>
+                                        <Card shadow={0}>
+                                            <div dangerouslySetInnerHTML={{__html: item.html}}>
+                                            </div>
+                                        </Card>
+
+                                    )
+                                    :
+                                    list.items.map(item =>
+                                        <Card shadow={0}>
+                                            <a href={item.url ? item.url : 'javascript:;'} target={item.url ? '_blank' : ''}>
+                                                <div className="bg-image lazyload" data-src={item.src} ></div>
+                                                <CardActions>
+                                                    <span className="card-intro">
+                                                        {item.info}
+                                                    </span>
+                                                </CardActions>
+                                            </a>
+                                        </Card>
+                                    )
+                            }
+                        </div>
+                    )}
                 </article>
             </div>
         </div>

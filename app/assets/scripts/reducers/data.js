@@ -38,97 +38,132 @@ function getTwData() {
                     items: [
                         '具備 SEO 經驗，善用 HTML 5 的 tag',
                         '會用 meta tag，包含預覽 Facebook, Google 的 og:',
-                        'Know how to have a better performance'
+                        'Know how to have a better performance',
                     ]
                 },
                 {
                     title: 'CSS3',
                     items: [
                         '以使用 SCSS 開發為主',
-                        '熟 RWD 開發方式，個人偏好由小尺寸開始',
+                        '熟 RWD 開發流程，個人偏好由小尺寸開始',
                         '熟悉使用 after、before，知道某些「有這個就要加另一個」的 css',
                         '實作過 style 先後載入順序，以提高效能',
-                        '魔鬼藏在細節裡，知道圖片的 preload、lazyload 方法',
-                        '知道哪些 transition 的效能順暢度比較好'
+                        '魔鬼藏在細節裡，知道如何優化網頁或圖片效能、提升動畫順暢度的方法'
                     ]
                 },
                 {
                     title: 'JavaScript',
                     items: [
+                        '使用 ES6 的環境開發',
                         '熟 jQuery，但傾向能用 Vanilla 解決就不使用 jQuery',
                         '有 React、AngularJS 1.x 的開發經驗'
+                    ]
+                },
+                {
+                    title: 'Others',
+                    items: [
+                        '以 gulp、rowserify、npm（或加上 bower）開發環境為主',
+                        '使用 Git，用過 fork 和 merge',
+                        '用 Evernote 紀錄一些步驟和指令，或是一些程式碼(程式碼陸續移到 codepen)'
                     ]
                 }
             ]
         },
-        portfolio: [
-            {
-                name: 'CNEWS',
-                src: 'assets/images/portfolio/cnews.png',
-                info: '匯流新聞網（開發中）\n'
-            },
-            {
-                name: 'Home Integration',
-                src: 'assets/images/portfolio/home-integration.png',
-                info: '紘樂網站（開發中）\n'
-            },
-            {
-                name: 'Gopapala',
-                src: 'assets/images/portfolio/gopapala.png',
-                info: 'Gopapala（非公開）\n'
-            },
-            {
-                name: 'ctop',
-                src: 'assets/images/portfolio/ctop.png',
-                info: 'ctop（非公開）\n'
-            },
-            {
-                name: 'Girlfie.',
-                src: 'assets/images/portfolio/girlfie.png',
-                url: 'http://girlfie.com.tw',
-                info: 'Girlfie.'
-            },
-            {
-                name: 'Delta',
-                src: 'assets/images/portfolio/delta-irs-system.png',
-                info: 'Delta（非公開）'
-            },
-            {
-                name: 'MyWedding',
-                src: 'assets/images/portfolio/my-wedding.png',
-                info: '我的婚禮網站（非公開）'
-            },
-            {
-                name: '春天旅遊網站',
-                src: 'assets/images/portfolio/lotustourstpe.png',
-                url: 'http://www.lotustourstpe.tw/',
-                info: '春天旅遊網站'
-            },
-            {
-                name: 'URstage',
-                src: 'assets/images/portfolio/urstage.png',
-                url: 'http://www.urstage.com.tw/',
-                info: 'URstage'
-            },
-            {
-                name: '華江高中教科書系統',
-                src: 'assets/images/portfolio/hua-chiang-high-school.png',
-                url: 'http://203.72.56.75:8088/',
-                info: '華江高中教科書系統'
-            },
-            {
-                name: '愛台玩星級旅館',
-                src: 'assets/images/portfolio/itaiwanhotel.png',
-                url: 'https://play.google.com/store/apps/details?id=com.wethink.itaiwan.hotel&hl=zh_TW',
-                info: '愛台玩星級旅館'
-            },
-            {
-                name: '巍新軟體',
-                src: 'assets/images/portfolio/wethink.png',
-                url: 'http://www.wethink.com.tw/',
-                info: '巍新軟體'
-            }
-        ],
+        portfolio: {
+            detail: [
+                {
+                    title: '特效作品',
+                    method: 'iframe',
+                    items: [
+                        {
+                            name: 'Flicker Text',
+                            html: '<iframe height="300" scrolling="no" src="http://codepen.io/jason90929/embed/LRbBYd/?height=300&theme-id=0&default-tab=result,result&embed-version=2" ' +
+                            'frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/jason90929/pen/LRbBYd/">Flicker Text</a>' +
+                            ' by Jason Tseng (<a href="http://codepen.io/jason90929">@jason90929</a>) on <a href="http://codepen.io">CodePen</a>.</iframe>',
+                            info: '破碎文字一個字一個字出現'
+                        },
+                        {
+                            name: '簡繁轉換器',
+                            html: '<iframe height="300" scrolling="no" src="http://codepen.io/jason90929/embed/YGNBEV/?height=300&theme-id=0&default-tab=result&embed-version=2"' +
+                            ' frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/jason90929/pen/YGNBEV/">簡繁轉換器</a> ' +
+                            'by Jason Tseng (<a href="http://codepen.io/jason90929">@jason90929</a>) on <a href="http://codepen.io">CodePen</a>.</iframe>',
+                            info: '簡繁字互轉，改編成不使用 jQuery 就能運作的方式'
+                        }
+                    ]
+                },
+                {
+                    title: '網站作品',
+                    items: [
+                        {
+                            name: 'CNEWS',
+                            src: 'assets/images/portfolio/cnews.png',
+                            info: '匯流新聞網（開發中）\n'
+                        },
+                        {
+                            name: 'Home Integration',
+                            src: 'assets/images/portfolio/home-integration.png',
+                            info: '紘樂網站（開發中）\n'
+                        },
+                        {
+                            name: 'Gopapala',
+                            src: 'assets/images/portfolio/gopapala.png',
+                            info: 'Gopapala（非公開）\n'
+                        },
+                        {
+                            name: 'ctop',
+                            src: 'assets/images/portfolio/ctop.png',
+                            info: 'ctop（非公開）\n'
+                        },
+                        {
+                            name: 'Girlfie.',
+                            src: 'assets/images/portfolio/girlfie.png',
+                            url: 'http://girlfie.com.tw',
+                            info: 'Girlfie.'
+                        },
+                        {
+                            name: 'Delta',
+                            src: 'assets/images/portfolio/delta-irs-system.png',
+                            info: 'Delta（非公開）'
+                        },
+                        {
+                            name: 'MyWedding',
+                            src: 'assets/images/portfolio/my-wedding.png',
+                            info: '我的婚禮網站（非公開）'
+                        },
+                        {
+                            name: '春天旅遊網站',
+                            src: 'assets/images/portfolio/lotustourstpe.png',
+                            url: 'http://www.lotustourstpe.tw/',
+                            info: '春天旅遊網站'
+                        },
+                        {
+                            name: 'URstage',
+                            src: 'assets/images/portfolio/urstage.png',
+                            url: 'http://www.urstage.com.tw/',
+                            info: 'URstage'
+                        },
+                        {
+                            name: '華江高中教科書系統',
+                            src: 'assets/images/portfolio/hua-chiang-high-school.png',
+                            url: 'http://203.72.56.75:8088/',
+                            info: '華江高中教科書系統'
+                        },
+                        {
+                            name: '愛台玩星級旅館',
+                            src: 'assets/images/portfolio/itaiwanhotel.png',
+                            url: 'https://play.google.com/store/apps/details?id=com.wethink.itaiwan.hotel&hl=zh_TW',
+                            info: '愛台玩星級旅館'
+                        },
+                        {
+                            name: '巍新軟體',
+                            src: 'assets/images/portfolio/wethink.png',
+                            url: 'http://www.wethink.com.tw/',
+                            info: '巍新軟體'
+                        }
+                    ]
+                }
+            ]
+        },
         contact: [
             {
                 name: 'Taiwan, Taipei',
@@ -184,8 +219,8 @@ function getEnData() {
                 {
                     title: 'Personality',
                     intro: 'I have a book. ' +
-                        'Hello, how are you? ' +
-                        'I am fine, and you?'
+                    'Hello, how are you? ' +
+                    'I am fine, and you?'
                 },
                 {
                     title: 'Other',
