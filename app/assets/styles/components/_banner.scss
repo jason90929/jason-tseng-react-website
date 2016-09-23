@@ -7,16 +7,16 @@
         background-size: $banner-width auto;
         background-color: #6a9cbc;
 
+        &.bot {
+            background-position: bottom center;
+        }
+
         &._01 {
-            background-image: url('../images/bg-header.jpg');
+            background-image: url('../images/bg-header-768.jpg');
         }
 
         &._02 {
-            background-image: url('../images/bg-footer.jpg');
-        }
-
-        &._google-map {
-            background-image: url('../images/bg-google-map.png');
+            background-image: url('../images/bg-footer-768.jpg');
         }
     }
 }
@@ -24,11 +24,27 @@
 @media screen and (min-width: $response-1) {
     .banner {
         height: $banner-pad-height;
+
+        &._01 {
+            background-image: url('../images/bg-header-1200.jpg');
+        }
+
+        &._02 {
+            background-image: url('../images/bg-footer-1200.jpg');
+        }
     }
 }
 
 @media screen and (min-width: $banner-width) {
     .banner {
         background-size: 100% auto;
+
+        &._01 {
+            background-image: url('../images/bg-header-1920.jpg');
+        }
+
+        &._02 {
+            background-image: url('../images/bg-footer-1920.jpg');
+        }
     }
 }

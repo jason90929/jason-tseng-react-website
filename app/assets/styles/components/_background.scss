@@ -1,63 +1,97 @@
-.bg-animation {
-    &::before {
-        -webkit-transform-origin: 2.1em 2.1em 1px;
-        transform-origin: 2.1em 2.1em 1px;
-        -webkit-transform: scale(1.1) translate(-1.05em, -1.05em);
-        transform: scale(1.1) translate(-1.05em, -1.05em);
+@media screen {
+    .bg-animation {
+        &::before {
+            -webkit-transform-origin: 2.1em 2.1em 1px;
+            transform-origin: 2.1em 2.1em 1px;
+            -webkit-transform: scale(1.1) translate(-1.05em, -1.05em);
+            transform: scale(1.1) translate(-1.05em, -1.05em);
 
-        -webkit-animation-fill-mode: forwards;
-        -moz-animation-fill-mode: forwards;
-        -o-animation-fill-mode: forwards;
-        animation-fill-mode: forwards;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-fill-mode: forwards;
+            -o-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
 
-        -webkit-animation: 12s bg-large ease-out 0s;
-        -o-animation: 12s bg-large ease-out 0s;
-        animation: 12s bg-large ease-out 0s;
+            -webkit-animation: 12s bg-large ease-out 0s;
+            -o-animation: 12s bg-large ease-out 0s;
+            animation: 12s bg-large ease-out 0s;
+        }
     }
-}
 
-.bg {
-    overflow: hidden;
+    .bg {
+        overflow: hidden;
 
-    &::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
 
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: cover;
+            background-color: #6a9cbc;
+        }
+
+        &._01 {
+            &::before {
+                background-image: url('../images/bg-main-768.jpg');
+            }
+        }
+
+        &._02 {
+            &::before {
+                background-image: url('../images/bg-footer-768.jpg');
+            }
+        }
+    }
+
+    .bg-image {
+        padding-top: 75%;
         background-repeat: no-repeat;
         background-position: top center;
         background-size: cover;
-        background-color: #6a9cbc;
     }
 
-    &._01 {
-        &::before {
-            background-image: url('../images/bg-main.jpg');
+    @keyframes bg-large {
+        from {
+            -webkit-transform: scale(1) translate(0);
+            transform: scale(1) translate(0);
         }
-    }
-
-    &._02 {
-        &::before {
-            background-image: url('../images/bg-footer.jpg');
+        to {
+            -webkit-transform: scale(1.1) translate(-1.05em, -1.05em);
+            transform: scale(1.1) translate(-1.05em, -1.05em);
         }
     }
 }
 
-.bg-image {
-    padding-top: 75%;
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
+@media screen and (min-width: $response-1) {
+    .bg {
+        &._01 {
+            &::before {
+                background-image: url('../images/bg-main-1200.jpg');
+            }
+        }
+
+        &._02 {
+            &::before {
+                background-image: url('../images/bg-footer-1200.jpg');
+            }
+        }
+    }
 }
 
-@keyframes bg-large {
-    from {
-        -webkit-transform: scale(1) translate(0);
-        transform: scale(1) translate(0);
-    }
-    to {
-        -webkit-transform: scale(1.1) translate(-1.05em, -1.05em);
-        transform: scale(1.1) translate(-1.05em, -1.05em);
+@media screen and (min-width: $response-2) {
+    .bg {
+        &._01 {
+            &::before {
+                background-image: url('../images/bg-main-1920.jpg');
+            }
+        }
+
+        &._02 {
+            &::before {
+                background-image: url('../images/bg-footer-1920.jpg');
+            }
+        }
     }
 }

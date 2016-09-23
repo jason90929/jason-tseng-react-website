@@ -15,7 +15,7 @@ const Footer = ({content}) => {
                     </div>
                 </div>
 
-                <div className="banner _02"></div>
+                <div className="banner _02 bot"></div>
             </footer>
         );
     }
