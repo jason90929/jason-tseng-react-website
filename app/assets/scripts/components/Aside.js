@@ -20,6 +20,7 @@ const Aside = ({content, menu}) => {
                         </MenuLink>
                         <MenuLink filter="ABOUT">
                             About
+
                         </MenuLink>
                         <MenuLink filter="SKILLS">
                             Skills

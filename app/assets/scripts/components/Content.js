@@ -43,7 +43,8 @@ class Content extends Component {
     render() {
 // const Content = ({ content, animation, data }) => {
         return (
-            <section onClick={this._onclick} className={'content' + (this.props.animation ? ' fade-out' : ' fade-in')}>
+            <section onClick={this._onclick} className={'content' + (this.props.animation ? ' fade-out' : ' fade-in')
+            }>
                 {getContent(this.props.content, this.props.data)}
             </section>
         );

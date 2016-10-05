@@ -76,15 +76,22 @@ function getTwData() {
                     method: 'iframe',
                     items: [
                         {
-                            name: 'Flicker Text',
-                            html: '<iframe height="300" scrolling="no" src="//codepen.io/jason90929/embed/PGWvjE/?height=300&theme-id=0&default-tab=result,result&embed-version=2"' +
+                            name: 'Multi Layer Menu Without JS',
+                            html: '<iframe height="300" scrolling="no" src="//codepen.io/jason90929/embed/BLROJN/?height=300&theme-id=0&default-tab=result&embed-version=2" ' +
+                            'frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/jason90929/pen/BLROJN/">Multi Layer Menu Without JS</a>' +
+                            ' by Jason Tseng (<a href="http://codepen.io/jason90929">@jason90929</a>) on <a href="http://codepen.io">CodePen</a>.</iframe>',
+                            info: '純 CSS 實現多層 Menu'
+                        },
+                        {
+                            name: 'Self Rotate Bubble',
+                            html: '<iframe height="300" scrolling="no" src="//codepen.io/jason90929/embed/PGWvjE/?height=300&theme-id=0&default-tab=result&embed-version=2"' +
                             ' frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/jason90929/pen/PGWvjE/">Self Rotate Bubble</a> ' +
                             'by Jason Tseng (<a href="http://codepen.io/jason90929">@jason90929</a>) on <a href="http://codepen.io">CodePen</a>.</iframe>',
-                            info: '破碎文字一個字一個字出現'
+                            info: '自訂泡泡特效'
                         },
                         {
                             name: 'Flicker Text',
-                            html: '<iframe height="300" scrolling="no" src="http://codepen.io/jason90929/embed/LRbBYd/?height=300&theme-id=0&default-tab=result,result&embed-version=2" ' +
+                            html: '<iframe height="300" scrolling="no" src="http://codepen.io/jason90929/embed/LRbBYd/?height=300&theme-id=0&default-tab=result&embed-version=2" ' +
                             'frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/jason90929/pen/LRbBYd/">Flicker Text</a>' +
                             ' by Jason Tseng (<a href="http://codepen.io/jason90929">@jason90929</a>) on <a href="http://codepen.io">CodePen</a>.</iframe>',
                             info: '破碎文字一個字一個字出現'

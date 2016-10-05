@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-const Menu = ({ active, children, onClick }) => {
+const Menu = ({ active, doAnimate, children, onClick, onClickWithAnimate }) => {
     if (active) {
         return (
             <li className="active">
@@ -14,14 +14,24 @@ const Menu = ({ active, children, onClick }) => {
     return (
         <li>
             <a href="javascript:;"
-               onTouchEnd={e => {
-                   e.preventDefault();
-                   onClick();
-               }}
-               onClick={e => {
-                   e.preventDefault();
-                   onClick();
-               }}
+                onTouchEnd={e => {
+                    e.preventDefault();
+                    if (doAnimate) {
+                        onClickWithAnimate();
+                    }
+                    else {
+                        onClick();
+                    }
+                }}
+                onClick={e => {
+                    e.preventDefault();
+                    if (doAnimate) {
+                        onClickWithAnimate();
+                    }
+                    else {
+                        onClick();
+                    }
+                }}
             >
                 {children}
             </a>

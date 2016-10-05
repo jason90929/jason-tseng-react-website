@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-const Menu = ({ children, onClick }) => {
+const MenuToggle = ({ children, onClick }) => {
     return (
         <a href="javascript:;"
             className="toggle"
@@ -18,9 +18,9 @@ const Menu = ({ children, onClick }) => {
     );
 };
 
-Menu.propTypes = {
+MenuToggle.propTypes = {
     children: PropTypes.node.isRequired,
     onClick: PropTypes.func.isRequired
 };
 
-export default Menu;
+export default MenuToggle;
