@@ -109,6 +109,11 @@ function getTwData() {
                     title: '網站作品',
                     items: [
                         {
+                            name: 'tin-group',
+                            src: 'assets/images/portfolio/tin-group.png',
+                            info: '廷廷鋼琴團購（開發中）\n'
+                        },
+                        {
                             name: 'CNEWS',
                             src: 'assets/images/portfolio/cnews.png',
                             info: '匯流新聞網（開發中）\n'
@@ -116,7 +121,7 @@ function getTwData() {
                         {
                             name: 'Home Integration',
                             src: 'assets/images/portfolio/home-integration.png',
-                            info: '紘樂網站（開發中）\n'
+                            info: '紘樂網站（等待上線）\n'
                         },
                         {
                             name: 'Gopapala',
@@ -126,7 +131,7 @@ function getTwData() {
                         {
                             name: 'ctop',
                             src: 'assets/images/portfolio/ctop.png',
-                            info: 'ctop（非公開）\n'
+                            info: 'ctop（開發中止）\n'
                         },
                         {
                             name: 'Girlfie.',
@@ -142,7 +147,7 @@ function getTwData() {
                         {
                             name: 'MyWedding',
                             src: 'assets/images/portfolio/my-wedding.png',
-                            info: '我的婚禮網站（非公開）'
+                            info: '我的婚禮網站（等待上線）'
                         },
                         {
                             name: '春天旅遊網站',

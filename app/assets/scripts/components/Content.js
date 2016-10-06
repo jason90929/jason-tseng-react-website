@@ -36,9 +36,7 @@ const getContent = (content, data) => {
 
 const Content = ({ content, animation, data }) => {
     return (
-        <section className={
-            'content' + (animation ? ' fade-out' : ' fade-in')
-        }>
+        <section className={'content' + (animation ? ' fade-out' : ' fade-in')}>
             {getContent(content, data)}
         </section>
     );
