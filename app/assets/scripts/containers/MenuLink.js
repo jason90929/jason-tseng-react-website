@@ -20,7 +20,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        onClickWithAnimate: () => {
+        onClickWithFadeInAnimate: () => {
             dispatch(setAnimate(true));
             dispatch(setMenuActive(false));
             dispatch(setContentStatus(getContent(ownProps.filter)));

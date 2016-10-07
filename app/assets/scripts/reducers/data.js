@@ -111,73 +111,87 @@ function getTwData() {
                         {
                             name: 'tin-group',
                             src: 'assets/images/portfolio/tin-group.png',
-                            info: '廷廷鋼琴團購（開發中）\n'
+                            info: '廷廷鋼琴團購',
+                            status: '開發中',
+                            detail: '使用技術：HTML5 + SCSS + JavaScript'
                         },
                         {
                             name: 'CNEWS',
                             src: 'assets/images/portfolio/cnews.png',
-                            info: '匯流新聞網（開發中）\n'
+                            info: '匯流新聞網',
+                            status: '開發中'
                         },
                         {
                             name: 'Home Integration',
                             src: 'assets/images/portfolio/home-integration.png',
-                            info: '紘樂網站（等待上線）\n'
+                            info: '紘樂網站',
+                            status: '等待上線'
                         },
                         {
                             name: 'Gopapala',
                             src: 'assets/images/portfolio/gopapala.png',
-                            info: 'Gopapala（非公開）\n'
+                            info: 'Gopapala',
+                            status: '非公開'
                         },
                         {
                             name: 'ctop',
                             src: 'assets/images/portfolio/ctop.png',
-                            info: 'ctop（開發中止）\n'
+                            info: 'ctop',
+                            status: '開發終止'
                         },
                         {
                             name: 'Girlfie.',
                             src: 'assets/images/portfolio/girlfie.png',
                             url: 'http://girlfie.com.tw',
-                            info: 'Girlfie.'
+                            info: 'Girlfie.',
+                            status: '已上線'
                         },
                         {
                             name: 'Delta',
                             src: 'assets/images/portfolio/delta-irs-system.png',
-                            info: 'Delta（非公開）'
+                            info: 'Delta',
+                            status: '非公開'
                         },
                         {
                             name: 'MyWedding',
                             src: 'assets/images/portfolio/my-wedding.png',
-                            info: '我的婚禮網站（等待上線）'
+                            info: '我的婚禮網站',
+                            status: '等待上線'
                         },
                         {
                             name: '春天旅遊網站',
                             src: 'assets/images/portfolio/lotustourstpe.png',
                             url: 'http://www.lotustourstpe.tw/',
-                            info: '春天旅遊網站'
+                            info: '春天旅遊網站',
+                            status: '已上線'
                         },
                         {
                             name: 'URstage',
                             src: 'assets/images/portfolio/urstage.png',
                             url: 'http://www.urstage.com.tw/',
-                            info: 'URstage'
+                            info: 'URstage',
+                            status: '已上線'
                         },
                         {
                             name: '華江高中教科書系統',
                             src: 'assets/images/portfolio/hua-chiang-high-school.png',
                             url: 'http://203.72.56.75:8088/',
-                            info: '華江高中教科書系統'
+                            info: '華江高中教科書系統',
+                            status: '已上線'
                         },
                         {
                             name: '愛台玩星級旅館',
                             src: 'assets/images/portfolio/itaiwanhotel.png',
                             url: 'https://play.google.com/store/apps/details?id=com.wethink.itaiwan.hotel&hl=zh_TW',
-                            info: '愛台玩星級旅館'
+                            info: '愛台玩星級旅館',
+                            status: '已上線'
                         },
                         {
                             name: '巍新軟體',
                             src: 'assets/images/portfolio/wethink.png',
                             url: 'http://www.wethink.com.tw/',
-                            info: '巍新軟體'
+                            info: '巍新軟體',
+                            status: '已上線'
                         }
                     ]
                 }

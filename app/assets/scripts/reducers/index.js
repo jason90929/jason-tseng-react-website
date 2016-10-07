@@ -7,6 +7,8 @@ import contentStatus from './contentStatus';
 import animation from './animation';
 import language from './language';
 import data from './data';
+import popup from './popup';
+import popupContent from './popupContent';
 
 const todoApp = combineReducers({
     // todos,
@@ -16,7 +18,9 @@ const todoApp = combineReducers({
     contentStatus,
     animation,
     language,
-    data
+    data,
+    popup,
+    popupContent
 });
 
 export default todoApp;

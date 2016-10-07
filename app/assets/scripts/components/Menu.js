@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-const Menu = ({ active, doAnimate, children, onClick, onClickWithAnimate }) => {
+const Menu = ({ active, doAnimate, children, onClick, onClickWithFadeInAnimate }) => {
     if (active) {
         return (
             <li className="active">
@@ -17,7 +17,7 @@ const Menu = ({ active, doAnimate, children, onClick, onClickWithAnimate }) => {
                 onTouchEnd={e => {
                     e.preventDefault();
                     if (doAnimate) {
-                        onClickWithAnimate();
+                        onClickWithFadeInAnimate();
                     }
                     else {
                         onClick();
@@ -26,7 +26,7 @@ const Menu = ({ active, doAnimate, children, onClick, onClickWithAnimate }) => {
                 onClick={e => {
                     e.preventDefault();
                     if (doAnimate) {
-                        onClickWithAnimate();
+                        onClickWithFadeInAnimate();
                     }
                     else {
                         onClick();

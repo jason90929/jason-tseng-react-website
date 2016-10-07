@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import Home from './Home';
 import About from './About';
 import Skills from './Skills';
-import Portfolio from './Portfolio';
+import PortfolioStatus from '../containers/PortfolioStatus';
 import Contact from './Contact';
 
 const getContent = (content, data) => {
@@ -25,7 +25,7 @@ const getContent = (content, data) => {
             );
         case 'PORTFOLIO':
             return (
-                <Portfolio data={data.portfolio} />
+                <PortfolioStatus data={data.portfolio} />
             );
         case 'CONTACT':
             return (

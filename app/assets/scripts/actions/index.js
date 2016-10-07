@@ -56,6 +56,20 @@ export const setContentStatus = (contentStatus) => {
     }
 };
 
+export const setPopupContent = (content) => {
+    return {
+        type: 'SET_POPUP_CONTENT',
+        content
+    }
+};
+
+export const showPopup = (bool) => {
+    return {
+        type: 'SHOW_POPUP',
+        bool
+    }
+};
+
 export const setLanguage = (language) => {
     return {
         type: 'SET_LANGUAGE',
