@@ -17,8 +17,24 @@ class Popup extends Component {
     }
     render() {
         return (
-            <section className="popup-wrapper">
-                <div className={'popup' + (this.props.popup ? ' active' : '')}>
+            <section className={'popup-wrapper' + (this.props.popup ? ' active' : '')}>
+                <a href="javascript:;"
+                   className={this.props.prev ? '' : 'hide'}
+                   onTouchEnd={e => {
+                       e.preventDefault();
+                       if (this.props.prev) {
+                           this.props.onSettingPopupIndex(this.props.index - 1);
+                       }
+                   }}
+                   onClick={e => {
+                       e.preventDefault();
+                       if (this.props.prev) {
+                           this.props.onSettingPopupIndex(this.props.index - 1);
+                       }
+                   }}>
+                    <div className="prevPopup"></div>
+                </a>
+                <div className="popup">
                     <a href="javascript:;" onClick={e => {
                         e.preventDefault();
                         this.props.onClick();
@@ -38,6 +54,22 @@ class Popup extends Component {
                         </a>
                     </div>
                 </div>
+                <a href="javascript:;"
+                   className={this.props.next ? '' : 'hide'}
+                   onTouchEnd={e => {
+                       e.preventDefault();
+                       if (this.props.next) {
+                           this.props.onSettingPopupIndex(this.props.index + 1);
+                       }
+                   }}
+                   onClick={e => {
+                       e.preventDefault();
+                       if (this.props.next) {
+                           this.props.onSettingPopupIndex(this.props.index + 1);
+                       }
+                   }}>
+                    <div className="nextPopup"></div>
+                </a>
                 <div className="_backdrop" onClick={e => {
                     e.preventDefault();
                     this.props.onClick();
@@ -50,7 +82,11 @@ class Popup extends Component {
 Popup.propTypes = {
     item: PropTypes.object.isRequired,
     popup: PropTypes.bool.isRequired,
-    onClick: PropTypes.func.isRequired
+    index: PropTypes.number.isRequired,
+    next: PropTypes.bool.isRequired,
+    prev: PropTypes.bool.isRequired,
+    onClick: PropTypes.func.isRequired,
+    onSettingPopupIndex: PropTypes.func.isRequired
 };
 
 export default Popup;

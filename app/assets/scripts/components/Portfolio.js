@@ -43,11 +43,11 @@ class Portfolio extends Component {
                                             </Card>
                                         )
                                         :
-                                        list.items.map(item =>
+                                        list.items.map((item, index) =>
                                             <Card shadow={0}>
                                                 <a href="javascript:;" onClick={e => {
                                                     e.preventDefault();
-                                                    this.props.onClick(item);
+                                                    this.props.onClick(index);
                                                 }}>
                                                     <div className="bg-image lazyload" data-src={item.src}></div>
                                                     <div className="_read-more"><span>{item.info}</span></div>

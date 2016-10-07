@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { setPopupContent, showPopup } from '../actions';
+import { setPopupIndex, showPopup } from '../actions';
 import Portfolio from '../components/Portfolio';
 
 const mapStateToProps = (state, ownProps) => {
@@ -10,8 +10,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        onClick: (item) => {
-            dispatch(setPopupContent(item || {}));
+        onClick: (index) => {
+            dispatch(setPopupIndex(index || 0));
             dispatch(showPopup(true));
         }
     };

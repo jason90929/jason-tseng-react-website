@@ -1,19 +1,24 @@
 import { connect } from 'react-redux';
-import { setPopupContent, showPopup } from '../actions';
+import { setPopupIndex, showPopup } from '../actions';
 import Popup from '../components/Popup';
 
 const mapStateToProps = (state) => {
     return {
         popup: state.popup,
-        item: state.popupContent
+        item: state.data.portfolio.detail[1].items[state.popupIndex],
+        index: state.popupIndex,
+        next: (state.data.portfolio.detail[1].items[state.popupIndex + 1] ? true : false),
+        prev: (state.data.portfolio.detail[1].items[state.popupIndex - 1] ? true : false)
     };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         onClick: () => {
-            dispatch(setPopupContent({}));
             dispatch(showPopup(false));
+        },
+        onSettingPopupIndex: (index) => {
+            dispatch(setPopupIndex(index || 0));
         }
     };
 };

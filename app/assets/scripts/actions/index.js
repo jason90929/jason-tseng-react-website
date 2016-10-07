@@ -56,10 +56,10 @@ export const setContentStatus = (contentStatus) => {
     }
 };
 
-export const setPopupContent = (content) => {
+export const setPopupIndex = (index) => {
     return {
-        type: 'SET_POPUP_CONTENT',
-        content
+        type: 'SET_POPUP_INDEX',
+        index
     }
 };
 

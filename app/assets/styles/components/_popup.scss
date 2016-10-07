@@ -1,38 +1,23 @@
 @media screen {
-    .popup {
+    .popup-wrapper {
         position: fixed;
-        top: 40px;
-        right: 15px;
-        bottom: 60px;
-        left: 15px;
-        background-color: $white;
-        z-index: 5;
         opacity: 0;
         visibility: hidden;
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        border-radius: 2px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
 
-        -webkit-transform: scale(0);
-        -moz-transform: scale(0);
-        -ms-transform: scale(0);
-        -o-transform: scale(0);
-        transform: scale(0);
+        -webkit-transition: opacity .3s cubic-bezier(.5,.61,.355,1), visibility .3s cubic-bezier(.5,.61,.355,1);
+        -moz-transition: opacity .3s cubic-bezier(.5,.61,.355,1), visibility .3s cubic-bezier(.5,.61,.355,1);
+        -ms-transition: opacity .3s cubic-bezier(.5,.61,.355,1), visibility .3s cubic-bezier(.5,.61,.355,1);
+        -o-transition: opacity .3s cubic-bezier(.5,.61,.355,1), visibility .3s cubic-bezier(.5,.61,.355,1);
+        transition: opacity .3s cubic-bezier(.5,.61,.355,1), visibility .3s cubic-bezier(.5,.61,.355,1);
 
-        -webkit-transition: opacity .3s cubic-bezier(.5,.61,.355,1), visibility .3s cubic-bezier(.5,.61,.355,1), transform .3s cubic-bezier(.5,.61,.355,1);
-        -moz-transition: opacity .3s cubic-bezier(.5,.61,.355,1), visibility .3s cubic-bezier(.5,.61,.355,1), transform .3s cubic-bezier(.5,.61,.355,1);
-        -ms-transition: opacity .3s cubic-bezier(.5,.61,.355,1), visibility .3s cubic-bezier(.5,.61,.355,1), transform .3s cubic-bezier(.5,.61,.355,1);
-        -o-transition: opacity .3s cubic-bezier(.5,.61,.355,1), visibility .3s cubic-bezier(.5,.61,.355,1), transform .3s cubic-bezier(.5,.61,.355,1);
-        transition: opacity .3s cubic-bezier(.5,.61,.355,1), visibility .3s cubic-bezier(.5,.61,.355,1), transform .3s cubic-bezier(.5,.61,.355,1);
-
-        .popup-close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            z-index: 1;
-        }
-
-        + ._backdrop {
+        ._backdrop {
             opacity: 0;
             visibility: hidden;
             position: fixed;
@@ -53,16 +38,51 @@
         &.active {
             opacity: 1;
             visibility: visible;
-            -webkit-transform: scale(1);
-            -moz-transform: scale(1);
-            -ms-transform: scale(1);
-            -o-transform: scale(1);
-            transform: scale(1);
 
-            + ._backdrop {
+            .popup {
+                -webkit-transform: scale(1);
+                -moz-transform: scale(1);
+                -ms-transform: scale(1);
+                -o-transform: scale(1);
+                transform: scale(1);
+            }
+
+            ._backdrop {
                 opacity: 1;
                 visibility: visible;
             }
+        }
+    }
+
+    .popup {
+        position: fixed;
+        top: 40px;
+        right: 15px;
+        bottom: 60px;
+        left: 15px;
+        background-color: $white;
+        z-index: 5;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
+
+        -webkit-transition: transform .3s cubic-bezier(.5,.61,.355,1);
+        -moz-transition: transform .3s cubic-bezier(.5,.61,.355,1);
+        -ms-transition: transform .3s cubic-bezier(.5,.61,.355,1);
+        -o-transition: transform .3s cubic-bezier(.5,.61,.355,1);
+        transition: transform .3s cubic-bezier(.5,.61,.355,1);
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1;
         }
     }
 
@@ -89,12 +109,16 @@
             font-size: 26px;
         }
     }
+
+    .prevPopup, .nextPopup {
+        display: none;
+    }
 }
 
 @media screen and (min-width: $response-1) {
     .popup {
         position: fixed;
-        top: calc(50% - 300px);
+        top: calc(50% - 250px);
         height: 500px;
         left: calc(50% - (#{$response-1} - 20px) / 2);
         width: calc(#{$response-1} - 20px);
@@ -107,6 +131,27 @@
         $mb: 30px;
         margin: $mt $mb $mb;
         height: calc(100% - #{$mt} - #{$mb});
+    }
+
+    .prevPopup, .nextPopup {
+        display: block;
+        position: fixed;
+        width: 22px;
+        height: 40px;
+        background-size: cover;
+        top: calc(50% - 20px);
+        z-index: 5;
+        background-repeat: no-repeat;
+    }
+
+    .prevPopup {
+        left: 15px;
+        background-image: url(../images/arrow-left-white.svg);
+    }
+
+    .nextPopup {
+        right: 15px;
+        background-image: url(../images/arrow-right-white.svg);
     }
 }
 
