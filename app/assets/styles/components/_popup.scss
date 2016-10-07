@@ -105,8 +105,21 @@
         }
 
         .caption {
-            margin: 0 auto 30px;
+            margin: 0 auto;
             font-size: 26px;
+            line-height: 30px;
+        }
+
+        .site-status {
+            margin: 5px auto;
+
+            a {
+                color: #14bf1c;
+            }
+            
+            span {
+                color: #cc2643;
+            }
         }
     }
 
@@ -120,8 +133,8 @@
         position: fixed;
         top: calc(50% - 250px);
         height: 500px;
-        left: calc(50% - (#{$response-1} - 20px) / 2);
-        width: calc(#{$response-1} - 20px);
+        left: calc(50% - (#{$response-1} - 100px) / 2);
+        width: calc(#{$response-1} - 100px);
         right: auto;
         bottom: auto;
     }

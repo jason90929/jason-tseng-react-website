@@ -1,7 +1,30 @@
 import React, {Component, PropTypes} from 'react';
 
+const keyupFunction = function (e) {
+    console.log(e);
+
+    if (e.keyCode === 37) { // Prev
+        e.preventDefault();
+        if (this.props.prev) {
+            this.props.onSettingPopupIndex(this.props.index - 1);
+        }
+    }
+    else if (e.keyCode === 39) { // Next
+        e.preventDefault();
+        if (this.props.next) {
+            this.props.onSettingPopupIndex(this.props.index + 1);
+        }
+    }
+};
+
 // 另一種寫法，可以加 Component 的寫法，因為我不知道原本的寫法怎麼加
 class Popup extends Component {
+    componentDidMount() { // HTML 匯入時
+        document.onkeyup = keyupFunction.bind(this);
+    }
+    componentWillUnmount() { // HTML 移除時
+        document.onkeyup = null;
+    }
     componentDidUpdate() { // 畫面更新完畢後執行
         // Lazy load
         [].forEach.call(document.querySelectorAll('div[data-src]'), function(el) {
@@ -17,9 +40,11 @@ class Popup extends Component {
     }
     render() {
         return (
-            <section className={'popup-wrapper' + (this.props.popup ? ' active' : '')}>
+            <section className={'popup-wrapper' + (this.props.popup ? ' active' : '')}
+            >
                 <a href="javascript:;"
                    className={this.props.prev ? '' : 'hide'}
+
                    onTouchEnd={e => {
                        e.preventDefault();
                        if (this.props.prev) {
@@ -43,15 +68,24 @@ class Popup extends Component {
                     </a>
                     <div className="theme-popup">
                         <div className="caption">
-                            <p>{this.props.item.detail}</p>
+                            {this.props.item.info}
                         </div>
 
-                        <a href={this.props.item.url ? this.props.item.url : 'javascript:;'}
-                           target={this.props.item.url ? '_blank' : ''}>
-                            <div className="bg-image lazyload" data-src={this.props.item.src}></div>
+                        <div className="site-status">
+                            {this.props.item.url ?
+                                <a href={this.props.item.url}
+                                   target="_blank">
+                                    {this.props.item.status}
+                                </a>
+                                :
+                                <span>{this.props.item.status}</span>
+                            }
+                        </div>
 
-                            {this.props.item.info}
-                        </a>
+
+                        <div className="bg-image lazyload" data-src={this.props.item.src}></div>
+
+                        <p>{this.props.item.detail}</p>
                     </div>
                 </div>
                 <a href="javascript:;"
