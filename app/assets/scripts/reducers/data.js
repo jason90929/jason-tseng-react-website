@@ -1,4 +1,4 @@
-import userData from '../../models/data';
+import userData from '../models/data';
 
 const data = (state = userData('TW'), action) => {
     switch (action.type) {
