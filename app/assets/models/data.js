@@ -23,12 +23,10 @@ module.exports = function (language) {
             detail: [
                 {
                     title: data.ability,
-                    intro: '',
                     items: data.abilityItems
                 },
                 {
                     title: data.personality,
-                    intro: '',
                     items: data.personalityItems
                 }
             ]
@@ -37,163 +35,141 @@ module.exports = function (language) {
             detail: [
                 {
                     title: 'HTML5',
-                    items: [
-                        '具備 SEO 經驗，善用 HTML 5 的 tag',
-                        '會用 meta tag，包含預覽 Facebook, Google 的 og:',
-                        'Know how to have a better performance',
-                    ]
+                    items: data.HTML5Items
                 },
                 {
                     title: 'CSS3',
-                    items: [
-                        '以使用 SCSS 開發為主',
-                        '熟 RWD 開發流程，個人偏好由小尺寸開始',
-                        '熟悉使用 after、before，知道某些「有這個就要加另一個」的 css',
-                        '實作過 style 先後載入順序，以提高效能',
-                        '魔鬼藏在細節裡，知道如何優化網頁或圖片效能、提升動畫順暢度的方法'
-                    ]
+                    items: data.CSS3Items
                 },
                 {
                     title: 'JavaScript',
-                    items: [
-                        '使用 ES6 的環境開發',
-                        '熟 jQuery，但傾向能用 Vanilla 解決就不使用 jQuery',
-                        '有 React、AngularJS 1.x 的開發經驗'
-                    ]
+                    items: data.JavaScriptItems
                 },
                 {
                     title: 'Others',
-                    items: [
-                        '以 gulp、rowserify、npm（或加上 bower）開發環境為主',
-                        '使用 Git，用過 fork 和 merge',
-                        '用 Evernote 紀錄一些步驟和指令，或是一些程式碼(程式碼陸續移到 codepen)'
-                    ]
+                    items: data.skillsOtherItems
                 }
             ]
         },
         portfolio: {
             detail: [
                 {
-                    title: '特效作品',
+                    title: data.codepenTitle,
                     method: 'iframe',
                     items: [
                         {
                             name: 'Multi Layer Menu With Pure CSS',
                             html: '<iframe height="300" scrolling="no" src="//codepen.io/jason90929/embed/BLROJN/?height=300&theme-id=0&default-tab=result&embed-version=2" ' +
                             'frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/jason90929/pen/BLROJN/">Multi Layer Menu Without JS</a>' +
-                            ' by Jason Tseng (<a href="http://codepen.io/jason90929">@jason90929</a>) on <a href="http://codepen.io">CodePen</a>.</iframe>',
-                            info: '純 CSS 實現多層 Menu'
+                            ' by Jason Tseng (<a href="http://codepen.io/jason90929">@jason90929</a>) on <a href="http://codepen.io">CodePen</a>.</iframe>'
                         },
                         {
                             name: 'Self Rotate Bubble',
                             html: '<iframe height="300" scrolling="no" src="//codepen.io/jason90929/embed/PGWvjE/?height=300&theme-id=0&default-tab=result&embed-version=2"' +
                             ' frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/jason90929/pen/PGWvjE/">Self Rotate Bubble</a> ' +
-                            'by Jason Tseng (<a href="http://codepen.io/jason90929">@jason90929</a>) on <a href="http://codepen.io">CodePen</a>.</iframe>',
-                            info: '自訂泡泡特效'
+                            'by Jason Tseng (<a href="http://codepen.io/jason90929">@jason90929</a>) on <a href="http://codepen.io">CodePen</a>.</iframe>'
                         },
                         {
                             name: 'Flicker Text',
                             html: '<iframe height="300" scrolling="no" src="http://codepen.io/jason90929/embed/LRbBYd/?height=300&theme-id=0&default-tab=result&embed-version=2" ' +
                             'frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/jason90929/pen/LRbBYd/">Flicker Text</a>' +
-                            ' by Jason Tseng (<a href="http://codepen.io/jason90929">@jason90929</a>) on <a href="http://codepen.io">CodePen</a>.</iframe>',
-                            info: '破碎文字一個字一個字出現'
+                            ' by Jason Tseng (<a href="http://codepen.io/jason90929">@jason90929</a>) on <a href="http://codepen.io">CodePen</a>.</iframe>'
                         },
                         {
                             name: '簡繁轉換器',
                             html: '<iframe height="300" scrolling="no" src="http://codepen.io/jason90929/embed/YGNBEV/?height=300&theme-id=0&default-tab=result&embed-version=2"' +
                             ' frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/jason90929/pen/YGNBEV/">簡繁轉換器</a> ' +
-                            'by Jason Tseng (<a href="http://codepen.io/jason90929">@jason90929</a>) on <a href="http://codepen.io">CodePen</a>.</iframe>',
-                            info: '簡繁字互轉，改編成不使用 jQuery 就能運作的方式'
+                            'by Jason Tseng (<a href="http://codepen.io/jason90929">@jason90929</a>) on <a href="http://codepen.io">CodePen</a>.</iframe>'
                         }
                     ]
                 },
                 {
-                    title: '網站作品',
+                    title: data.websiteTitle,
                     items: [
                         {
                             name: 'tin-group',
+                            info: data.tinGroupTitle,
                             src: 'assets/images/portfolio/tin-group.png',
-                            info: '廷廷鋼琴團購',
-                            status: '開發中',
+                            status: data.inDevelopment,
                             detail: '使用技術：HTML5 + SCSS + JavaScript'
                         },
                         {
                             name: 'CNEWS',
+                            info: data.cnewsTitle,
                             src: 'assets/images/portfolio/cnews.png',
-                            info: '匯流新聞網',
-                            status: '開發中'
+                            status: data.online
                         },
                         {
                             name: 'Home Integration',
+                            info: data.homeIntegration,
                             src: 'assets/images/portfolio/home-integration.png',
-                            info: '紘樂網站',
-                            status: '等待上線'
+                            status: data.inDevelopment
                         },
                         {
                             name: 'Gopapala',
+                            info: data.gopapalaTitle,
                             src: 'assets/images/portfolio/gopapala.png',
-                            info: 'Gopapala',
-                            status: '非公開'
+                            status: data.private
                         },
                         {
                             name: 'ctop',
+                            info: data.ctopTitle,
                             src: 'assets/images/portfolio/ctop.png',
-                            info: 'ctop',
-                            status: '開發終止'
+                            status: data.terminated
                         },
                         {
                             name: 'Girlfie.',
+                            info: data.gitlfieTitle,
                             src: 'assets/images/portfolio/girlfie.png',
                             url: 'http://girlfie.com.tw',
-                            info: 'Girlfie.',
-                            status: '已上線'
+                            status: data.online
                         },
                         {
                             name: 'Delta',
+                            info: data.deltaTitle,
                             src: 'assets/images/portfolio/delta-irs-system.png',
-                            info: 'Delta',
-                            status: '非公開'
+                            status: data.private
                         },
                         {
                             name: 'MyWedding',
+                            info: data.myWeddingTitle,
                             src: 'assets/images/portfolio/my-wedding.png',
-                            info: '我的婚禮網站',
-                            status: '等待上線'
+                            status: data.inDevelopment
                         },
                         {
-                            name: '春天旅遊網站',
+                            name: 'LotusToursTaipei',
+                            info: data.lotusToursTaipeiTitle,
                             src: 'assets/images/portfolio/lotustourstpe.png',
                             url: 'http://www.lotustourstpe.tw/',
-                            info: '春天旅遊網站',
-                            status: '已上線'
+                            status: data.online
                         },
                         {
                             name: 'URstage',
+                            info: data.urStageTitle,
                             src: 'assets/images/portfolio/urstage.png',
                             url: 'http://www.urstage.com.tw/',
-                            info: 'URstage',
-                            status: '已上線'
+                            status: data.online
                         },
                         {
-                            name: '華江高中教科書系統',
+                            name: 'HuaChiangBookSystem',
+                            info: data.huaChiangBookSystemTitle,
                             src: 'assets/images/portfolio/hua-chiang-high-school.png',
                             url: 'http://203.72.56.75:8088/',
-                            info: '華江高中教科書系統',
-                            status: '已上線'
+                            status: data.online
                         },
                         {
-                            name: '愛台玩星級旅館',
+                            name: 'iTaiwanHotel',
+                            info: data.iTaiwanHotelTitle,
                             src: 'assets/images/portfolio/itaiwanhotel.png',
                             url: 'https://play.google.com/store/apps/details?id=com.wethink.itaiwan.hotel&hl=zh_TW',
-                            info: '愛台玩星級旅館',
-                            status: '已上線'
+                            status: data.online
                         },
                         {
-                            name: '巍新軟體',
+                            name: 'WeThinkSoftware',
+                            info: data.weThinkSoftwareTitle,
                             src: 'assets/images/portfolio/wethink.png',
                             url: 'http://www.wethink.com.tw/',
-                            info: '巍新軟體',
-                            status: '已上線'
+                            status: data.online
                         }
                     ]
                 }

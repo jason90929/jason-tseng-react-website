@@ -63,6 +63,25 @@ class Footer extends Component {
                         </div>
                     </div>
 
+                    <div className="language-pos">
+                        <a href="javascript:;"
+                           onTouchEnd={e => {
+                               e.preventDefault();
+                               this.onChangeLanguageButtonName(); // 把 TW 兩字顯示成 中
+                               this.props.onSwitchLanguage(getLanguageButtonName(this.props.language));
+                           }}
+                           onClick={e => {
+                               e.preventDefault();
+                               this.onChangeLanguageButtonName(); // 把 TW 兩字顯示成 中
+                               this.props.onSwitchLanguage(getLanguageButtonName(this.props.language));
+                           }}
+                        >
+                            <Button ripple className="mdl-icon-custom">
+                                {this.state.language}
+                            </Button>
+                        </a>
+                    </div>
+
                     <div className="banner _02 bot"></div>
                 </footer>
             );

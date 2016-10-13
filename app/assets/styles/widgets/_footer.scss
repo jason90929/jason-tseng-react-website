@@ -20,7 +20,7 @@
                 background-color: rgba(51, 51, 51, 1);
                 left: 0;
                 right: 0;
-                padding: 20px 40px;
+                padding: 20px;
                 text-align: center;
 
                 a {
@@ -74,8 +74,19 @@
 
         .summary {
             font-size: 12px;
-            text-align: center;
+            text-align: right;
             margin: 0 auto;
+        }
+
+        .language-pos {
+            position: absolute;
+            display: flex;
+            display: -webkit-flex;
+            align-items: center;
+            -webkit-align-items: center;
+            bottom: 0;
+            left: 20px;
+            height: 60px;
         }
     }
 }
@@ -99,6 +110,11 @@
 
         .icon-wrapper {
             padding: 0 55px;
+        }
+
+        .language-pos {
+            height: 90px;
+            left: 40px;
         }
     }
 }
