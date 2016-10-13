@@ -1,5 +1,15 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {Button} from 'react-mdl';
+
+const getLanguageButtonName = (language) => {
+    switch (language) {
+        case 'EN':
+            return 'TW';
+        case 'TW':
+        default:
+            return 'EN';
+    }
+};
 
 /**
  * @return {boolean}
@@ -9,20 +19,38 @@ class Footer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            draw: ''
+            language: ''
         };
     }
 
-    doDrawLine() {
+    componentDidMount() {
+        let language;
+        switch (getLanguageButtonName(this.props.language)) {
+            case 'TW':
+                language = '中';
+                break;
+            case 'EN':
+            default:
+                language = 'EN';
+        }
         this.setState({
-            draw: 'active'
+            language: language
         });
+    }
 
-        setTimeout(() => {
-            this.setState({
-                draw: ''
-            });
-        }, 3000);
+    onChangeLanguageButtonName() {
+        let language;
+        switch (this.props.language) {
+            case 'TW':
+                language = '中';
+                break;
+            case 'EN':
+            default:
+                language = 'EN';
+        }
+        this.setState({
+            language: language
+        });
     }
 
     render() {
@@ -47,11 +75,22 @@ class Footer extends Component {
         return (
             <footer className="footer">
                 <div className="icon-wrapper">
-                    {/*<a href="javascript:;" onClick={this.doDrawLine.bind(this)}>*/}
-                        {/*<Button ripple className="mdl-icon-custom">*/}
-                            {/*<i className="fa fa-signal"/>*/}
-                        {/*</Button>*/}
-                    {/*</a>*/}
+                    <a href="javascript:;"
+                       onTouchEnd={e => {
+                           e.preventDefault();
+                           this.onChangeLanguageButtonName(); // 把 TW 兩字顯示成 中
+                           this.props.onSwitchLanguage(getLanguageButtonName(this.props.language));
+                       }}
+                       onClick={e => {
+                           e.preventDefault();
+                           this.onChangeLanguageButtonName(); // 把 TW 兩字顯示成 中
+                           this.props.onSwitchLanguage(getLanguageButtonName(this.props.language));
+                       }}
+                    >
+                        <Button ripple className="mdl-icon-custom">
+                            {this.state.language}
+                        </Button>
+                    </a>
 
                     {this.props.data.map(item =>
                     <a href={item.url} target={item._blank ? '_blank' : ''}>
@@ -74,5 +113,12 @@ class Footer extends Component {
         )
     };
 }
+
+Footer.propTypes = {
+    content: PropTypes.string.isRequired,
+    data: PropTypes.object.isRequired,
+    language: PropTypes.string.isRequired,
+    onSwitchLanguage: PropTypes.func.isRequired
+};
 
 export default Footer;
