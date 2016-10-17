@@ -2,20 +2,19 @@
 
 ### 環境架設
 
-##### 請先確認自己的 cmd 或 terminal 具有 npm，bower，gulp 指令才能繼續以下步驟：
+##### 請先確認自己的 cmd 或 terminal 具有 yarn，gulp 指令才能繼續以下步驟：
 
 ```
-npm install
-bower install
+yarn
 ```
 
 ##### 安裝完畢後，gulp 我自訂了兩樣指令
 
 #### build: 
-##### 匯出檔案到 public 資料夾，裡面是匯出的靜態頁面
+##### 匯出檔案到 dist 資料夾，裡面是匯出的靜態頁面
 
 ```
-gulp build
+gulp
 ```
 
 #### serve:
