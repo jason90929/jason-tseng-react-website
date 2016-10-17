@@ -11,25 +11,25 @@ import Contact from './Contact';
 
 const getContent = (content, data) => {
     switch (content) {
-        case 'HOME':
-            return (
-                <Home />
-            );
-        case 'ABOUT':
+        case 'about':
             return (
                 <About data={data.about} />
             );
-        case 'SKILLS':
+        case 'skills':
             return (
                 <Skills data={data.skills} />
             );
-        case 'PORTFOLIO':
+        case 'portfolio':
             return (
                 <PortfolioStatus data={data.portfolio} />
             );
-        case 'CONTACT':
+        case 'contact':
             return (
                 <Contact data={data.contact} />
+            );
+        default:
+            return (
+                <Home />
             );
     }
 };

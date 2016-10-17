@@ -3,7 +3,7 @@ import React from 'react';
 const Header = ({content}) => {
     var headerClassName = '';
 
-    if (content === 'CONTENT') {
+    if (content === 'content') {
         headerClassName = ' has-content';
     }
 

@@ -1,4 +1,4 @@
-const content = (state = 'HOME', action) => {
+const content = (state = '', action) => {
     switch (action.type) {
         case 'SET_CONTENT':
             return action.content;

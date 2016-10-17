@@ -1,10 +1,10 @@
 import React from 'react';
+import { Router, Route, browserHistory } from 'react-router'
 import MenuStatus from '../containers/MenuStatus';
 import MenuLink from '../containers/MenuLink';
-// import LanguageStatus from '../containers/LanguageStatus';
 
 const Aside = ({content, menu}) => {
-    if (content === 'CONTENT') {
+    if (content === 'content') {
         return (
             <aside className={'menu has-content fade-in' + (menu ? ' active' : '')}>
                 <MenuStatus filter={true}>
@@ -15,20 +15,19 @@ const Aside = ({content, menu}) => {
                         <i className="fa fa-close"/>
                     </MenuStatus>
                     <ul className="bask">
-                        <MenuLink filter="HOME">
+                        <MenuLink filter="">
                             Home
                         </MenuLink>
-                        <MenuLink filter="ABOUT">
+                        <MenuLink filter="about">
                             About
-
                         </MenuLink>
-                        <MenuLink filter="SKILLS">
+                        <MenuLink filter="skills">
                             Skills
                         </MenuLink>
-                        <MenuLink filter="PORTFOLIO">
+                        <MenuLink filter="portfolio">
                             Portfolio
                         </MenuLink>
-                        <MenuLink filter="CONTACT">
+                        <MenuLink filter="contact">
                             Contact
                         </MenuLink>
                     </ul>
@@ -41,25 +40,23 @@ const Aside = ({content, menu}) => {
         <aside className="menu">
             <nav className="main-menu">
                 <ul className="bask">
-                    <MenuLink filter="HOME">
+                    <MenuLink filter="">
                         Home
                     </MenuLink>
-                    <MenuLink filter="ABOUT">
+                    <MenuLink filter="about">
                         About
                     </MenuLink>
-                    <MenuLink filter="SKILLS">
+                    <MenuLink filter="skills">
                         Skills
                     </MenuLink>
-                    <MenuLink filter="PORTFOLIO">
+                    <MenuLink filter="portfolio">
                         Portfolio
                     </MenuLink>
-                    <MenuLink filter="CONTACT">
+                    <MenuLink filter="contact">
                         Contact
                     </MenuLink>
                 </ul>
             </nav>
-
-            {/*<LanguageStatus />*/}
         </aside>
     );
 };

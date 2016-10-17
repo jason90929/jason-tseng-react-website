@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import { Router, Route, browserHistory } from 'react-router'
+import { createStore, combineReducers } from 'redux'
 import todoApp from './reducers'
 import App from './components/App'
 
@@ -14,7 +15,9 @@ window.store = createStore(todoApp, initialState);
 
 render(
     <Provider store={store}>
-        <App />
+        <Router history={browserHistory}>
+            <Route path="/(:filter)" component={App} />
+        </Router>
     </Provider>,
     document.getElementById('root')
 );

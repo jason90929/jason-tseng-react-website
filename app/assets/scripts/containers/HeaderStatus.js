@@ -3,10 +3,13 @@ import Header from '../components/Header';
 
 const getContent = (content) => {
     switch (content) {
-        case 'HOME':
-            return 'HOME';
+        case 'about':
+        case 'skills':
+        case 'portfolio':
+        case 'contact':
+            return 'content';
         default:
-            return 'CONTENT';
+            return 'home';
     }
 };
 

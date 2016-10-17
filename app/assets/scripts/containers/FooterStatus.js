@@ -4,12 +4,14 @@ import Footer from '../components/Footer';
 
 const getContent = (content) => {
     switch (content) {
-        case 'HOME':
-            return 'HOME';
-        case 'CONTACT':
-            return 'CONTACT';
+        case 'about':
+        case 'skills':
+        case 'portfolio':
+            return 'content';
+        case 'contact':
+            return 'contact';
         default:
-            return 'CONTENT';
+            return 'home';
     }
 };
 

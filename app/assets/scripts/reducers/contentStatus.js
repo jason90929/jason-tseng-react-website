@@ -1,4 +1,4 @@
-const contentStatus = (state = 'HOME', action) => {
+const contentStatus = (state = '', action) => {
     switch (action.type) {
         case 'SET_CONTENT_STATUS':
             return action.contentStatus;

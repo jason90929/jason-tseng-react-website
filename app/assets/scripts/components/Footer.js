@@ -54,7 +54,7 @@ class Footer extends Component {
     }
 
     render() {
-        if (this.props.content === 'CONTENT') {
+        if (this.props.content === 'content') {
             return (
                 <footer className="footer has-content">
                     <div className="icon-wrapper">
@@ -86,7 +86,7 @@ class Footer extends Component {
                 </footer>
             );
         }
-        else if (this.props.content === 'CONTACT') {
+        else if (this.props.content === 'contact') {
             // do nothing
             return false;
         }
