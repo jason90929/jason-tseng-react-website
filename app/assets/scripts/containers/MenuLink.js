@@ -33,6 +33,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
                 dispatch(setAnimate(false));
                 dispatch(setContent(ownProps.filter));
 
+                // router
                 browserHistory.push('/' + ownProps.filter);
             }, 800);
         },
@@ -41,6 +42,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
             dispatch(setContentStatus(getContent(ownProps.filter)));
             dispatch(setContent(ownProps.filter));
 
+            // router
             browserHistory.push('/' + ownProps.filter);
         }
     };

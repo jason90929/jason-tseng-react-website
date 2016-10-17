@@ -23,7 +23,7 @@ gulp.task('watch', ['browserify', 'scss', 'fonts', 'images', 'models', 'html'], 
     gulp.watch('app/assets/fonts/**', ['fonts']);
     gulp.watch('app/assets/images/**', ['images']);
     gulp.watch('app/assets/models/**', ['models']);
-    gulp.watch('app/*.html', ['html']);
+    gulp.watch(['app/*.html', 'app/**/*.html'], ['html']);
 });
 
 // 啟動伺服器
@@ -52,7 +52,7 @@ gulp.task('browserify', () => {
         })
         .pipe(source('main.js'))
         .pipe(buffer()) // js 壓縮前置準備
-        // .pipe(uglify()) // 壓縮 js
+        .pipe(uglify()) // 壓縮 js
         .pipe(bom()) // 解決中文亂碼
         .pipe(gulp.dest('./dist/assets/scripts/'))
         .pipe(reload({stream: true}));
