@@ -1,8 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 
 const keyupFunction = function (e) {
-    console.log(e);
-
     if (e.keyCode === 37) { // Prev
         e.preventDefault();
         if (this.props.prev) {

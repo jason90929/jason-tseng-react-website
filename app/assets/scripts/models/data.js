@@ -60,7 +60,7 @@ module.exports = function (language) {
                         {
                             name: 'Multi Layer Menu With Pure CSS',
                             html: '<iframe height="300" scrolling="no" src="//codepen.io/jason90929/embed/BLROJN/?height=300&theme-id=0&default-tab=result&embed-version=2" ' +
-                            'frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/jason90929/pen/BLROJN/">Multi Layer Menu Without JS</a>' +
+                            'frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/jason90929/pen/BLROJN/">Multi Layer Menu Without JS</a>' +
                             ' by Jason Tseng (<a href="http://codepen.io/jason90929">@jason90929</a>) on <a href="http://codepen.io">CodePen</a>.</iframe>'
                         },
                         {
@@ -71,14 +71,14 @@ module.exports = function (language) {
                         },
                         {
                             name: 'Flicker Text',
-                            html: '<iframe height="300" scrolling="no" src="http://codepen.io/jason90929/embed/LRbBYd/?height=300&theme-id=0&default-tab=result&embed-version=2" ' +
-                            'frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/jason90929/pen/LRbBYd/">Flicker Text</a>' +
+                            html: '<iframe height="300" scrolling="no" src="//codepen.io/jason90929/embed/LRbBYd/?height=300&theme-id=0&default-tab=result&embed-version=2" ' +
+                            'frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/jason90929/pen/LRbBYd/">Flicker Text</a>' +
                             ' by Jason Tseng (<a href="http://codepen.io/jason90929">@jason90929</a>) on <a href="http://codepen.io">CodePen</a>.</iframe>'
                         },
                         {
                             name: '簡繁轉換器',
-                            html: '<iframe height="300" scrolling="no" src="http://codepen.io/jason90929/embed/YGNBEV/?height=300&theme-id=0&default-tab=result&embed-version=2"' +
-                            ' frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/jason90929/pen/YGNBEV/">簡繁轉換器</a> ' +
+                            html: '<iframe height="300" scrolling="no" src="//codepen.io/jason90929/embed/YGNBEV/?height=300&theme-id=0&default-tab=result&embed-version=2"' +
+                            ' frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/jason90929/pen/YGNBEV/">簡繁轉換器</a> ' +
                             'by Jason Tseng (<a href="http://codepen.io/jason90929">@jason90929</a>) on <a href="http://codepen.io">CodePen</a>.</iframe>'
                         }
                     ]
@@ -97,6 +97,7 @@ module.exports = function (language) {
                             name: 'CNEWS',
                             info: data.cnewsTitle,
                             src: 'assets/images/portfolio/cnews.png',
+                            url: 'https://cnews.com.tw',
                             status: data.online
                         },
                         {
