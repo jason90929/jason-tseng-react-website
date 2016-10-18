@@ -27,12 +27,12 @@ module.exports = {
         'Responsive Web Design',
         'Make good use of Pseudo-elements',
         'Understand how to enhance animation performance, preload image, enhance page speed',
-        'CSS is a large fraction in these project, <a href="https://cnews.com.tw" target="_blank">CNEWS</a>, ' +
+        'CSS is a large fraction in these project: <a href="https://cnews.com.tw" target="_blank">CNEWS</a>, ' +
         '<a href="https://jason-tseng.com/sample/ctop" target="_blank">ctop</a>, you can try resizing the browser to see RWD effect'
     ],
     JavaScriptItems: [
         'Understand ES6',
-        'Understand jQuery, but I use Vanilla instead',
+        'Understand jQuery, but I use Vanilla instead for better performance',
         'React, Redux',
         'AngularJS 1.x',
         'combine multiple JavaScript file to single file'
