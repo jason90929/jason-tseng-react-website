@@ -122,7 +122,7 @@ gulp.task('html', () => {
     return gulp.src(mainBowerFiles('app/*.html', function (err) {
     })
         .concat('app/*'))
-        .pipe(htmlmin({collapseWhitespace: true}))
+        // .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(bom()) // 解決中文亂碼
         .pipe(gulp.dest('dist'))
         .pipe(reload({stream: true}));

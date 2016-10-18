@@ -1,3 +1,19 @@
+window.updateBodyURL = function () {
+    var path = window.location.pathname;
+    var endIndex = path.length - 1;
+    var end = path.charAt(endIndex);
+    if (path !== '/' && end === '/') path = path.slice(0, -1);
+    document.getElementsByTagName('body')[0]
+        .setAttribute('data-url', path);
+};
+window.updateBodyURL()
+;(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-85911523-1', 'auto');
+ga('send', 'pageview');
+
 import React, { PropTypes } from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
@@ -45,10 +61,3 @@ render(
     document.getElementById('root')
 );
 
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-85911523-1', 'auto');
-ga('send', 'pageview');
