@@ -16,8 +16,7 @@ const Skills = ({data}) => (
                         </h3>
                         <ol>
                             {item.items.map(text =>
-                                <li>
-                                    {text}
+                                <li dangerouslySetInnerHTML={{__html: text}}>
                                 </li>
                             )}
                         </ol>
