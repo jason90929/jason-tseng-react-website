@@ -3,31 +3,43 @@ module.exports = {
     ability: 'Ability',
     abilityItems: [
         'More than 2 years experience with HTML5, CSS3 and JavaScript',
-        'Have experience with RESTful API, such as Facebook, Google',
-        'Able to complete Responsive Web Design independently',
-        'Have experience with using framework like AngularJS 1.x, React',
-        'Know how to use gulp, browserify, scss, npm development environment, it makes me complete jobs faster'
+        'Have experience with RESTful API like Facebook',
+        'Have knowledge with some Back End Skill, such as Nginx Gzip, Let\'s Encrypt, Database CRUD',
+        'Able to complete Responsive Web Design independently. I prefer develop from mobile size to PC size',
+        'Understand HTML5 tag to enhance SEO',
+        'Have experience of using framework like AngularJS 1.x, React + Redux. Now you see this website is built up by React and Redux. ' +
+        'My <a href="sample/old-website/" target="_blank">Old Website</a> is built up by Angular 1.x',
+        'Understand how to use gulp, browserify, scss, yarn development environment, it makes me complete projects faster'
     ],
     personality: 'Personality',
     personalityItems: [
-        'Learn fast',
+        'Learn fast, and have passion for most new things',
+        'Survey something if I want to know more about it',
+        ''
     ],
     HTML5Items: [
         'Have SEO Experience',
         'Have knowledge of og meta like Facebook, Google',
-        'Know how to have a better performance'
+        'Understand how to have a better performance'
     ],
     CSS3Items: [
-        'Know how to use ::after, ::before',
-        'Know how to deal with Responsive Web Design professional skills',
-        'Use SCSS to replace CSS'
+        'Use scss',
+        'Responsive Web Design',
+        'Make good use of Pseudo-elements',
+        'Understand how to enhance animation performance, preload image, enhance page speed',
+        'CSS is a large fraction in these project, <a href="https://cnews.com.tw" target="_blank">CNEWS</a>, ' +
+        '<a href="https://jason-tseng.com/sample/ctop" target="_blank">ctop</a>, you can try resizing browser to see rwd effect'
     ],
     JavaScriptItems: [
-        'jQuery',
+        'Understand ES6',
+        'Understand jQuery, but I use Vanilla instead',
         'React, Redux',
-        'AngularJS 1.x'
+        'AngularJS 1.x',
+        'combine multiple JavaScript file to single file'
     ],
-    skillsOtherItems: [],
+    skillsOtherItems: [
+        
+    ],
     codepenTitle: 'Effect Artifact',
     websiteTitle: 'Website',
     inDevelopment: 'In Development',

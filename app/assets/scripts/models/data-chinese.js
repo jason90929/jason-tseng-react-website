@@ -4,9 +4,9 @@ module.exports = {
     abilityItems: [
         '超過兩年的 HTML5, CSS3 and JavaScript 開發經驗',
         '具備使用 RESTful API 的能力，如 Facebook API',
-        '了解一些後端的技術和知識，如 Gzip、Let\'s Encrypt、CRUD',
+        '了解一些後端的技術和知識，如 Gzip、Let\'s Encrypt、資料庫 CRUD',
         '能獨立完成 RWD 網頁與切版，個人偏好從小裝置寫到大裝置',
-        '瞭解 SEO 所需的 tag',
+        '瞭解 SEO 所需的 HTML5 tag',
         '有使用 AWS S3 和 EC2 的經驗，獨立架站的能力，你現在看到的個人網站就是 AWS EC2 + GoDaddy 完成的',
         '使用過 AngularJS 1.x, React 的經驗，你現在看到的網頁是 React + Redux 架構寫的，<a href="sample/old-website/" target="_blank">舊網站</a>則是使用 Angular 1.x',
         '使用 gulp、browserify、scss、yarn（取代 npm）開發環境，加速開頭的開發建置提高工作效率'
@@ -15,7 +15,7 @@ module.exports = {
     personalityItems: [
         '學任何新東西都超快，新技術、新才藝或新興趣',
         '對很多事情都很有興趣和積極地去追求更多',
-        '超會整理，空格什麼的都排得整齊',
+        '超會整理，空格什麼的都排得整齊。不只程式碼，房間也是',
         '對於同一件事情可以投入長時間的專注力'
     ],
     HTML5Items: [
@@ -35,7 +35,7 @@ module.exports = {
         '了解部分的 ES6 語法',
         '熟 jQuery，但傾向能用 Vanilla 解決就不使用 jQuery',
         '有 React + Redux、AngularJS 1.x 的開發經驗',
-        '將全部的 js 合併成一隻檔案以提升效能'
+        '將全部的 .js 合併成一隻檔案以提升效能'
     ],
     skillsOtherItems: [
         '以 gulp、browserify、yarn 開發環境為主（新專案以 yarn 取代 npm），使用過 bower',
