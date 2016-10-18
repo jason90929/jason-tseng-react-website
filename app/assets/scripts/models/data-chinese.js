@@ -15,13 +15,12 @@ module.exports = {
     personalityItems: [
         '學任何新東西都超快，新技術、新才藝或新興趣',
         '對很多事情都很有興趣和積極地去追求更多',
-        '超會整理，空格什麼的都排得整齊。不只程式碼，房間也是',
+        '超會整理，空格什麼的都排得整齊；不只程式碼，房間也是',
         '對於同一件事情可以投入長時間的專注力'
     ],
     HTML5Items: [
         '具備 SEO 經驗，善用 HTML 5 的 tag',
         '會用 meta tag，包含預覽 Facebook, Google 的 og tag',
-        'Know how to have a better performance',
     ],
     CSS3Items: [
         '使用 SCSS 開發為主',
@@ -39,7 +38,9 @@ module.exports = {
     ],
     skillsOtherItems: [
         '以 gulp、browserify、yarn 開發環境為主（新專案以 yarn 取代 npm），使用過 bower',
+        '自備電腦 Mac Pro Retina 2015 年初，編輯器使用 IntelliJ IDEA 2016，且使用 <a href="http://docs.emmet.io/cheat-sheet/" target="_blank">Emmet</a> 快速輸入加速寫 Code 速度',
         '使用 Git 和 <a href="https://github.com/jason90929" target="_blank">Github</a>，用過 fork 和 merge',
+        '會操作 Linux、Ubuntu，AWS S3、EC2 等',
         '用 Evernote 紀錄一些步驟和指令，或是一些程式碼(程式碼陸續移到 <a href="https://codepen.io/jason90929/" target="_blank">codepen</a>)<br>' +
         'Evernote 記事範例：<br><a href="https://www.evernote.com/l/AboPjibqjtJGUp8IG9dOxBRev0x-HKVSwi0" target="_blank">WordPress 存取 Amazon S3 的圖片的方法</a><br>' +
             '<a href="https://www.evernote.com/l/AbpT0e0Nt1hISYo0fQFzXnZElDZ6kwIx7KE" target="_blank">AWS EC2 Nginx Let\'s Encrypt HTTPS SSL 設定</a>',
