@@ -1,4 +1,6 @@
 import React, {Component, PropTypes} from 'react';
+import { connect } from 'react-redux';
+import { setPopupIndex, showPopup } from '../actions';
 
 const keyupFunction = function (e) {
     if (e.keyCode === 37) { // Prev
@@ -111,14 +113,28 @@ class Popup extends Component {
     }
 }
 
-Popup.propTypes = {
-    item: PropTypes.object.isRequired,
-    popup: PropTypes.bool.isRequired,
-    index: PropTypes.number.isRequired,
-    next: PropTypes.bool.isRequired,
-    prev: PropTypes.bool.isRequired,
-    onClick: PropTypes.func.isRequired,
-    onSettingPopupIndex: PropTypes.func.isRequired
+const mapStateToProps = (state) => {
+    return {
+        popup: state.popup,
+        item: state.data.portfolio.detail[1].items[state.popupIndex],
+        index: state.popupIndex,
+        next: (state.data.portfolio.detail[1].items[state.popupIndex + 1] ? true : false),
+        prev: (state.data.portfolio.detail[1].items[state.popupIndex - 1] ? true : false)
+    };
 };
 
-export default Popup;
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        onClick: () => {
+            dispatch(showPopup(false));
+        },
+        onSettingPopupIndex: (index) => {
+            dispatch(setPopupIndex(index || 0));
+        }
+    };
+};
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Popup);

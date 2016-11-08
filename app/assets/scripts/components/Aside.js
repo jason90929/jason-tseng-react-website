@@ -1,35 +1,36 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Router, Route, browserHistory } from 'react-router'
-import MenuStatus from '../containers/MenuStatus';
-import MenuLink from '../containers/MenuLink';
+import MenuToggle from '../components/MenuToggle';
+import Menu from '../components/Menu';
 
 const Aside = ({content, menu}) => {
     if (content === 'content') {
         return (
             <aside className={'menu has-content fade-in' + (menu ? ' active' : '')}>
-                <MenuStatus filter={true}>
+                <MenuToggle filter={true}>
                     <i className="fa fa-list"/>
-                </MenuStatus>
+                </MenuToggle>
                 <nav className="main-menu">
-                    <MenuStatus filter={false}>
+                    <MenuToggle filter={false}>
                         <i className="fa fa-close"/>
-                    </MenuStatus>
+                    </MenuToggle>
                     <ul className="bask">
-                        <MenuLink filter="">
+                        <Menu filter="">
                             Home
-                        </MenuLink>
-                        <MenuLink filter="about">
+                        </Menu>
+                        <Menu filter="about">
                             About
-                        </MenuLink>
-                        <MenuLink filter="skills">
+                        </Menu>
+                        <Menu filter="skills">
                             Skills
-                        </MenuLink>
-                        <MenuLink filter="portfolio">
+                        </Menu>
+                        <Menu filter="portfolio">
                             Portfolio
-                        </MenuLink>
-                        <MenuLink filter="contact">
+                        </Menu>
+                        <Menu filter="contact">
                             Contact
-                        </MenuLink>
+                        </Menu>
                     </ul>
                 </nav>
             </aside>
@@ -40,25 +41,46 @@ const Aside = ({content, menu}) => {
         <aside className="menu">
             <nav className="main-menu">
                 <ul className="bask">
-                    <MenuLink filter="">
+                    <Menu filter="">
                         Home
-                    </MenuLink>
-                    <MenuLink filter="about">
+                    </Menu>
+                    <Menu filter="about">
                         About
-                    </MenuLink>
-                    <MenuLink filter="skills">
+                    </Menu>
+                    <Menu filter="skills">
                         Skills
-                    </MenuLink>
-                    <MenuLink filter="portfolio">
+                    </Menu>
+                    <Menu filter="portfolio">
                         Portfolio
-                    </MenuLink>
-                    <MenuLink filter="contact">
+                    </Menu>
+                    <Menu filter="contact">
                         Contact
-                    </MenuLink>
+                    </Menu>
                 </ul>
             </nav>
         </aside>
     );
 };
 
-export default Aside;
+const getContent = (content) => {
+    switch (content) {
+        case 'about':
+        case 'skills':
+        case 'portfolio':
+        case 'contact':
+            return 'content';
+        default:
+            return 'home';
+    }
+};
+
+const mapStateToProps = (state) => {
+    return {
+        menu: state.menu,
+        content: getContent(state.content)
+    };
+};
+
+export default connect(
+    mapStateToProps
+)(Aside);

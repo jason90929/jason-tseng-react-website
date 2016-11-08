@@ -1,22 +1,25 @@
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
+import {setPopupIndex, showPopup} from '../actions';
 import {Card, CardTitle, CardActions} from 'react-mdl';
-import PopupStatus from '../containers/PopupStatus';
+import Popup from '../components/Popup';
 
 // 另一種寫法，可以加 Component 的寫法，因為我不知道原本的寫法怎麼加
 class Portfolio extends Component {
     componentDidMount() { // HTML 載入完畢後執行
         // Lazy load
-        [].forEach.call(document.querySelectorAll('div[data-src]'), function(el) {
+        [].forEach.call(document.querySelectorAll('div[data-src]'), function (el) {
             var src = el.getAttribute('data-src');
             var img = document.createElement('img');
             img.setAttribute('src', src);
 
             el.style.backgroundImage = 'url(' + src + ')';
-            img.onload = function() {
+            img.onload = function () {
                 el.removeAttribute('data-src');
             };
         });
     }
+
     render() {
         return (
             <div>
@@ -59,16 +62,29 @@ class Portfolio extends Component {
                         )}
                     </article>
 
-                    <PopupStatus />
+                    <Popup />
                 </div>
             </div>
         );
     }
 }
 
-Portfolio.propTypes = {
-    data: PropTypes.object.isRequired,
-    onClick: PropTypes.func.isRequired
+const mapStateToProps = (state, ownProps) => {
+    return {
+        active: ownProps.filter === state.popup
+    };
 };
 
-export default Portfolio;
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        onClick: (index) => {
+            dispatch(setPopupIndex(index || 0));
+            dispatch(showPopup(true));
+        }
+    };
+};
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Portfolio);

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux';
 // import AddTodo from '../containers/AddTodo';
 // import VisibleTodoList from '../containers/VisibleTodoList';
 // import TodoFilter from './TodoFilter';
-import Home from './Home';
-import About from './About';
-import Skills from './Skills';
-import PortfolioStatus from '../containers/PortfolioStatus';
-import Contact from './Contact';
+import Home from '../containers/Home';
+import About from '../containers/About';
+import Skills from '../containers/Skills';
+import Portfolio from '../containers/Portfolio';
+import Contact from '../containers/Contact';
 
 const getContent = (content, data) => {
     switch (content) {
@@ -21,7 +21,7 @@ const getContent = (content, data) => {
             );
         case 'portfolio':
             return (
-                <PortfolioStatus data={data.portfolio} />
+                <Portfolio data={data.portfolio} />
             );
         case 'contact':
             return (
@@ -42,4 +42,15 @@ const Content = ({ content, animation, data }) => {
     );
 };
 
-export default Content;
+const mapStateToProps = (state) => {
+    return {
+        content: state.content,
+        contentStatus: state.contentStatus,
+        data: state.data,
+        animation: state.animation
+    }
+};
+
+export default connect(
+    mapStateToProps
+)(Content);

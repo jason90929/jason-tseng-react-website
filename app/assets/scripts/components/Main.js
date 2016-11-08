@@ -1,9 +1,9 @@
 import React from 'react';
-import ContentList from '../containers/ContentList';
+import Content from '../components/Content';
 
 const App = () => (
     <main className="main">
-        <ContentList />
+        <Content />
     </main>
 );
 

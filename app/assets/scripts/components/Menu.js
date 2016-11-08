@@ -1,4 +1,7 @@
 import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
+import { setContent, setAnimate, setMenuActive, setContentStatus } from '../actions';
+import { browserHistory } from 'react-router'
 
 const Menu = ({ active, doAnimate, children, onClick, onClickWithFadeInAnimate }) => {
     if (active) {
@@ -39,10 +42,52 @@ const Menu = ({ active, doAnimate, children, onClick, onClickWithFadeInAnimate }
     );
 };
 
-Menu.propTypes = {
-    active: PropTypes.bool.isRequired,
-    children: PropTypes.node.isRequired,
-    onClick: PropTypes.func.isRequired
+const getContent = (content) => {
+    switch (content) {
+        case 'about':
+        case 'skills':
+        case 'portfolio':
+        case 'contact':
+            return 'content';
+        default:
+            return 'home';
+    }
 };
 
-export default Menu;
+const mapStateToProps = (state, ownProps) => {
+    return {
+        active: ownProps.filter === state.content,
+        doAnimate: getContent(ownProps.filter) !== state.contentStatus,
+    };
+};
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        onClickWithFadeInAnimate: () => {
+            dispatch(setAnimate(true));
+            dispatch(setMenuActive(false));
+            dispatch(setContentStatus(getContent(ownProps.filter)));
+
+            setTimeout(function() {
+                dispatch(setAnimate(false));
+                dispatch(setContent(ownProps.filter));
+
+                // router
+                browserHistory.push('/' + ownProps.filter);
+            }, 800);
+        },
+        onClick: () => {
+            dispatch(setMenuActive(false));
+            dispatch(setContentStatus(getContent(ownProps.filter)));
+            dispatch(setContent(ownProps.filter));
+
+            // router
+            browserHistory.push('/' + ownProps.filter);
+        }
+    };
+};
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Menu);

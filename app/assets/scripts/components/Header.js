@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 const Header = ({content}) => {
     var headerClassName = '';
@@ -19,4 +20,24 @@ const Header = ({content}) => {
     );
 };
 
-export default Header;
+const getContent = (content) => {
+    switch (content) {
+        case 'about':
+        case 'skills':
+        case 'portfolio':
+        case 'contact':
+            return 'content';
+        default:
+            return 'home';
+    }
+};
+
+const mapStateToProps = (state) => {
+    return {
+        content: getContent(state.content)
+    };
+};
+
+export default connect(
+    mapStateToProps
+)(Header);

@@ -1,9 +1,9 @@
 import React from 'react';
 import _HeaderDecoration from './_HeaderDecoration';
-import HeaderStatus from '../containers/HeaderStatus';
-import AsideStatus from '../containers/AsideStatus';
+import Header from '../components/Header';
+import Aside from '../components/Aside';
 import Main from './Main';
-import FooterStatus from '../containers/FooterStatus';
+import Footer from '../components/Footer';
 
 
 import 'react-mdl/extra/material.js';
@@ -11,10 +11,10 @@ import 'react-mdl/extra/material.js';
 const App = () => (
     <div>
         <_HeaderDecoration />
-        <HeaderStatus />
-        <AsideStatus />
+        <Header />
+        <Aside />
         <Main />
-        <FooterStatus />
+        <Footer />
     </div>
 );
 

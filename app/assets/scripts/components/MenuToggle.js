@@ -1,4 +1,6 @@
 import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
+import { setMenuActive } from '../actions';
 
 const MenuToggle = ({ children, onClick }) => {
     return (
@@ -18,9 +20,21 @@ const MenuToggle = ({ children, onClick }) => {
     );
 };
 
-MenuToggle.propTypes = {
-    children: PropTypes.node.isRequired,
-    onClick: PropTypes.func.isRequired
+const mapStateToProps = (state, ownProps) => {
+    return {
+        menu: ownProps.filter === state.menu
+    };
 };
 
-export default MenuToggle;
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        onClick: () => {
+            dispatch(setMenuActive(ownProps.filter));
+        }
+    };
+};
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(MenuToggle);

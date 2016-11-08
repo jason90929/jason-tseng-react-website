@@ -1,5 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {Button} from 'react-mdl';
+import {connect} from 'react-redux';
+import {setLanguage, getData} from '../actions';
 
 const getLanguageButtonName = (language) => {
     switch (language) {
@@ -112,32 +114,58 @@ class Footer extends Component {
                     </a>
 
                     {this.props.data.map(item =>
-                    <a href={item.url} target={item._blank ? '_blank' : ''}>
-                    <Button ripple className="mdl-icon-custom">
-                    <i className={'fa ' + item.icon}/>
-                    </Button>
-                    </a>
+                        <a href={item.url} target={item._blank ? '_blank' : ''}>
+                            <Button ripple className="mdl-icon-custom">
+                                <i className={'fa ' + item.icon}/>
+                            </Button>
+                        </a>
                     )}
                 </div>
 
                 {/*<svg id="drawLine" className={this.state.draw} xmlns="http://www.w3.org/2000/svg"
-                     xmlnsXlink="http://www.w3.org/1999/xlink"
-                     preserveAspectRatio="xMidYMid">
-                    <path d="M15.000,-1200.000 L15.000,1200.000 Z"/>
-                    <path d="M45.000,-1200.000 L45.000,1200.000 Z"/>
-                    <path d="M75.000,-1200.000 L75.000,1200.000 Z"/>
-                    <path d="M105.000,-1200.000 L105.000,1200.000 Z"/>
-                </svg>*/}
+                 xmlnsXlink="http://www.w3.org/1999/xlink"
+                 preserveAspectRatio="xMidYMid">
+                 <path d="M15.000,-1200.000 L15.000,1200.000 Z"/>
+                 <path d="M45.000,-1200.000 L45.000,1200.000 Z"/>
+                 <path d="M75.000,-1200.000 L75.000,1200.000 Z"/>
+                 <path d="M105.000,-1200.000 L105.000,1200.000 Z"/>
+                 </svg>*/}
             </footer>
         )
     };
 }
 
-Footer.propTypes = {
-    content: PropTypes.string.isRequired,
-    data: PropTypes.object.isRequired,
-    language: PropTypes.string.isRequired,
-    onSwitchLanguage: PropTypes.func.isRequired
+const getContent = (content) => {
+    switch (content) {
+        case 'about':
+        case 'skills':
+        case 'portfolio':
+            return 'content';
+        case 'contact':
+            return 'contact';
+        default:
+            return 'home';
+    }
 };
 
-export default Footer;
+const mapStateToProps = (state) => {
+    return {
+        content: getContent(state.content),
+        data: state.data.contact,
+        language: state.language
+    };
+};
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        onSwitchLanguage: (language) => {
+            dispatch(setLanguage(language));
+            dispatch(getData(language));
+        }
+    };
+};
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Footer);
