@@ -59,6 +59,7 @@ module.exports = {
     terminated: '開發中止',
     online: '已上線',
     private: '非公開',
+    nongDesignTitle: '弄弄設計官網',
     tinGroupTitle: '廷廷鋼琴團購',
     cnewsTitle: '匯流新聞網',
     homeIntegration: '紘樂網站',

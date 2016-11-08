@@ -105,6 +105,13 @@ module.exports = function (language) {
                     title: data.websiteTitle,
                     items: [
                         {
+                            name: 'nong-design',
+                            info: data.nongDesignTitle,
+                            src: 'assets/images/portfolio/nong-design.png',
+                            status: data.inDevelopment,
+                            detail: '使用技術：HTML5 + SCSS + JavaScript'
+                        },
+                        {
                             name: 'tin-group',
                             info: data.tinGroupTitle,
                             src: 'assets/images/portfolio/tin-group.png',
@@ -122,7 +129,8 @@ module.exports = function (language) {
                             name: 'Home Integration',
                             info: data.homeIntegration,
                             src: 'assets/images/portfolio/home-integration.png',
-                            status: data.inDevelopment
+                            url: 'http://home-i.com.tw',
+                            status: data.online
                         },
                         {
                             name: 'Gopapala',

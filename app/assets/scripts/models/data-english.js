@@ -59,6 +59,7 @@ module.exports = {
     terminated: 'Terminated',
     online: 'Online',
     private: 'Private',
+    nongDesignTitle: 'Nong Design Website',
     tinGroupTitle: 'TinTin Group',
     cnewsTitle: 'CNEWS',
     homeIntegration: 'Home Integration',
