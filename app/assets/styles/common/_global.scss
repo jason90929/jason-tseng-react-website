@@ -23,6 +23,14 @@ html, body {
     }
 }
 
+.a-html {
+    position: relative !important;
+}
+
+.a-body {
+    overflow: auto !important;
+}
+
 a {
     text-decoration: none;
 

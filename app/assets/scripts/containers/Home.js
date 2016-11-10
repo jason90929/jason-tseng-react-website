@@ -1,10 +1,74 @@
-import React from 'react';
+import React, {Component} from 'react';
+import 'aframe';
+import 'aframe-bmfont-text-component';
+import {Entity, Scene} from 'aframe-react';
 
-const Home = () => {
-    return (
-        <figure className="pof full bg _01 bg-animation">
-        </figure>
-    );
-};
+class Home extends Component {
+
+    render () {
+        return (
+            <figure className="pof full">
+                <Scene>
+                    <Entity geometry={{primitive: 'box'}} material={{color: 'red'}} position={[0, 0, -5]}/>
+                    <Entity bmfont-text={{text: 'HELLO WORLD'}} position={[0, 1, -5]}/>
+                    <Entity primitive='a-gradient-sky' material={{topColor: '0 1 0', bottomColor: '1 0 0'}}/>
+                </Scene>
+            </figure>
+        );
+    }
+}
 
 export default Home;
+AFRAME.registerShader('gradient', {
+    schema: {
+        topColor: {type: 'vec3', default: '1 0 0', is: 'uniform'},
+        bottomColor: {type: 'vec3', default: '0 0 1', is: 'uniform'},
+        offset: {type: 'float', default: '400', is: 'uniform'},
+        exponent: {type: 'float', default: '0.6', is: 'uniform'}
+    },
+    vertexShader: [
+        'varying vec3 vWorldPosition;',
+
+        'void main() {',
+
+        'vec4 worldPosition = modelMatrix * vec4( position, 1.0 );',
+        'vWorldPosition = worldPosition.xyz;',
+
+        'gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0 );',
+
+        '}'
+    ].join('\n'),
+    fragmentShader: [
+        'uniform vec3 bottomColor;',
+        'uniform vec3 topColor;',
+        'uniform float offset;',
+        'uniform float exponent;',
+        'varying vec3 vWorldPosition;',
+        'void main() {',
+        ' float h = normalize( vWorldPosition + offset ).y;',
+        ' gl_FragColor = vec4( mix( bottomColor, topColor, max( pow( max(h, 0.0 ), exponent ), 0.0 ) ), 1.0 );',
+        '}'
+    ].join('\n')
+});
+
+AFRAME.registerPrimitive('a-gradient-sky', {
+    defaultComponents: {
+        geometry: {
+            primitive: 'sphere',
+            radius: 5000,
+            segmentsWidth: 64,
+            segmentsHeight: 20
+        },
+        material: {
+            shader: 'gradient'
+        },
+        scale: '-1 1 1'
+    },
+
+    mappings: {
+        topColor: 'material.topColor',
+        bottomColor: 'material.bottomColor',
+        offset: 'material.offset',
+        exponent: 'material.exponent'
+    }
+});
