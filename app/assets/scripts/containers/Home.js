@@ -9,7 +9,7 @@ class Home extends Component {
 
     render () {
         var stars = [];
-        for (let i = 0; i < 500; i++) { // 星星數量
+        for (let i = 0; i < 400; i++) { // 星星數量
             stars.push(<Entity geometry={{primitive: 'sphere', radius: Math.random() * .05 + .01}} material={{color: '#fff'}} position={[(Math.random() * 80 - 40), (Math.random() * 300 - 150), (Math.random() * 200 - 100)]} />);
         }
 
@@ -35,7 +35,7 @@ class Home extends Component {
                     {stars}
 
                     {/*漸層背景*/}
-                    <Entity primitive="a-gradient-sky" material={{topColor: '0.0078125 0.12109375 0.23046875', bottomColor: '0.00390625 0.09375 0.1796875'}}/>
+                    <Entity primitive="a-gradient-sky" material={{topColor: '0.00390625 0.09375 0.1796875', bottomColor: '0.0078125 0.12109375 0.23046875'}}/>
                 </Scene>
             </figure>
         );
