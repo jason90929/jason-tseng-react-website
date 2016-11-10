@@ -15,7 +15,11 @@ class Home extends Component {
 
         return (
             <figure className="pof full">
-                <Scene>
+                {/* embedded 為不要讓他綁整個畫面，可在其他頁面使用 scroll */}
+                {/* vr-mode-ui="enabled: false" 不要顯示右下角的 VR 模式 */}
+                {/* vr-mode-ui="enabled: false" 時，就不能放 embedded 了不然會出錯 = = */}
+                <Scene vr-mode-ui={{enabled: false}}>
+                    {/*會自動緩慢移動的攝影機*/}
                     <Entity position={[0, 2, 5]}
                               alongpath="path:-1,0,3 2,3,0 1,2,-3 2,0,-5 4,0,-2 4,0,2; closed:true; dur:50000">
                         <Entity camera look-controls id="player">
@@ -24,10 +28,14 @@ class Home extends Component {
                     </Entity>
 
                     {/*月亮*/}
-                    <Entity geometry={{primitive: 'sphere', radius: 5}} material={{color: '#F5F3CE'}} position={[64, 49, -80]}/>
+                    <Entity geometry={{primitive: 'sphere', radius: 3}} material={{color: '#F5F3CE'}} position={[91, 106, -82]}/>
+
+                    {/*火星*/}
+                    <Entity geometry={{primitive: 'sphere', radius: .8}} material={{color: '#FFD0D0'}} position={[-46, 74, -135]}/>
                     {stars}
 
-                    <Entity primitive="a-gradient-sky" material={{topColor: '0.00390625 0.09375 0.1796875', bottomColor: '0.0078125 0.12109375 0.23046875'}}/>
+                    {/*漸層背景*/}
+                    <Entity primitive="a-gradient-sky" material={{topColor: '0.0078125 0.12109375 0.23046875', bottomColor: '0.00390625 0.09375 0.1796875'}}/>
                 </Scene>
             </figure>
         );
