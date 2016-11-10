@@ -132,7 +132,7 @@ class Footer extends Component {
                  </svg>*/}
             </footer>
         )
-    };
+    }
 }
 
 const getContent = (content) => {

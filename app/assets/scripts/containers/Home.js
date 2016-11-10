@@ -1,17 +1,21 @@
 import React, {Component} from 'react';
 import 'aframe';
-import 'aframe-bmfont-text-component';
 import {Entity, Scene} from 'aframe-react';
 
 class Home extends Component {
+    constructor(props) {
+        super(props);
+    }
 
     render () {
         return (
             <figure className="pof full">
                 <Scene>
                     <Entity geometry={{primitive: 'box'}} material={{color: 'red'}} position={[0, 0, -5]}/>
-                    <Entity bmfont-text={{text: 'HELLO WORLD'}} position={[0, 1, -5]}/>
-                    <Entity primitive='a-gradient-sky' material={{topColor: '0 1 0', bottomColor: '1 0 0'}}/>
+
+                    <Entity primitive='a-light' type="ambient" color="#ddd" position="0 5 -3" />
+
+                    <Entity primitive='a-gradient-sky' material={{topColor: '0.00390625 0.09375 0.1796875', bottomColor: '0.0078125 0.12109375 0.23046875'}}/>
                 </Scene>
             </figure>
         );
@@ -19,6 +23,8 @@ class Home extends Component {
 }
 
 export default Home;
+
+// http://stackoverflow.com/questions/40454143/gradient-sky-in-a-frame
 AFRAME.registerShader('gradient', {
     schema: {
         topColor: {type: 'vec3', default: '1 0 0', is: 'uniform'},

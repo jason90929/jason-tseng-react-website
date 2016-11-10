@@ -68,7 +68,6 @@
   },
   "dependencies": {
     "aframe": "^0.3.2",
-    "aframe-bmfont-text-component": "^0.1.4",
     "aframe-react": "^3.4.0",
     "font-awesome": "^4.6.3",
     "material-design-lite": "^1.2.0",
