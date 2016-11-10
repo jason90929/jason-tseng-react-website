@@ -8,14 +8,26 @@ class Home extends Component {
     }
 
     render () {
+        var stars = [];
+        for (let i = 0; i < 500; i++) { // 星星數量
+            stars.push(<Entity geometry={{primitive: 'sphere', radius: Math.random() * .05 + .01}} material={{color: '#fff'}} position={[(Math.random() * 80 - 40), (Math.random() * 300 - 150), (Math.random() * 200 - 100)]} />);
+        }
+
         return (
             <figure className="pof full">
                 <Scene>
-                    <Entity geometry={{primitive: 'box'}} material={{color: 'red'}} position={[0, 0, -5]}/>
+                    <Entity position={[0, 2, 5]}
+                              alongpath="path:-1,0,3 2,3,0 1,2,-3 2,0,-5 4,0,-2 4,0,2; closed:true; dur:50000">
+                        <Entity camera look-controls id="player">
+                            <Entity primitve="a-cursor" material={{color: "#FFF"}} />
+                        </Entity>
+                    </Entity>
 
-                    <Entity primitive='a-light' type="ambient" color="#ddd" position="0 5 -3" />
+                    {/*月亮*/}
+                    <Entity geometry={{primitive: 'sphere', radius: 5}} material={{color: '#F5F3CE'}} position={[64, 49, -80]}/>
+                    {stars}
 
-                    <Entity primitive='a-gradient-sky' material={{topColor: '0.00390625 0.09375 0.1796875', bottomColor: '0.0078125 0.12109375 0.23046875'}}/>
+                    <Entity primitive="a-gradient-sky" material={{topColor: '0.00390625 0.09375 0.1796875', bottomColor: '0.0078125 0.12109375 0.23046875'}}/>
                 </Scene>
             </figure>
         );
@@ -24,6 +36,7 @@ class Home extends Component {
 
 export default Home;
 
+// 漸層天空色
 // http://stackoverflow.com/questions/40454143/gradient-sky-in-a-frame
 AFRAME.registerShader('gradient', {
     schema: {
@@ -78,3 +91,47 @@ AFRAME.registerPrimitive('a-gradient-sky', {
         exponent: 'material.exponent'
     }
 });
+
+// 攝影機移動效果
+// http://dirosa.me/cat-garden/
+var alongpathComp = {
+    schema: {
+        path     : { default: ''    },
+        closed   : { default: false },
+        dur      : { default: 1000  }
+    },
+
+    init: function() {
+        var ent = this.el;
+        var d = this.data;
+        var points = d.path.split(' ').map(function(p) {
+            p = p.split(',');
+            return new THREE.Vector3(
+                parseFloat(p[0]),
+                parseFloat(p[1]),
+                parseFloat(p[2])
+            );
+        });
+        var ctor = d.closed ? 'ClosedSplineCurve3' : 'SplineCurve3';
+        var curve = new THREE[ctor](points);
+
+        var onFrame = function onFrame(t) {
+            window.requestAnimationFrame(onFrame);
+            t = t % d.dur;
+            var i = t / d.dur;
+            try {
+                var p = curve.getPoint(i);
+                ent.setAttribute('position', p);
+            } catch (ex) {}
+        };
+
+        onFrame();
+    },
+
+    update: function(oldData) {},
+
+    remove: function() {}
+};
+
+AFRAME.registerComponent('alongpath', alongpathComp);
+
