@@ -23,7 +23,7 @@ class Home extends Component {
                     <Entity position={[0, 2, 5]}
                               alongpath="path:-1,0,3 2,3,0 1,2,-3 2,0,-5 4,0,-2 4,0,2; closed:true; dur:50000">
                         <Entity camera look-controls id="player">
-                            <Entity primitve="a-cursor" material={{color: "#FFF"}} />
+                            {/*<Entity primitve="a-cursor" material={{color: "#FFF"}} />*/}
                         </Entity>
                     </Entity>
 
