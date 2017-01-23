@@ -58,9 +58,21 @@ module.exports = function (language) {
           method: 'iframe',
           items: [
             {
-              name: 'Scroll down then element brush in',
-              html: `<iframe height="300" scrolling="no" src="//codepen.io/jason90929/embed/jVbbRm/?height=300&theme-id=0&default-tab=result&embed-version=2"
-frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/jason90929/pen/jVbbRm/">Scroll down then element brush in</a>
+              name: 'Todo List in Vue.js',
+              html: `<iframe height="300" scrolling="no" title="Todo List in Vue.js" src="//codepen.io/jason90929/embed/apWrVK/?height=300&theme-id=26312&default-tab=result&embed-version=2"
+frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/jason90929/pen/apWrVK/">Todo List in Vue.js</a>
+by Jason Tseng (<a href="http://codepen.io/jason90929">@jason90929</a>) on <a href="http://codepen.io">CodePen</a>.</iframe>`
+            },
+            {
+              name: 'Horizontal Articles with RWD',
+              html: `<iframe height="300" scrolling="no" title="Horizontal Articles with RWD" src="//codepen.io/jason90929/embed/vggdjK/?height=300&theme-id=26312&default-tab=result&embed-version=2" 
+frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/jason90929/pen/vggdjK/">Horizontal Articles with RWD</a> 
+by Jason Tseng (<a href="http://codepen.io/jason90929">@jason90929</a>) on <a href="http://codepen.io">CodePen</a>.</iframe>`
+            },
+            {
+              name: 'Smooth fill text with 2 animations',
+              html: `<iframe height="300" scrolling="no" title="Smooth fill text with 2 animations" src="//codepen.io/jason90929/embed/XNPQBP/?height=300&theme-id=26312&default-tab=result&embed-version=2"
+frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/jason90929/pen/XNPQBP/">Smooth fill text with 2 animations</a>
 by Jason Tseng (<a href="http://codepen.io/jason90929">@jason90929</a>) on <a href="http://codepen.io">CodePen</a>.</iframe>`
             },
             // {
