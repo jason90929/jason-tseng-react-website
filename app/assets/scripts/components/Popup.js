@@ -77,7 +77,7 @@ class Popup extends Component {
             <div className="site-status">
               {this.props.item.url ?
                 <a href={this.props.item.url}
-                   target="_blank">
+                   target="_blank" rel="noopener">
                   {this.props.item.status}
                 </a>
                 :

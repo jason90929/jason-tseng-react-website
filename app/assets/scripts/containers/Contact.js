@@ -14,8 +14,7 @@ const Contact = ({ data }) => (
           <ul>
             {data.map(item =>
               <li>
-                <a href={item.url} target={item._blank ? '_blank' : ''}>
-
+                <a href={item.url} target={item._blank ? '_blank' : ''} rel="noopener">
                   <Button ripple className="mdl-btn-custom">
                     <i className={'fa ' + item.icon} />
                     {item.name}

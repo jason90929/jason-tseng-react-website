@@ -114,7 +114,7 @@ class Footer extends Component {
           </a>
 
           {this.props.data.map(item =>
-            <a href={item.url} target={item._blank ? '_blank' : ''}>
+            <a href={item.url} target={item._blank ? '_blank' : ''} rel="noopener">
               <Button ripple className="mdl-icon-custom">
                 <i className={'fa ' + item.icon} />
               </Button>
