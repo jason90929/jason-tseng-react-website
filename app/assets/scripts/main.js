@@ -1,10 +1,10 @@
 window.updateBodyURL = function () {
-    var path = window.location.pathname;
-    var endIndex = path.length - 1;
-    var end = path.charAt(endIndex);
-    if (path !== '/' && end === '/') path = path.slice(0, -1);
-    document.getElementsByTagName('body')[0]
-        .setAttribute('data-url', path);
+  var path = window.location.pathname;
+  var endIndex = path.length - 1;
+  var end = path.charAt(endIndex);
+  if (path !== '/' && end === '/') path = path.slice(0, -1);
+  document.getElementsByTagName('body')[0]
+    .setAttribute('data-url', path);
 };
 window.updateBodyURL()
 ;(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -26,27 +26,27 @@ var initialState = {};
 
 // router
 switch (location.pathname) {
-    case '/about':
-    case '/about/':
-        initialState.content = 'about';
-        initialState.contentStatus = 'content';
-        break;
-    case '/skills':
-    case '/skills/':
-        initialState.content = 'skills';
-        initialState.contentStatus = 'content';
-        break;
-    case '/portfolio':
-    case '/portfolio/':
-        initialState.content = 'portfolio';
-        initialState.contentStatus = 'content';
-        break;
-    case '/contact':
-    case '/contact/':
-        initialState.content = 'contact';
-        initialState.contentStatus = 'content';
-        break;
-    default:
+  case '/about':
+  case '/about/':
+    initialState.content = 'about';
+    initialState.contentStatus = 'content';
+    break;
+  case '/skills':
+  case '/skills/':
+    initialState.content = 'skills';
+    initialState.contentStatus = 'content';
+    break;
+  case '/portfolio':
+  case '/portfolio/':
+    initialState.content = 'portfolio';
+    initialState.contentStatus = 'content';
+    break;
+  case '/contact':
+  case '/contact/':
+    initialState.content = 'contact';
+    initialState.contentStatus = 'content';
+    break;
+  default:
 }
 
 // In Development...
@@ -55,9 +55,9 @@ switch (location.pathname) {
 let store = createStore(todoApp, initialState);
 
 render(
-    <Provider store={store}>
-        <App />
-    </Provider>,
-    document.getElementById('root')
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
 );
 

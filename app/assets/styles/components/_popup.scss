@@ -1,171 +1,171 @@
 @media screen {
-    .popup-wrapper {
-        position: fixed;
-        opacity: 0;
-        visibility: hidden;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 5;
+  .popup-wrapper {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
 
-        -webkit-transition: opacity .3s cubic-bezier(.5,.61,.355,1), visibility .3s cubic-bezier(.5,.61,.355,1);
-        -moz-transition: opacity .3s cubic-bezier(.5,.61,.355,1), visibility .3s cubic-bezier(.5,.61,.355,1);
-        -ms-transition: opacity .3s cubic-bezier(.5,.61,.355,1), visibility .3s cubic-bezier(.5,.61,.355,1);
-        -o-transition: opacity .3s cubic-bezier(.5,.61,.355,1), visibility .3s cubic-bezier(.5,.61,.355,1);
-        transition: opacity .3s cubic-bezier(.5,.61,.355,1), visibility .3s cubic-bezier(.5,.61,.355,1);
+    -webkit-transition: opacity .3s cubic-bezier(.5, .61, .355, 1), visibility .3s cubic-bezier(.5, .61, .355, 1);
+    -moz-transition: opacity .3s cubic-bezier(.5, .61, .355, 1), visibility .3s cubic-bezier(.5, .61, .355, 1);
+    -ms-transition: opacity .3s cubic-bezier(.5, .61, .355, 1), visibility .3s cubic-bezier(.5, .61, .355, 1);
+    -o-transition: opacity .3s cubic-bezier(.5, .61, .355, 1), visibility .3s cubic-bezier(.5, .61, .355, 1);
+    transition: opacity .3s cubic-bezier(.5, .61, .355, 1), visibility .3s cubic-bezier(.5, .61, .355, 1);
 
-        ._backdrop {
-            opacity: 0;
-            visibility: hidden;
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, .8);
-            z-index: 4;
+    ._backdrop {
+      opacity: 0;
+      visibility: hidden;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, .8);
+      z-index: 4;
 
-            -webkit-transition: opacity .3s ease-out, visibility .3s ease-out;
-            -moz-transition: opacity .3s ease-out, visibility .3s ease-out;
-            -ms-transition: opacity .3s ease-out, visibility .3s ease-out;
-            -o-transition: opacity .3s ease-out, visibility .3s ease-out;
-            transition: opacity .3s ease-out, visibility .3s ease-out;
-        }
-
-        &.active {
-            opacity: 1;
-            visibility: visible;
-
-            .popup {
-                -webkit-transform: scale(1);
-                -moz-transform: scale(1);
-                -ms-transform: scale(1);
-                -o-transform: scale(1);
-                transform: scale(1);
-            }
-
-            ._backdrop {
-                opacity: 1;
-                visibility: visible;
-            }
-        }
+      -webkit-transition: opacity .3s ease-out, visibility .3s ease-out;
+      -moz-transition: opacity .3s ease-out, visibility .3s ease-out;
+      -ms-transition: opacity .3s ease-out, visibility .3s ease-out;
+      -o-transition: opacity .3s ease-out, visibility .3s ease-out;
+      transition: opacity .3s ease-out, visibility .3s ease-out;
     }
 
-    .popup {
-        position: fixed;
-        top: 40px;
-        right: 15px;
-        bottom: 60px;
-        left: 15px;
-        background-color: $white;
-        z-index: 5;
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        border-radius: 2px;
+    &.active {
+      opacity: 1;
+      visibility: visible;
 
-        -webkit-transform: scale(0);
-        -moz-transform: scale(0);
-        -ms-transform: scale(0);
-        -o-transform: scale(0);
-        transform: scale(0);
+      .popup {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+      }
 
-        -webkit-transition: transform .3s cubic-bezier(.5,.61,.355,1);
-        -moz-transition: transform .3s cubic-bezier(.5,.61,.355,1);
-        -ms-transition: transform .3s cubic-bezier(.5,.61,.355,1);
-        -o-transition: transform .3s cubic-bezier(.5,.61,.355,1);
-        transition: transform .3s cubic-bezier(.5,.61,.355,1);
+      ._backdrop {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
 
-        .popup-close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            z-index: 1;
-        }
+  .popup {
+    position: fixed;
+    top: 40px;
+    right: 15px;
+    bottom: 60px;
+    left: 15px;
+    background-color: $white;
+    z-index: 5;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+
+    -webkit-transition: transform .3s cubic-bezier(.5, .61, .355, 1);
+    -moz-transition: transform .3s cubic-bezier(.5, .61, .355, 1);
+    -ms-transition: transform .3s cubic-bezier(.5, .61, .355, 1);
+    -o-transition: transform .3s cubic-bezier(.5, .61, .355, 1);
+    transition: transform .3s cubic-bezier(.5, .61, .355, 1);
+
+    .popup-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 1;
+    }
+  }
+
+  .theme-popup {
+    $mt: 30px;
+    $mb: 12px;
+    position: relative;
+    text-align: center;
+    margin: $mt $mb $mb;
+    height: calc(100% - #{$mt} - #{$mb});
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    form {
+      position: relative;
     }
 
-    .theme-popup {
-        $mt: 30px;
-        $mb: 12px;
-        position: relative;
-        text-align: center;
-        margin: $mt $mb $mb;
-        height: calc(100% - #{$mt} - #{$mb});
-        overflow: auto;
-        -webkit-overflow-scrolling: touch;
-
-        form {
-            position: relative;
-        }
-
-        button[type=submit] {
-            margin-top: 40px;
-        }
-
-        .caption {
-            margin: 0 auto;
-            font-size: 26px;
-            line-height: 30px;
-        }
-
-        .site-status {
-            margin: 5px auto;
-
-            a {
-                color: #14bf1c;
-            }
-            
-            span {
-                color: #cc2643;
-            }
-        }
+    button[type=submit] {
+      margin-top: 40px;
     }
 
-    .prevPopup, .nextPopup {
-        display: none;
+    .caption {
+      margin: 0 auto;
+      font-size: 26px;
+      line-height: 30px;
     }
+
+    .site-status {
+      margin: 5px auto;
+
+      a {
+        color: #14bf1c;
+      }
+
+      span {
+        color: #cc2643;
+      }
+    }
+  }
+
+  .prevPopup, .nextPopup {
+    display: none;
+  }
 }
 
 @media screen and (min-width: $response-1) {
-    .popup {
-        position: fixed;
-        top: calc(50% - 250px);
-        height: 500px;
-        left: calc(50% - (#{$response-1} - 100px) / 2);
-        width: calc(#{$response-1} - 100px);
-        right: auto;
-        bottom: auto;
-    }
+  .popup {
+    position: fixed;
+    top: calc(50% - 250px);
+    height: 500px;
+    left: calc(50% - (#{$response-1} - 100px) / 2);
+    width: calc(#{$response-1} - 100px);
+    right: auto;
+    bottom: auto;
+  }
 
-    .theme-popup {
-        $mt: 50px;
-        $mb: 30px;
-        margin: $mt $mb $mb;
-        height: calc(100% - #{$mt} - #{$mb});
-    }
+  .theme-popup {
+    $mt: 50px;
+    $mb: 30px;
+    margin: $mt $mb $mb;
+    height: calc(100% - #{$mt} - #{$mb});
+  }
 
-    .prevPopup, .nextPopup {
-        display: block;
-        position: fixed;
-        width: 22px;
-        height: 40px;
-        background-size: cover;
-        top: calc(50% - 20px);
-        z-index: 5;
-        background-repeat: no-repeat;
-    }
+  .prevPopup, .nextPopup {
+    display: block;
+    position: fixed;
+    width: 22px;
+    height: 40px;
+    background-size: cover;
+    top: calc(50% - 20px);
+    z-index: 5;
+    background-repeat: no-repeat;
+  }
 
-    .prevPopup {
-        left: 15px;
-        background-image: url(../images/arrow-left-white.svg);
-    }
+  .prevPopup {
+    left: 15px;
+    background-image: url(../images/arrow-left-white.svg);
+  }
 
-    .nextPopup {
-        right: 15px;
-        background-image: url(../images/arrow-right-white.svg);
-    }
+  .nextPopup {
+    right: 15px;
+    background-image: url(../images/arrow-right-white.svg);
+  }
 }
 
 @media screen and (min-width: $response-2) {

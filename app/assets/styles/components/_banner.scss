@@ -1,50 +1,50 @@
 @media screen {
-    .banner {
-        height: $banner-mobile-height;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-position: top center;
-        background-size: $banner-width auto;
-        background-color: #6a9cbc;
+  .banner {
+    height: $banner-mobile-height;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: $banner-width auto;
+    background-color: #6a9cbc;
 
-        &.bot {
-            background-position: bottom center;
-        }
-
-        &._01 {
-            background-image: url('../images/bg-header-768.jpg');
-        }
-
-        &._02 {
-            background-image: url('../images/bg-footer-768.jpg');
-        }
+    &.bot {
+      background-position: bottom center;
     }
+
+    &._01 {
+      background-image: url('../images/bg-header-768.jpg');
+    }
+
+    &._02 {
+      background-image: url('../images/bg-footer-768.jpg');
+    }
+  }
 }
 
 @media screen and (min-width: $response-1) {
-    .banner {
-        height: $banner-pad-height;
+  .banner {
+    height: $banner-pad-height;
 
-        &._01 {
-            background-image: url('../images/bg-header-1200.jpg');
-        }
-
-        &._02 {
-            background-image: url('../images/bg-footer-1200.jpg');
-        }
+    &._01 {
+      background-image: url('../images/bg-header-1200.jpg');
     }
+
+    &._02 {
+      background-image: url('../images/bg-footer-1200.jpg');
+    }
+  }
 }
 
 @media screen and (min-width: $banner-width) {
-    .banner {
-        background-size: 100% auto;
+  .banner {
+    background-size: 100% auto;
 
-        &._01 {
-            background-image: url('../images/bg-header-1920.jpg');
-        }
-
-        &._02 {
-            background-image: url('../images/bg-footer-1920.jpg');
-        }
+    &._01 {
+      background-image: url('../images/bg-header-1920.jpg');
     }
+
+    &._02 {
+      background-image: url('../images/bg-footer-1920.jpg');
+    }
+  }
 }

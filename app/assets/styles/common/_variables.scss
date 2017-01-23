@@ -11,7 +11,6 @@ $banner-pad-height: 610px;
 $response-1: 768px;
 $response-2: 1280px;
 
-
 // 移除箭頭和藍色外框
 //summary {
 //    &::-webkit-details-marker {
@@ -24,5 +23,5 @@ $response-2: 1280px;
 //}
 
 .pof {
-    position: fixed;
+  position: fixed;
 }

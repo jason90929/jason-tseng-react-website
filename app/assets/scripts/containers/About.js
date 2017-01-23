@@ -1,59 +1,59 @@
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from 'react';
 import { Link } from 'react-router'
 
-const About = ({data}) => (
-    <div>
-        <figure className="banner _01">
+const About = ({ data }) => (
+  <div>
+    <figure className="banner _01">
+    </figure>
+
+    <div className="bg-theme-color">
+      <article className="article">
+        <h2>About</h2>
+
+        <figure className="avatar">
+          <img src={data.avatar.src} alt={data.avatar.alt} />
         </figure>
 
-        <div className="bg-theme-color">
-            <article className="article">
-                <h2>About</h2>
 
-                <figure className="avatar">
-                    <img src={data.avatar.src} alt={data.avatar.alt} />
-                </figure>
+        <p dangerouslySetInnerHTML={{ __html: data.intro }}>
 
+        </p>
 
-                <p dangerouslySetInnerHTML={{__html: data.intro}}>
+        {data.detail.map(item =>
+          <div>
+            <h3>
+              {item.title}
+            </h3>
 
-                </p>
+            { item.intro ?
+              <p dangerouslySetInnerHTML={{ __html: item.intro }}>
 
-                {data.detail.map(item =>
-                    <div>
-                        <h3>
-                            {item.title}
-                        </h3>
+              </p>
+              :
+              false
+            }
 
-                        { item.intro ?
-                            <p dangerouslySetInnerHTML={{__html: item.intro}}>
-
-                            </p>
-                            :
-                            false
-                        }
-
-                        { item.items ?
-                            <ol>
-                                {item.items.map(text =>
-                                    <li dangerouslySetInnerHTML={{__html: text}}>
-                                    </li>
-                                )}
-                            </ol>
-                            :
-                            false
-                        }
-                    </div>
+            { item.items ?
+              <ol>
+                {item.items.map(text =>
+                  <li dangerouslySetInnerHTML={{ __html: text }}>
+                  </li>
                 )}
+              </ol>
+              :
+              false
+            }
+          </div>
+        )}
 
-                <br className="clear"/>
-            </article>
-        </div>
+        <br className="clear" />
+      </article>
     </div>
+  </div>
 );
 
 About.propTypes = {
-    data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired
 };
 
 export default About;

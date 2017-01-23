@@ -1,229 +1,229 @@
 @media screen {
-    .menu {
+  .menu {
+    position: fixed;
+    z-index: 1;
+    left: 40px;
+    bottom: 64px;
+    opacity: .95;
+
+    .toggle {
+      position: fixed;
+      display: block;
+      right: 30px;
+      top: 35px;
+      font-size: 20px;
+      color: $white;
+
+      &:hover, &:focus, &:active {
+        color: $white;
+      }
+    }
+
+    &.has-content {
+      nav.main-menu {
+        opacity: 0;
+        visibility: hidden;
+
+        > ul {
+          > li {
+            -webkit-animation: none;
+            -o-animation: none;
+            animation: none;
+          }
+        }
+      }
+    }
+
+    &.active {
+      z-index: 3;
+
+      nav.main-menu {
         position: fixed;
-        z-index: 1;
-        left: 40px;
-        bottom: 64px;
-        opacity: .95;
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: calc(100% - 30px);
+        height: 100%;
+        background-color: rgba(40, 40, 30, .8);
+        padding-left: 30px;
 
-        .toggle {
-            position: fixed;
-            display: block;
-            right: 30px;
-            top: 35px;
-            font-size: 20px;
-            color: $white;
+        > ul {
+          position: absolute;
+          top: calc(50% - 87px);
+        }
+      }
+    }
+  }
 
-            &:hover, &:focus, &:active {
-                color: $white;
-            }
+  nav.main-menu {
+    -webkit-transition: opacity .275s linear;
+    -moz-transition: opacity .275s linear;
+    -ms-transition: opacity .275s linear;
+    -o-transition: opacity .275s linear;
+    transition: opacity .275s linear;
+
+    > ul {
+      font-weight: 400;
+      margin: 0;
+      padding: 0;
+
+      > li {
+        position: relative;
+        list-style: none;
+        margin-bottom: 21px;
+        color: $white;
+        font-size: 14px;
+        letter-spacing: 3.2px;
+
+        @for $i from 1 through 5 {
+          &:nth-child(#{$i}) {
+            -webkit-animation: main-menu-in 2.2s + $i * .5 ease-out;
+            -o-animation: main-menu-in 2.2s + $i * .5 ease-out;
+            animation: main-menu-in 2.2s + $i * .5 ease-out;
+          }
         }
 
-        &.has-content {
-            nav.main-menu {
-                opacity: 0;
-                visibility: hidden;
+        > a {
+          position: relative;
+          color: $white;
 
-                > ul {
-                    > li {
-                        -webkit-animation: none;
-                        -o-animation: none;
-                        animation: none;
-                    }
-                }
-            }
+          &::after {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 0;
+            left: 0;
+            bottom: -4px;
+            background-color: $white;
+
+            -webkit-transition: width .3s ease-in .1s;
+            -moz-transition: width .3s ease-in .1s;
+            -ms-transition: width .3s ease-in .1s;
+            -o-transition: width .3s ease-in .1s;
+            transition: width .3s ease-in .1s;
+          }
         }
 
         &.active {
-            z-index: 3;
-
-            nav.main-menu {
-                position: fixed;
-                display: block;
-                opacity: 1;
-                visibility: visible;
-                left: 0;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                width: calc(100% - 30px);
-                height: 100%;
-                background-color: rgba(40, 40, 30, .8);
-                padding-left: 30px;
-
-                > ul {
-                    position: absolute;
-                    top: calc(50% - 87px);
-                }
+          > a {
+            &::after {
+              width: 100%;
             }
+          }
         }
-    }
 
-    nav.main-menu {
-        -webkit-transition: opacity .275s linear;
-        -moz-transition: opacity .275s linear;
-        -ms-transition: opacity .275s linear;
-        -o-transition: opacity .275s linear;
-        transition: opacity .275s linear;
+        > a {
+          &:hover, &:focus, &:active {
+            &::after {
+              width: 100%;
 
-        > ul {
-            font-weight: 400;
-            margin: 0;
-            padding: 0;
-
-            > li {
-                position: relative;
-                list-style: none;
-                margin-bottom: 21px;
-                color: $white;
-                font-size: 14px;
-                letter-spacing: 3.2px;
-
-                @for $i from 1 through 5 {
-                    &:nth-child(#{$i}) {
-                        -webkit-animation: main-menu-in 2.2s + $i * .5 ease-out;
-                        -o-animation: main-menu-in 2.2s + $i * .5 ease-out;
-                        animation: main-menu-in 2.2s + $i * .5 ease-out;
-                    }
-                }
-
-                > a {
-                    position: relative;
-                    color: $white;
-
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        height: 1px;
-                        width: 0;
-                        left: 0;
-                        bottom: -4px;
-                        background-color: $white;
-
-                        -webkit-transition: width .3s ease-in .1s;
-                        -moz-transition: width .3s ease-in .1s;
-                        -ms-transition: width .3s ease-in .1s;
-                        -o-transition: width .3s ease-in .1s;
-                        transition: width .3s ease-in .1s;
-                    }
-                }
-
-                &.active {
-                    > a {
-                        &::after {
-                            width: 100%;
-                        }
-                    }
-                }
-
-                > a {
-                    &:hover, &:focus, &:active {
-                        &::after {
-                            width: 100%;
-
-                            -webkit-transition: width .225s ease-in;
-                            -moz-transition: width .225s ease-in;
-                            -ms-transition: width .225s ease-in;
-                            -o-transition: width .225s ease-in;
-                            transition: width .225s ease-in;
-                        }
-                    }
-                }
+              -webkit-transition: width .225s ease-in;
+              -moz-transition: width .225s ease-in;
+              -ms-transition: width .225s ease-in;
+              -o-transition: width .225s ease-in;
+              transition: width .225s ease-in;
             }
+          }
         }
+      }
     }
+  }
 }
 
 @media screen and (min-width: $response-1) {
-    .menu {
-        left: 55px;
-        bottom: 84px;
+  .menu {
+    left: 55px;
+    bottom: 84px;
 
-        .toggle {
-            display: none;
-        }
-
-        &.has-content {
-            top: 75px;
-            left: 40px;
-            bottom: auto;
-
-            nav.main-menu {
-                opacity: 1;
-                visibility: visible;
-                width: 100%;
-
-                > ul {
-                    &.bask {
-                        letter-spacing: 1.8px;
-                    }
-
-                    > li {
-                        $pr: 5px;
-                        float: left;
-                        padding-right: $pr;
-                        font-size: 86%;
-                        line-height: 1;
-
-                        + li {
-                            &::before {
-                                content: '/';
-                                padding-right: $pr;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        &.active {
-            z-index: 1;
-            
-            nav.main-menu {
-                position: relative;
-                left: auto;
-                right: auto;
-                top: auto;
-                bottom: auto;
-                background-color: transparent;
-                padding-top: 0;
-                padding-left: 0;
-
-                ul {
-                    position: relative;
-                    top: auto;
-                }
-            }
-        }
+    .toggle {
+      display: none;
     }
+
+    &.has-content {
+      top: 75px;
+      left: 40px;
+      bottom: auto;
+
+      nav.main-menu {
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+
+        > ul {
+          &.bask {
+            letter-spacing: 1.8px;
+          }
+
+          > li {
+            $pr: 5px;
+            float: left;
+            padding-right: $pr;
+            font-size: 86%;
+            line-height: 1;
+
+            + li {
+              &::before {
+                content: '/';
+                padding-right: $pr;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.active {
+      z-index: 1;
+
+      nav.main-menu {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        background-color: transparent;
+        padding-top: 0;
+        padding-left: 0;
+
+        ul {
+          position: relative;
+          top: auto;
+        }
+      }
+    }
+  }
 }
 
 $tx: 30px;
 @keyframes main-menu-in {
-    0% {
-        display: none;
-        opacity: 0;
-        -webkit-transform: translateX($tx);
-        -moz-transform: translateX($tx);
-        -ms-transform: translateX($tx);
-        -o-transform: translateX($tx);
-        transform: translateX($tx);
-    }
-    80% {
-        display: block;
-        opacity: 0;
-        -webkit-transform: translateX($tx);
-        -moz-transform: translateX($tx);
-        -ms-transform: translateX($tx);
-        -o-transform: translateX($tx);
-        transform: translateX($tx);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: none;
-        -moz-transform: none;
-        -ms-transform: none;
-        -o-transform: none;
-        transform: none;
-    }
+  0% {
+    display: none;
+    opacity: 0;
+    -webkit-transform: translateX($tx);
+    -moz-transform: translateX($tx);
+    -ms-transform: translateX($tx);
+    -o-transform: translateX($tx);
+    transform: translateX($tx);
+  }
+  80% {
+    display: block;
+    opacity: 0;
+    -webkit-transform: translateX($tx);
+    -moz-transform: translateX($tx);
+    -ms-transform: translateX($tx);
+    -o-transform: translateX($tx);
+    transform: translateX($tx);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
 }

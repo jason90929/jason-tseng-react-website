@@ -9,13 +9,13 @@ import Footer from '../components/Footer';
 import 'react-mdl/extra/material.js';
 
 const App = () => (
-    <div>
-        <_HeaderDecoration />
-        <Header />
-        <Aside />
-        <Main />
-        <Footer />
-    </div>
+  <div>
+    <_HeaderDecoration />
+    <Header />
+    <Aside />
+    <Main />
+    <Footer />
+  </div>
 );
 
 export default App;

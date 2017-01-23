@@ -10,47 +10,47 @@ import Portfolio from '../containers/Portfolio';
 import Contact from '../containers/Contact';
 
 const getContent = (content, data) => {
-    switch (content) {
-        case 'about':
-            return (
-                <About data={data.about} />
-            );
-        case 'skills':
-            return (
-                <Skills data={data.skills} />
-            );
-        case 'portfolio':
-            return (
-                <Portfolio data={data.portfolio} />
-            );
-        case 'contact':
-            return (
-                <Contact data={data.contact} />
-            );
-        default:
-            return (
-                <Home />
-            );
-    }
+  switch (content) {
+    case 'about':
+      return (
+        <About data={data.about} />
+      );
+    case 'skills':
+      return (
+        <Skills data={data.skills} />
+      );
+    case 'portfolio':
+      return (
+        <Portfolio data={data.portfolio} />
+      );
+    case 'contact':
+      return (
+        <Contact data={data.contact} />
+      );
+    default:
+      return (
+        <Home />
+      );
+  }
 };
 
 const Content = ({ content, animation, data }) => {
-    return (
-        <section className={'content' + (animation ? ' fade-out' : ' fade-in')}>
-            {getContent(content, data)}
-        </section>
-    );
+  return (
+    <section className={'content' + (animation ? ' fade-out' : ' fade-in')}>
+      {getContent(content, data)}
+    </section>
+  );
 };
 
 const mapStateToProps = (state) => {
-    return {
-        content: state.content,
-        contentStatus: state.contentStatus,
-        data: state.data,
-        animation: state.animation
-    }
+  return {
+    content: state.content,
+    contentStatus: state.contentStatus,
+    data: state.data,
+    animation: state.animation
+  }
 };
 
 export default connect(
-    mapStateToProps
+  mapStateToProps
 )(Content);

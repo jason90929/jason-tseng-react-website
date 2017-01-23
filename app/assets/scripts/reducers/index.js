@@ -12,17 +12,17 @@ import popup from './popup';
 import popupIndex from './popupIndex';
 
 const todoApp = combineReducers({
-    // todos,
-    // visibilityFilter,
-    menu,
-    content,
-    contentStatus,
-    animation,
-    language,
-    data,
-    popup,
-    popupIndex,
-    routing: routerReducer
+  // todos,
+  // visibilityFilter,
+  menu,
+  content,
+  contentStatus,
+  animation,
+  language,
+  data,
+  popup,
+  popupIndex,
+  routing: routerReducer
 });
 
 export default todoApp;

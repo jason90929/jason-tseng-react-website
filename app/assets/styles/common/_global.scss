@@ -8,136 +8,136 @@
 @import 'https://fonts.googleapis.com/css?family=Libre+Baskerville';
 
 html, body {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    background-color: $bg-main;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: $bg-main;
 
-    ::-moz-selection {
-        background: #efefef;
-    }
-    ::selection {
-        background: #efefef;
-    }
+  ::-moz-selection {
+    background: #efefef;
+  }
+  ::selection {
+    background: #efefef;
+  }
 }
 
 .a-html {
-    position: relative !important;
+  position: relative !important;
 }
 
 .a-body {
-    overflow: auto !important;
+  overflow: auto !important;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 
-    &:hover, &:focus, &:active {
-        outline: none;
-        text-decoration: none;
-    }
+  &:hover, &:focus, &:active {
+    outline: none;
+    text-decoration: none;
+  }
 }
 
 figure {
-    position: relative;
-    margin: 0;
-    padding: 0;
+  position: relative;
+  margin: 0;
+  padding: 0;
 
-    &.full {
-        img {
-            width: 100%;
-            height: 100%;
-        }
+  &.full {
+    img {
+      width: 100%;
+      height: 100%;
     }
+  }
 }
 
 article {
-    max-width: 980px;
-    //width: 100%;
-    margin: 0 auto;
-    position: relative;
-    padding: 20px;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    color: $dark;
+  max-width: 980px;
+  //width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  color: $dark;
 }
 
 .bg-theme-color {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    z-index: 2;
-    //background-color: $bg-main;
-    background-image: linear-gradient(175deg, $bg-main 600px, transparent 0),
-    linear-gradient(175deg, $bg-main-2 1200px, transparent 0),
-    linear-gradient(175deg, $bg-main 100%, transparent 0);
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 2;
+  //background-color: $bg-main;
+  background-image: linear-gradient(175deg, $bg-main 600px, transparent 0),
+  linear-gradient(175deg, $bg-main-2 1200px, transparent 0),
+  linear-gradient(175deg, $bg-main 100%, transparent 0);
 }
 
 .full {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 .fade-in {
-    opacity: 1;
+  opacity: 1;
 
-    -webkit-animation: fade-in .6s linear;
-    -o-animation: fade-in .6s linear;
-    animation: fade-in .6s linear;
+  -webkit-animation: fade-in .6s linear;
+  -o-animation: fade-in .6s linear;
+  animation: fade-in .6s linear;
 }
 
 .fade-out {
-    opacity: 0;
+  opacity: 0;
 
-    -webkit-animation: fade-out .8s linear;
-    -o-animation: fade-out .8s linear;
-    animation: fade-out .8s linear;
+  -webkit-animation: fade-out .8s linear;
+  -o-animation: fade-out .8s linear;
+  animation: fade-out .8s linear;
 }
 
 @keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade-out {
-    0% {
-        opacity: 1;
-    }
-    60% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @mixin scroll-no-show() {
-    -ms-overflow-style: none;
+  -ms-overflow-style: none;
 
-    &::-webkit-scrollbar {
-        width: 0;
-        height: 0;
-        display: none;
-    }
-    &::-webkit-scrollbar-track {
-        background-color: transparent;
-    }
-    &::-webkit-scrollbar-thumb {
-        background-color: transparent;
-    }
-    &::-webkit-scrollbar-button {
-        background-color: transparent;
-    }
-    &::-webkit-scrollbar-corner {
-        background-color: transparent;
-    }
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-button {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
 }
