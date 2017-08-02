@@ -4,7 +4,8 @@
   "description": "Gulp, Npm, with React Redux",
   "main": "main.js",
   "scripts": {
-    "test": "start"
+    "serve": "gulp serve",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
